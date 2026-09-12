@@ -6,7 +6,15 @@
     "description": "The Loopler Wiki provides gameplay guides, mechanics explanations, updates, tips, and essential information to help players explore the game's looping adventure world.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
-  "nav": {},
+  "nav": {
+    "guide": "Guide",
+    "mechanics": "Mechanics",
+    "progression": "Progression",
+    "steam": "Steam",
+    "community": "Community",
+    "vehicles": "Vehicles",
+    "modes": "Modes"
+  },
   "home": {
     "meta": {
       "title": "The Loopler Wiki - Guides, Updates & Tips",
@@ -402,5 +410,33 @@
     "buildGuide": "Progression Guide",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
+  },
+  "guide": {
+    "overviewTitle": "The Loopler Guides & Walkthroughs",
+    "overviewDescription": "Comprehensive beginner guides, loop strategies, and essential walkthroughs to master the endless arcade racing cycles of The Loopler."
+  },
+  "mechanics": {
+    "overviewTitle": "The Loopler Game Mechanics",
+    "overviewDescription": "In-depth breakdown of roguelite elements, slot car physics, drafting boosts, and infinite loop systems in The Loopler."
+  },
+  "progression": {
+    "overviewTitle": "The Loopler Progression & Upgrades",
+    "overviewDescription": "Complete guide to car upgrades, meta-progression, speed builds, high scores, and milestone unlocks in The Loopler."
+  },
+  "steam": {
+    "overviewTitle": "The Loopler Steam & Release Info",
+    "overviewDescription": "Official Steam details, demo availability, system requirements, launch updates, and patch notes for The Loopler."
+  },
+  "community": {
+    "overviewTitle": "The Loopler Community & Challenges",
+    "overviewDescription": "Connect with fellow racers, participate in daily challenges, share leaderboard runs, and join The Loopler discussions."
+  },
+  "vehicles": {
+    "overviewTitle": "The Loopler Vehicles & Car Builds",
+    "overviewDescription": "Detailed roster of slot cars, performance stats, acceleration tunings, and top-tier vehicle builds in The Loopler."
+  },
+  "modes": {
+    "overviewTitle": "The Loopler Game Modes & Leaderboards",
+    "overviewDescription": "Explore challenge modes, ghost rival races, global leaderboard competitions, and special event rules in The Loopler."
   }
 }
