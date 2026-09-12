@@ -1,1 +1,442 @@
-{}
+{
+  "site": {
+    "name": "The Loopler Wiki",
+    "shortName": "The Loopler",
+    "tagline": "Guias, Mecânicas, Atualizações e Dicas",
+    "description": "A The Loopler Wiki oferece guías de jogo, explicações de mecânicas, atualizações, dicas e informações essenciais para ajudar os jogadores a explorar o mundo de aventuras em loop do jogo.",
+    "legalNotice": "Wiki não oficial de fãs. Feita por jogadores, para jogadores."
+  },
+  "nav": {
+    "guide": "Guia",
+    "mechanics": "Mecânicas",
+    "progression": "Progressão",
+    "steam": "Steam",
+    "community": "Comunidade",
+    "vehicles": "Veículos",
+    "modes": "Modos"
+  },
+  "home": {
+    "meta": {
+      "title": "The Loopler Wiki - Guias, Atualizações e Dicas",
+      "description": "Explore a The Loopler Wiki para encontrar guias de jogabilidade, mecânicas, atualizações, dicas e informações úteis para dominar a experiência única de aventura em loop."
+    },
+    "hero": {
+      "eyebrow": "Jogo Único de Aventura em Loop",
+      "title": "The Loopler Wiki",
+      "description": "A The Loopler Wiki oferece guias de jogo, explicações de mecânicas, atualizações, dicas e informações essenciais para ajudar os jogadores a explorar o mundo de aventuras em loop do jogo.",
+      "stats": [
+        "Aventura em Loop",
+        "Guias de Progressão",
+        "Mecânicas de Jogo",
+        "Últimas Atualizações"
+      ],
+      "primaryCta": "Guia para Iniciantes",
+      "secondaryCta": "Mecânicas de Jogo",
+      "tertiaryCta": "Códigos Ativos",
+      "videoLabel": "Trailer Oficial"
+    },
+    "updates": {
+      "title": "Últimas Atualizações",
+      "browse": "Navegar por Todos os Guias",
+      "viewAll": "Ver Tudo"
+    },
+    "start": {
+      "eyebrow": "Comece Aqui",
+      "title": "Sua Jornada em The Loopler",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Guia para Iniciantes",
+          "description": "Domine as mecânicas fundamentais de loop, vácuo de pista e posicionamento de portais desde a sua primeira corrida."
+        },
+        {
+          "number": "2",
+          "title": "Configuração de Portais e Multiplicadores",
+          "description": "Encadeie portais multiplicadores com eficácia para maximizar as voltas dos veículos e alcançar pontuações astronômicas."
+        },
+        {
+          "number": "3",
+          "title": "Amuletos e Sinergias de Cartas",
+          "description": "Desbloqueie amuletos passivos e selecione combinações sinérgicas de cartas para sustentar corridas em alta velocidade."
+        },
+        {
+          "number": "4",
+          "title": "Melhores Builds de Corrida",
+          "description": "Otimize a escolha de veículos, o traçado de pistas e as árvores de melhorias prioritárias para o modo infinito."
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "Guias Populares",
+      "title": "Em Alta",
+      "quickLinks": [
+        "Guia para Iniciantes",
+        "Multiplicadores de Portais",
+        "Melhores Builds",
+        "Sinergias de Amuletos"
+      ],
+      "cards": [
+        {
+          "badge": "Iniciante",
+          "title": "Guia para Iniciantes de The Loopler",
+          "description": "Tudo o que você precisa desde sua primeira volta até dominar o vácuo de pista e portais multiplicadores.",
+          "href": "/guide/the-loopler-beginner-guide"
+        },
+        {
+          "badge": "Cartas",
+          "title": "Banco de Dados de Cartas de The Loopler",
+          "description": "Catálogo completo de cartas detalhando impulsos de velocidade, extensores de pista e gatilhos de pontuação.",
+          "href": "/cards/the-loopler-cards-guide"
+        },
+        {
+          "badge": "Builds",
+          "title": "Melhores Builds de The Loopler",
+          "description": "Combinações otimizadas de baralhos e arranjos de portais para partidas infinitas com pontuações recordes consistentes.",
+          "href": "/builds/the-loopler-builds-guide"
+        },
+        {
+          "badge": "Amuletos",
+          "title": "Tier List de Amuletos de The Loopler",
+          "description": "Todos os amuletos colecionáveis ranqueados com efeitos passivos e melhores combinações para builds.",
+          "href": "/charms/the-loopler-charms-guide"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "O que é The Loopler?",
+      "paragraphs": [
+        "The Loopler é um inovador jogo arcade roguelite de construção de loops, onde os jogadores projetam pistas, selecionam cartas dinâmicas e posicionam portais multiplicadores para maximizar as voltas dos veículos. Acelere por circuitos circulares infinitos, acione combos colossais de pontuação e colecione amuletos únicos para impulsionar sua progressão.",
+        "Seja ajustando o posicionamento dos portais, experimentando sinergias de baralhos ou desbloqueando carros e pistas exclusivas, a The Loopler Wiki oferece guias abrangentes, análises táticas e notas de atualização para ajudá-lo a liderar cada volta."
+      ],
+      "stats": [
+        {
+          "label": "Gênero",
+          "value": "Arcade Roguelite"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Steam / PC"
+        },
+        {
+          "label": "Loop Principal",
+          "value": "Draft e Construção"
+        },
+        {
+          "label": "Portais e Amuletos",
+          "value": "50+ Sinergias"
+        },
+        {
+          "label": "Modo de Jogo",
+          "value": "Loops Infinitos"
+        },
+        {
+          "label": "Estratégia",
+          "value": "Cadeias Multiplicadoras"
+        }
+      ],
+      "cta": "Explorar Todos os Guias"
+    },
+    "explore": {
+      "title": "Explore a The Loopler Wiki",
+      "description": "Domine circuitos de pistas infinitos, otimize seleções de cartas e portais multiplicadores e desbloqueie builds de pontuação alta com nossos guias detalhados.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Guia para Iniciantes de The Loopler",
+          "description": "Um guia acessível para novatos cobrindo o loop básico de gameplay, seleção de cartas, posicionamento de portais, coleta de amuletos e como construir partidas mais fortes. Ajuda jogadores em busca de dicas e tutoriais de The Loopler.",
+          "href": "/guide/the-loopler-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Escolha cartas iniciais para definir o trajeto básico da pista e a velocidade do veículo."
+            },
+            {
+              "label": "2",
+              "detail": "Posicione portais multiplicadores em interseções estratégicas para aumentar os pontos por volta."
+            },
+            {
+              "label": "3",
+              "detail": "Equipe amuletos passivos que complementem seus multiplicadores ativos e sinergias de cartas."
+            },
+            {
+              "label": "4",
+              "detail": "Reinvista os ganhos das corridas em melhorias permanentes na garagem e novos veículos."
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Guia de Cartas de The Loopler",
+          "description": "Um catálogo interativo detalhando efeitos de cartas, sinergias e combinações recomendadas para variadas builds. Os jogadores aprenderão a criar reações em cadeia impressionantes e maximizar pontos.",
+          "href": "/cards/the-loopler-cards-guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Draft",
+              "detail": "Rota Inicial — Estabelece o traçado circular básico da corrida"
+            },
+            {
+              "label": "Boost",
+              "detail": "Impulso de Velocidade — Eleva a velocidade do veículo nas retas"
+            },
+            {
+              "label": "Trigger",
+              "detail": "Pulso de Pontuação — Garante bônus de pontos ao entrar no ápice do loop"
+            },
+            {
+              "label": "Chain",
+              "detail": "Portal de Eco — Duplica o efeito multiplicador nas voltas seguintes"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Guia de Builds de The Loopler",
+          "description": "Recomendações com combinações fortes de cartas, portais, amuletos e melhorias. Feito sob medida para jogadores que buscam estratégias otimizadas e recordes de pontuação.",
+          "href": "/builds/the-loopler-builds-guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Speed",
+              "detail": "Loop de Alta Velocidade — Maximiza voltas por minuto com portais de aceleração"
+            },
+            {
+              "label": "Multiplier",
+              "detail": "Multiplicador Composto — Acumula portais de pontuação exponencial em circuitos fechados"
+            },
+            {
+              "label": "Economy",
+              "detail": "Coletor de Sucata — Prioriza a geração de fichas para giros rápidos de cartas"
+            },
+            {
+              "label": "Endurance",
+              "detail": "Resistência Overdrive — Mantém partidas infinitas longas sem superaquecimento"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Guia de Amuletos de The Loopler",
+          "description": "Visão geral completa dos amuletos colecionáveis, efeitos passivos e impacto nos estilos de jogo. Ajuda a definir quais amuletos melhor combinam com cada estratégia.",
+          "href": "/charms/the-loopler-charms-guide",
+          "displayType": "tier-grid",
+          "highlights": [
+            {
+              "label": "S",
+              "detail": "Núcleo Quântico · Marcador Crono — Escalonamento absoluto de multiplicadores e reinício de voltas"
+            },
+            {
+              "label": "A",
+              "detail": "Frasco de Nitro · Roda Magnética — Aceleração de alto nível e raio ampliado de coleta"
+            },
+            {
+              "label": "B",
+              "detail": "Faísca Dourada · Troca de Marcha — Renda estável e redução de tempo de recarga"
+            },
+            {
+              "label": "C",
+              "detail": "Parafuso Enferrujado · Bobina de Cobre — Utilidade inicial básica para garantir a sobrevivência"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Guia de Portais de The Loopler",
+          "description": "Guia tático focado no posicionamento de portais, efeitos e otimização de circuitos para montar cadeias multiplicadoras imbatíveis.",
+          "href": "/gates/the-loopler-gates-guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Portal",
+              "detail": "Portal de Teletransporte — Reposiciona o veículo instantaneamente para zonas de alta pontuação"
+            },
+            {
+              "label": "Amplifier",
+              "detail": "Portal Multiplicador — Multiplica a pontuação total da volta por uma taxa progressiva"
+            },
+            {
+              "label": "Splitter",
+              "detail": "Portal de Bifurcação — Divide a pista em duas rotas paralelas de pontuação"
+            },
+            {
+              "label": "Converter",
+              "detail": "Conversor de Fichas — Converte excesso de velocidade diretamente em sucata para compras"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Carros e Pistas de The Loopler",
+          "description": "Seção de referência cobrindo carros disponíveis, traçados de pistas e mecânicas exclusivas. Facilita a comparação de modelos antes de começar cada corrida.",
+          "href": "/cars/the-loopler-cars-and-tracks",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Racer",
+              "detail": "Cruzador Apex — Altíssima velocidade final, perfeito para traçados abertos"
+            },
+            {
+              "label": "Drifter",
+              "detail": "Derrapador Vortex — Controle excepcional em curvas fechadas e grampos"
+            },
+            {
+              "label": "Heavy",
+              "detail": "Titã Rig — Grande inércia, aciona multiplicadores de portais pesados"
+            },
+            {
+              "label": "Prototype",
+              "detail": "Vetor Neon — Veículo de energia experimental com dirigibilidade adaptativa"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Atualizações e Notícias de The Loopler",
+          "description": "Área de notícias reunindo comunicados oficiais, notas de desenvolvimento, novidades da demo e patches de balanceamento para manter os jogadores por dentro.",
+          "href": "/news/the-loopler-updates-and-news",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Patch",
+              "detail": "Ajuste de Acesso Antecipado — Refinamento de multiplicadores e sinergias de amuletos"
+            },
+            {
+              "label": "Demo",
+              "detail": "Lançamento da Demo no Steam — Circuitos iniciais jogáveis e primeiras cartas disponíveis"
+            },
+            {
+              "label": "Content",
+              "detail": "Pacote de Novos Veículos — Adicionados dois novos chassis desbloqueáveis e pistas exclusivas"
+            },
+            {
+              "label": "Roadmap",
+              "detail": "Expansão do Modo Infinito — Tabelas de classificação e desafios solicitados pela comunidade"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Guia de Conquistas de The Loopler",
+          "description": "Guia focado nas conquistas do Steam e metas de progressão, ajudando a acompanhar objetivos cumpridos e desafios a longo prazo.",
+          "href": "/achievements/the-loopler-achievements-guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Bronze",
+              "detail": "Primeiro Circuito — Complete 10 voltas consecutivas em uma única corrida"
+            },
+            {
+              "label": "Silver",
+              "detail": "Mestre do Multiplicador — Alcance uma cadeia multiplicadora de 100x em portais interligados"
+            },
+            {
+              "label": "Gold",
+              "detail": "Colecionador de Amuletos — Desbloqueie e equipe 15 amuletos passivos exclusivos"
+            },
+            {
+              "label": "Platinum",
+              "detail": "Mestre do Infinito — Ultrapasse 1.000.000 de pontos no modo Loop Infinito"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "description": "Respostas rápidas para as dúvidas mais comuns sobre gameplay e progressão em The Loopler.",
+      "items": [
+        {
+          "question": "O que é The Loopler?",
+          "answer": "The Loopler é um jogo arcade roguelite de construção de loops no Steam, no qual os jogadores selecionam cartas, posicionam portais multiplicadores e coletam amuletos para criar circuitos de pontuação infinita para carros velozes."
+        },
+        {
+          "question": "Como jogadores iniciantes progridem em The Loopler?",
+          "answer": "Em The Loopler, novos jogadores devem focar em traçar loops consistentes, escolher cartas complementares no início e encadear portais multiplicadores antes de investir em upgrades caros de nível alto."
+        },
+        {
+          "question": "Quais são as builds mais eficientes em The Loopler?",
+          "answer": "As melhores builds em The Loopler combinam cartas de aceleração com portais multiplicadores compostos e amuletos passivos como o Núcleo Quântico para criar loops de pontuação exponencial."
+        },
+        {
+          "question": "Onde posso encontrar as últimas atualizações e patches de The Loopler?",
+          "answer": "Você pode acompanhar as notas de atualização, anúncios de patches e novidades da demo de The Loopler diretamente no nosso guia de Atualizações e no hub oficial da comunidade no Steam."
+        },
+        {
+          "question": "The Loopler possui conquistas no Steam?",
+          "answer": "Sim, The Loopler conta com conquistas no Steam e marcos de progressão que recompensam multiplicadores altos, descoberta de amuletos raros e partidas de longa duração."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Pronto para Dominar The Loopler?",
+      "description": "Da sua primeira volta às mecânicas avançadas, nossa wiki comunitária oferece guias gratuitos e atualizados.",
+      "primary": "Ler o Guia para Iniciantes",
+      "secondary": "Jogar no Steam"
+    }
+  },
+  "shared": {
+    "wikiNavigation": "Navegação da Wiki",
+    "activeCodes": "Códigos Ativos",
+    "updated": "Atualizado",
+    "viewAllCodes": "Ver todos os códigos",
+    "playOnRoblox": "Jogar no Roblox",
+    "inThisSection": "Nesta seção",
+    "tableOfContents": "Índice",
+    "nextSteps": "Próximos Passos",
+    "needHelp": "Precisa de Ajuda?",
+    "relatedReading": "Leituras Relacionadas",
+    "relatedGuides": "Guias Relacionados",
+    "readMore": "Ler mais",
+    "officialMedia": "Mídias oficiais",
+    "home": "Início",
+    "noGuidesAvailable": "Nenhum guia disponível ainda. Volte em breve!"
+  },
+  "footer": {
+    "aboutTitle": "The Loopler Wiki",
+    "about": "A The Loopler Wiki é uma central comunitária independente com foco em mecânicas de gameplay, rotas de progressão, atualizações e informações cruciais para jogadores novatos e veteranos.",
+    "quickLinks": "Links Rápidos",
+    "guides": "Guias",
+    "legal": "Legal",
+    "copyright": "2026 The Loopler Wiki. Não associado aos desenvolvedores do jogo.",
+    "description": "Central independente de guías para The Loopler com passo a passo, mecânicas, novidades e dicas da comunidade.",
+    "playGame": "Jogar The Loopler",
+    "officialDiscord": "Comunidade no Discord",
+    "officialYoutube": "Canal no YouTube",
+    "vvBuilder": "Planejador de Loops",
+    "beginnerGuide": "Guia para Iniciantes",
+    "raceGuides": "Mecânicas de Jogo",
+    "bossGuides": "Guias de Chefes",
+    "buildGuide": "Guia de Progressão",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço"
+  },
+  "guide": {
+    "overviewTitle": "Guias e Tutoriais de The Loopler",
+    "overviewDescription": "Guias abrangentes para iniciantes, táticas de loop e orientações essenciais para dominar as corridas arcade infinitas em The Loopler."
+  },
+  "mechanics": {
+    "overviewTitle": "Mecânicas de Jogo de The Loopler",
+    "overviewDescription": "Análise detalhada de elementos roguelite, física de slot cars, aceleração por vácuo e sistemas de voltas infinitas em The Loopler."
+  },
+  "progression": {
+    "overviewTitle": "Progressão e Upgrades de The Loopler",
+    "overviewDescription": "Guia completo de melhorias de carros, metaprogressão, builds velozes, recordes e desbloqueios de conquistas em The Loopler."
+  },
+  "steam": {
+    "overviewTitle": "Steam e Informações de Lançamento de The Loopler",
+    "overviewDescription": "Detalhes oficiais do Steam, disponibilidade da demo, requisitos do sistema, atualizações de lançamento e notas de patch de The Loopler."
+  },
+  "community": {
+    "overviewTitle": "Comunidade e Desafios de The Loopler",
+    "overviewDescription": "Conecte-se com outros corredores, dispute desafios diários, compartilhe recordes de classificação e participe dos debates de The Loopler."
+  },
+  "vehicles": {
+    "overviewTitle": "Veículos e Builds de Carros de The Loopler",
+    "overviewDescription": "Lista detalhada de veículos slot car, atributos de desempenho, calibragem de aceleração e melhores builds de carros em The Loopler."
+  },
+  "modes": {
+    "overviewTitle": "Modos de Jogo e Placares de The Loopler",
+    "overviewDescription": "Explore modos de desafio, corridas contra rivais fantasma, placares globais e eventos com regras especiais em The Loopler."
+  }
+}
