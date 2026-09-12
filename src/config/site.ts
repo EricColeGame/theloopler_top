@@ -18,18 +18,18 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "My Seafood Stand Wiki",
-  shortName: "My Seafood Stand",
-  logoText: "SS",
-  tagline: "Complete Guides, Codes, Recipes & Tier Lists",
-  description: "Your ultimate guide to My Seafood Stand on Roblox! Explore active working codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top",
-  gameUrl: "https://www.roblox.com/games/my-seafood-stand",
-  heroVideoId: "M8DvcwoFRrk", // Roblox My Seafood Stand codes & gameplay video
+  name: "The Loopler Wiki",
+  shortName: "The Loopler",
+  logoText: "TL",
+  tagline: "Guides, Updates & Tips",
+  description: "Explore The Loopler Wiki for gameplay guides, mechanics, updates, tips, and useful information to master the unique looping adventure experience.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://theloopler.top",
+  gameUrl: "https://store.steampowered.com/app/4150860/The_Loopler/",
+  heroVideoId: "Y2Cnr5JqMaU", // The Loopler gameplay & release showcase
   social: {
-    discord: "https://discord.gg/roblox",
-    youtube: "https://www.youtube.com/@roblox",
+    discord: "https://discord.gg/steam",
+    youtube: "https://www.youtube.com/watch?v=Y2Cnr5JqMaU",
   },
-  locales: ["en", "es", "pt", "de", "fr"],
+  locales: ["en", "es", "pt", "de"],
   defaultLocale: "en",
 };
