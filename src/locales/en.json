@@ -34,265 +34,301 @@
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your My Seafood Stand Journey",
+      "title": "Your The Loopler Journey",
       "cards": [
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Master the core loop mechanics, track drafting, and gate placements from your very first run."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "Gate & Multiplier Setup",
+          "description": "Chain multiplier gates effectively to maximize vehicle loops and rack up massive scores."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "Charms & Card Synergies",
+          "description": "Unlock passive charms and draft synergistic card combinations to sustain high-speed runs."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in My Seafood Stand."
+          "title": "Best Run Builds",
+          "description": "Optimize car selection, track routing, and upgrade priority trees for endgame endless mode."
         }
       ]
     },
     "popular": {
-      "eyebrow": "Popular Pages",
+      "eyebrow": "Popular Guides",
       "title": "Trending Now",
       "quickLinks": [
-        "Hollow Progression",
-        "Fastest Leveling",
-        "Spirit Charms",
-        "All Boss Guides"
+        "Beginner Guide",
+        "Gate Multipliers",
+        "Best Builds",
+        "Charm Synergies"
       ],
       "cards": [
         {
           "badge": "Beginner",
-          "title": "Beginner Guide",
-          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
-          "href": "/beginner-guide"
+          "title": "The Loopler Beginner Guide",
+          "description": "Everything you need from your first loop to mastering track drafting and multiplier gates.",
+          "href": "/guide/the-loopler-beginner-guide"
         },
         {
-          "badge": "Updated",
-          "title": "Active Codes",
-          "description": "All working codes with rewards redeem before they expire.",
-          "href": "/codes"
+          "badge": "Cards",
+          "title": "The Loopler Cards Database",
+          "description": "Complete card catalog detailing speed boosts, track extenders, and scoring triggers.",
+          "href": "/cards/the-loopler-cards-guide"
         },
         {
-          "badge": "Updated",
-          "title": "Equipment Database",
-          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
-          "href": "/equipment"
+          "badge": "Builds",
+          "title": "Best Loopler Builds",
+          "description": "Optimized deck combinations and gate arrangements for sustained high-score endless runs.",
+          "href": "/builds/the-loopler-builds-guide"
         },
         {
-          "badge": "Popular",
-          "title": "Which Race Should You Pick?",
-          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
-          "href": "/races/best-race"
-        },
-        {
-          "badge": "New",
-          "title": "Enemies & Monsters",
-          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
-          "href": "/enemies"
-        },
-        {
-          "badge": "Popular",
-          "title": "Boss Locations & Drops",
-          "description": "Every boss location, drop table, and respawn timer in one reference.",
-          "href": "/boss-locations-drops-respawn-times"
-        },
-        {
-          "badge": "Popular",
-          "title": "Best Builds",
-          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
-          "href": "/builds/best-builds"
-        },
-        {
-          "badge": "New",
-          "title": "Shikai Tier List",
-          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
-          "href": "/tier-list/shikai"
-        },
-        {
-          "badge": "New",
-          "title": "World Events Guide",
-          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
-          "href": "/world-events"
+          "badge": "Charms",
+          "title": "The Loopler Charms Tier List",
+          "description": "All collectible charms ranked with passive effects and best build pairings.",
+          "href": "/charms/the-loopler-charms-guide"
         }
       ]
     },
     "aboutGame": {
-      "title": "What is My Seafood Stand?",
+      "title": "What is The Loopler?",
       "paragraphs": [
-        "My Seafood Stand is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "The Loopler is an innovative roguelite arcade loop builder where players design tracks, draft dynamic cards, and place multiplier gates to maximize vehicle runs. Race through endless circular pathways, trigger massive score combos, and collect unique charms to fuel your progression.",
+        "Whether you are fine-tuning gate placements, experimenting with deck synergies, or unlocking specialized cars and tracks, The Loopler Wiki provides comprehensive guides, strategy breakdowns, and patch notes to help you dominate every loop."
       ],
       "stats": [
         {
-          "label": "Developer",
-          "value": "Midnight Continent"
+          "label": "Genre",
+          "value": "Roguelite Arcade"
         },
         {
           "label": "Platform",
-          "value": "Roblox"
+          "value": "Steam / PC"
         },
         {
-          "label": "Genre",
-          "value": "Fighting RPG"
+          "label": "Core Loop",
+          "value": "Draft & Build"
         },
         {
-          "label": "Visits",
-          "value": "12.6M+"
+          "label": "Gates & Charms",
+          "value": "50+ Synergies"
         },
         {
-          "label": "Favorites",
-          "value": "243K+"
+          "label": "Game Mode",
+          "value": "Endless Loops"
         },
         {
-          "label": "Total Skills",
-          "value": "130+"
-        },
-        {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "Strategy",
+          "value": "Multiplier Chains"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
       "title": "Explore The Loopler Wiki",
-      "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
+      "description": "Master endless track layouts, optimize card drafts and multiplier gates, and unlock high-score builds with our comprehensive guides.",
       "modules": [
         {
           "order": 1,
-          "name": "My Seafood Stand Working Codes",
-          "description": "Redeem the latest working codes to claim free coins, gems, exclusive cosmetics, and boost items before they expire.",
-          "href": "/codes/my-seafood-stand-codes",
-          "displayType": "code-box",
+          "name": "The Loopler Beginner Guide",
+          "description": "A beginner-friendly guide covering the basic gameplay loop, card drafting, gate placement, charm collection, and how new players can build stronger runs. This module helps users searching for The Loopler tips and how to play information.",
+          "href": "/guide/the-loopler-beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Code",
-              "detail": "FULLRELEASE — Free Cash & Rewards"
+              "label": "1",
+              "detail": "Draft starter cards to establish your basic track route and vehicle speed."
             },
             {
-              "label": "Code",
-              "detail": "75KLIKES — Exclusive Ability Reroll"
+              "label": "2",
+              "detail": "Place multiplier gates at key intersection points to boost score per loop."
             },
             {
-              "label": "Tip",
-              "detail": "Codes are case-sensitive; enter them in the Settings menu"
+              "label": "3",
+              "detail": "Equip passive charms that complement your active multiplier and draft synergies."
+            },
+            {
+              "label": "4",
+              "detail": "Reinvest run earnings into permanent garage upgrades and new vehicle unlocks."
             }
           ]
         },
         {
           "order": 2,
-          "name": "Beginner Guide: How to Start & Serve Customers",
-          "description": "Step-by-step beginner guide covering customer ordering, food prep, station management, and cashier checkout mechanics.",
-          "href": "/guide/my-seafood-stand-beginner-guide",
-          "displayType": "feature-cards",
+          "name": "The Loopler Cards Guide",
+          "description": "A searchable card database explaining card effects, synergies, and recommended combinations for different builds. Players can learn how to create powerful chain reactions and maximize their scores.",
+          "href": "/cards/the-loopler-cards-guide",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Step 1",
-              "detail": "Take customer order at the stall front"
+              "label": "Draft",
+              "detail": "Starter Route — Establishes circular base path"
             },
             {
-              "label": "Step 2",
-              "detail": "Cook seafood on the grill or boil station"
+              "label": "Boost",
+              "detail": "Velocity Surge — Increases vehicle speed through straightaways"
             },
             {
-              "label": "Step 3",
-              "detail": "Serve warm food promptly for maximum customer tips"
+              "label": "Trigger",
+              "detail": "Score Pulse — Grants bonus points upon entering loop apex"
+            },
+            {
+              "label": "Chain",
+              "detail": "Echo Gate — Duplicates multiplier effect on subsequent laps"
             }
           ]
         },
         {
           "order": 3,
-          "name": "Seafood & Fish Tier List",
-          "description": "Complete breakdown of all catchable fish and seafood ranked by market value, customer demand, and profit margins.",
-          "href": "/seafood/my-seafood-stand-tier-list",
-          "displayType": "tier-grid",
+          "name": "The Loopler Builds Guide",
+          "description": "A build recommendation section featuring strong combinations of cards, gates, charms, and upgrades. It targets players looking for optimized strategies and high-score runs.",
+          "href": "/builds/the-loopler-builds-guide",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S Tier",
-              "detail": "King Crab · Lobster Boil — Highest profit per customer"
+              "label": "Speed",
+              "detail": "High-Velocity Loop — Maximizes laps per minute with speed gates"
             },
             {
-              "label": "A Tier",
-              "detail": "Salmon · Jumbo Shrimp · Tuna Steak — Reliable fast earners"
+              "label": "Multiplier",
+              "detail": "Compound Multiplier — Stacks exponential score gates in tight circuits"
             },
             {
-              "label": "B Tier",
-              "detail": "Clams · Oysters · Squid — Great mid-game margin"
+              "label": "Economy",
+              "detail": "Scrap Harvester — Prioritizes token generation for fast card rerolls"
             },
             {
-              "label": "C Tier",
-              "detail": "Common Sardines · Small Crab — Starter seafood"
+              "label": "Endurance",
+              "detail": "Overdrive Resilience — Sustains prolonged endless runs without heat burnout"
             }
           ]
         },
         {
           "order": 4,
-          "name": "Best Upgrades Progression",
-          "description": "Optimal order to spend your cash: expand kitchen stations, hire waitstaff, speed up grills, and upgrade seating.",
-          "href": "/upgrades/my-seafood-stand-best-upgrades",
-          "displayType": "feature-cards",
+          "name": "The Loopler Charms Guide",
+          "description": "A complete overview of collectible charms, their passive effects, and how they influence different playstyles. This module helps players understand which charms fit specific builds.",
+          "href": "/charms/the-loopler-charms-guide",
+          "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "Priority 1",
-              "detail": "Cooking Speed & Extra Burners — Clears customer backlog"
+              "label": "S",
+              "detail": "Quantum Core · Chrono Dial — Game-breaking multiplier scaling and lap resets"
             },
             {
-              "label": "Priority 2",
-              "detail": "Customer Seating Capacity — Increases simultaneous diners"
+              "label": "A",
+              "detail": "Nitro Flask · Magnetic Wheel — Top-tier acceleration and bonus pickup radius"
             },
             {
-              "label": "Priority 3",
-              "detail": "Auto-Chef / Waiter Staff — Passive hands-free revenue"
+              "label": "B",
+              "detail": "Golden Spark · Gear Shift — Reliable steady revenue and cooldown reduction"
+            },
+            {
+              "label": "C",
+              "detail": "Rusty Bolt · Copper Coil — Early starter utility for basic run survival"
             }
           ]
         },
         {
           "order": 5,
-          "name": "How to Get Cash Fast",
-          "description": "Top money-making strategies, VIP evaluation, tip maximization, and high-efficiency serving tips.",
-          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
-          "displayType": "feature-cards",
+          "name": "The Loopler Gates Guide",
+          "description": "A strategy guide focused on gate placement, gate effects, and track optimization. Players can learn how to arrange gates to create stronger multiplier chains.",
+          "href": "/gates/the-loopler-gates-guide",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Combo",
-              "detail": "Chain orders quickly to build the Customer Happiness multiplier"
+              "label": "Portal",
+              "detail": "Warp Gate — Relocates vehicle instantly to high-density point zones"
             },
             {
-              "label": "High Margin",
-              "detail": "Focus high-tier seafood boils during peak customer rush hours"
+              "label": "Amplifier",
+              "detail": "Multiplier Gate — Multiplies total lap score by fixed scaling factor"
             },
             {
-              "label": "Reinvest",
-              "detail": "Keep 20% cash reserve for fresh ingredient replenishment"
+              "label": "Splitter",
+              "detail": "Fork Gate — Splits route into dual parallel scoring sections"
+            },
+            {
+              "label": "Converter",
+              "detail": "Token Converter — Exchanges excess velocity directly into shop scrap"
             }
           ]
         },
         {
           "order": 6,
-          "name": "Plot Expansion & Stand Customization",
-          "description": "Unlock bigger land plots, arrange optimal cooking layouts, and add high-value decorative upgrades.",
-          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
-          "displayType": "feature-cards",
+          "name": "The Loopler Cars and Tracks",
+          "description": "A reference section covering available cars, track layouts, and their unique gameplay characteristics. It helps users compare options before starting a run.",
+          "href": "/cars/the-loopler-cars-and-tracks",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Plot 1",
-              "detail": "Starter Beach Stand (3 Tables, 1 Grill)"
+              "label": "Racer",
+              "detail": "Apex Cruiser — High top speed, optimal for open circuit layouts"
             },
             {
-              "label": "Plot 2",
-              "detail": "Boardwalk Restaurant (6 Tables, 2 Grills, Boil Station)"
+              "label": "Drifter",
+              "detail": "Vortex Skid — Superior turn handling on compact hairpin tracks"
             },
             {
-              "label": "Plot 3",
-              "detail": "Luxury Pier Seafood Pavilion (Full Automation & VIP Seating)"
+              "label": "Heavy",
+              "detail": "Titan Rig — High inertia, triggers heavyweight gate multipliers"
+            },
+            {
+              "label": "Prototype",
+              "detail": "Neon Vector — Experimental energy vehicle with adaptive handling"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "The Loopler Updates and News",
+          "description": "A news section collecting official announcements, development updates, demo information, and patch notes. It keeps returning players informed about new content and balance changes.",
+          "href": "/news/the-loopler-updates-and-news",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Patch",
+              "detail": "Early Access Balance Update — Refined gate scaling and charm synergies"
+            },
+            {
+              "label": "Demo",
+              "detail": "Steam Demo Release — Playable starter tracks and initial card pool"
+            },
+            {
+              "label": "Content",
+              "detail": "New Vehicle Pack — Added two unlockable chassis and specialized tracks"
+            },
+            {
+              "label": "Roadmap",
+              "detail": "Endless Mode Expansion — Community-requested leaderboards and challenges"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "The Loopler Achievements Guide",
+          "description": "A guide for Steam achievements and progression goals, helping players track completion targets and discover long-term objectives. This module supports users searching for achievement and completion information.",
+          "href": "/achievements/the-loopler-achievements-guide",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Bronze",
+              "detail": "First Circuit — Complete your first 10 consecutive laps in a single run"
+            },
+            {
+              "label": "Silver",
+              "detail": "Multiplier Maestro — Achieve a 100x multiplier chain across linked gates"
+            },
+            {
+              "label": "Gold",
+              "detail": "Charm Collector — Unlock and equip 15 unique passive charms"
+            },
+            {
+              "label": "Platinum",
+              "detail": "Infinite Master — Surpass 1,000,000 points in Endless Loop mode"
             }
           ]
         }
@@ -300,27 +336,27 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about My Seafood Stand.",
+      "description": "Quick answers to common gameplay and progression questions about The Loopler.",
       "items": [
         {
-          "question": "What is My Seafood Stand?",
-          "answer": "My Seafood Stand is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of game mechanics Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is The Loopler?",
+          "answer": "The Loopler is a roguelite arcade loop builder on Steam where players draft cards, place multiplier gates, and collect charms to create endless scoring pathways for high-speed vehicles."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "How do beginner players progress in The Loopler?",
+          "answer": "In The Loopler, new players should focus on establishing clean track loops, drafting complementary cards early, and chaining multiplier gates before investing in expensive high-tier upgrades."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "What are the most effective builds in The Loopler?",
+          "answer": "Top builds in The Loopler combine velocity-boosting cards with compound multiplier gates and passive charms like Quantum Core to create exponential score loops."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "Where can I find the latest updates and patches for The Loopler?",
+          "answer": "You can track development updates, patch notes, and demo announcements for The Loopler directly through our Updates guide and the official Steam community hub."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "Does The Loopler feature Steam achievements?",
+          "answer": "Yes, The Loopler includes Steam achievements and progression milestones that reward players for reaching high multiplier scores, discovering rare charms, and completing extended runs."
         }
       ]
     },
