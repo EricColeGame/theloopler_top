@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Wiki My Seafood Stand",
+    "name": "Wiki The Loopler",
     "shortName": "My Seafood Stand",
     "tagline": "Guides complets, codes, recettes et tier lists",
     "description": "Votre guide ultime pour My Seafood Stand sur Roblox ! Découvrez les codes actifs, les recettes de fruits de mer, les meilleures améliorations, les stratégies de profit et les guides de progression.",
@@ -26,7 +26,7 @@
   },
   "home": {
     "meta": {
-      "title": "Wiki My Seafood Stand — Codes, recettes, améliorations et guides",
+      "title": "Wiki The Loopler — Codes, recettes, améliorations et guides",
       "description": "Guide complet de My Seafood Stand sur Roblox avec les codes actifs valides, tous les poissons et recettes, la tier list des meilleures améliorations et des astuces pour gagner de l'argent rapidement."
     },
     "hero": {
@@ -180,7 +180,7 @@
       "cta": "Explorer tous les guides"
     },
     "explore": {
-      "title": "Explorer le Wiki My Seafood Stand",
+      "title": "Explorer le Wiki The Loopler",
       "description": "Gérez au mieux votre restaurant de fruits de mer sur Roblox grâce aux guides de progression incontournables, codes actifs, catalogues complets de poissons et recettes, et stratégies d'amélioration optimales.",
       "modules": [
         {
@@ -350,7 +350,7 @@
   },
   "bosses": {
     "meta": {
-      "title": "Boss — Guide complet et cheminement | Wiki My Seafood Stand",
+      "title": "Boss — Guide complet et cheminement | Wiki The Loopler",
       "description": "Guides complets des boss pour My Seafood Stand — tous les boss, du chevalier Gelum du tutoriel aux rencontres de fin de jeu, avec stratégies, butins et temps de réapparition."
     },
     "overviewTitle": "Aperçu des boss",
@@ -379,12 +379,12 @@
     "noGuidesAvailable": "Aucun guide disponible pour le moment. Revenez bientôt !"
   },
   "footer": {
-    "aboutTitle": "Wiki My Seafood Stand",
-    "about": "Le Wiki My Seafood Stand est un centre de guides indépendant créé par des fans, couvrant les voies de progression, les races, les boss, les builds et les connaissances essentielles du jeu, aussi bien pour les nouveaux joueurs que pour les vétérans.",
+    "aboutTitle": "Wiki The Loopler",
+    "about": "Le Wiki The Loopler est un centre de guides indépendant créé par des fans, couvrant les voies de progression, les races, les boss, les builds et les connaissances essentielles du jeu, aussi bien pour les nouveaux joueurs que pour les vétérans.",
     "quickLinks": "Liens rapides",
     "guides": "Guides",
     "legal": "Mentions légales",
-    "copyright": "2026 Wiki My Seafood Stand. Non affilié à Midnight Continent ou Roblox.",
+    "copyright": "2026 Wiki The Loopler. Non affilié à Midnight Continent ou Roblox.",
     "description": "RPG de combat gratuit inspiré de Bleach sur Roblox. 3 races, 130+ compétences, Niv. max 100.",
     "playGame": "Jouer à My Seafood Stand",
     "officialDiscord": "Discord officiel",
