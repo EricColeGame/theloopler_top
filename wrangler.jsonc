@@ -1,5 +1,5 @@
 {
-  "name": "vvultimatum-sbs",
+  "name": "theloopler-top",
   "compatibility_date": "2024-09-01",
   "workers_dev": false,
   "assets": {
@@ -7,7 +7,11 @@
   },
   "routes": [
     {
-      "pattern": "vvultimatum.sbs",
+      "pattern": "theloopler.top",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.theloopler.top",
       "custom_domain": true
     }
   ]
