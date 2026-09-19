@@ -9,10 +9,6 @@
     {
       "pattern": "theloopler.top",
       "custom_domain": true
-    },
-    {
-      "pattern": "www.theloopler.top",
-      "custom_domain": true
     }
   ]
 }
