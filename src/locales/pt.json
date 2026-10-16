@@ -86,19 +86,19 @@
           "badge": "Cartas",
           "title": "Banco de Dados de Cartas de The Loopler",
           "description": "Catálogo completo de cartas detalhando impulsos de velocidade, extensores de pista e gatilhos de pontuação.",
-          "href": "/cards/the-loopler-cards-guide"
+          "href": "/mechanics/the-loopler-deckbuilder"
         },
         {
           "badge": "Builds",
           "title": "Melhores Builds de The Loopler",
           "description": "Combinações otimizadas de baralhos e arranjos de portais para partidas infinitas com pontuações recordes consistentes.",
-          "href": "/builds/the-loopler-builds-guide"
+          "href": "/progression/the-loopler-builds"
         },
         {
           "badge": "Amuletos",
           "title": "Tier List de Amuletos de The Loopler",
           "description": "Todos os amuletos colecionáveis ranqueados com efeitos passivos e melhores combinações para builds.",
-          "href": "/charms/the-loopler-charms-guide"
+          "href": "/progression/the-loopler-upgrades"
         }
       ]
     },
@@ -169,7 +169,7 @@
           "order": 2,
           "name": "Guia de Cartas de The Loopler",
           "description": "Um catálogo interativo detalhando efeitos de cartas, sinergias e combinações recomendadas para variadas builds. Os jogadores aprenderão a criar reações em cadeia impressionantes e maximizar pontos.",
-          "href": "/cards/the-loopler-cards-guide",
+          "href": "/mechanics/the-loopler-deckbuilder",
           "displayType": "card-list",
           "highlights": [
             {
@@ -194,7 +194,7 @@
           "order": 3,
           "name": "Guia de Builds de The Loopler",
           "description": "Recomendações com combinações fortes de cartas, portais, amuletos e melhorias. Feito sob medida para jogadores que buscam estratégias otimizadas e recordes de pontuação.",
-          "href": "/builds/the-loopler-builds-guide",
+          "href": "/progression/the-loopler-builds",
           "displayType": "card-list",
           "highlights": [
             {
@@ -219,7 +219,7 @@
           "order": 4,
           "name": "Guia de Amuletos de The Loopler",
           "description": "Visão geral completa dos amuletos colecionáveis, efeitos passivos e impacto nos estilos de jogo. Ajuda a definir quais amuletos melhor combinam com cada estratégia.",
-          "href": "/charms/the-loopler-charms-guide",
+          "href": "/progression/the-loopler-upgrades",
           "displayType": "tier-grid",
           "highlights": [
             {
@@ -244,7 +244,7 @@
           "order": 5,
           "name": "Guia de Portais de The Loopler",
           "description": "Guia tático focado no posicionamento de portais, efeitos e otimização de circuitos para montar cadeias multiplicadoras imbatíveis.",
-          "href": "/gates/the-loopler-gates-guide",
+          "href": "/mechanics/the-loopler-infinite-loop",
           "displayType": "card-list",
           "highlights": [
             {
@@ -269,7 +269,7 @@
           "order": 6,
           "name": "Carros e Pistas de The Loopler",
           "description": "Seção de referência cobrindo carros disponíveis, traçados de pistas e mecânicas exclusivas. Facilita a comparação de modelos antes de começar cada corrida.",
-          "href": "/cars/the-loopler-cars-and-tracks",
+          "href": "/vehicles/the-loopler-car",
           "displayType": "card-list",
           "highlights": [
             {
@@ -294,7 +294,7 @@
           "order": 7,
           "name": "Atualizações e Notícias de The Loopler",
           "description": "Área de notícias reunindo comunicados oficiais, notas de desenvolvimento, novidades da demo e patches de balanceamento para manter os jogadores por dentro.",
-          "href": "/news/the-loopler-updates-and-news",
+          "href": "/modes/the-loopler-update",
           "displayType": "card-list",
           "highlights": [
             {
@@ -319,7 +319,7 @@
           "order": 8,
           "name": "Guia de Conquistas de The Loopler",
           "description": "Guia focado nas conquistas do Steam e metas de progressão, ajudando a acompanhar objetivos cumpridos e desafios a longo prazo.",
-          "href": "/achievements/the-loopler-achievements-guide",
+          "href": "/progression/the-loopler-world-record",
           "displayType": "card-list",
           "highlights": [
             {

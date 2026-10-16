@@ -1,0 +1,108 @@
+export const metadata = {
+  title: "The Loopler Playtest Guide: What Players Learned Testing Mheep's Slot-Car Roguelite",
+  description: "A community guide to The Loopler playtest: what testers found in the demo, the feedback that shaped launch, and tips for your own runs.",
+  category: "community",
+  date: "2026-10-16",
+}
+
+Most roguelite deckbuilders ask you to plan carefully. The Loopler asks you to let go and watch the numbers explode. Mheep's slot-car deckbuilder spent roughly a year in public testing before its full Steam launch on September 11, 2026, and much of that back-and-forth happened in the open, on the developer's itch.io page and in Steam discussions. If you want the real story of **The Loopler playtest** — what testers saw, what frustrated them, and which complaints the developer actually acted on — this guide covers it, with notes pulled straight from the community.
+
+That history matters, because the build you can buy today is not the build early testers poked at. The **The Loopler playtest** phase shaped expectations around fuel cells, gate detection, and late-run scaling long before version 1.0 shipped. Knowing what changed (and what deliberately did not) will save you hours of confusion when your own runs start snowballing.
+
+## What the Playtest Actually Looked Like
+
+The Loopler was never a secret. Mheep built an audience by releasing playable versions early and answering feedback directly, which is unusual for a solo-developed roguelite. Across roughly a year, players had three different ways to get their hands on the game before launch.
+
+| Testing ground | What it was | What it revealed | Status today |
+|---|---|---|---|
+| itch.io prototype | A free early build on the developer's itch.io page | The core loop, first cards, gates, and charm stacking | Still online, but community reports say it has not been updated in a long time |
+| Steam demo | A free demo tied to the official store listing | A slice of the full roguelite structure and difficulty curve | Available now as a free PC demo |
+| Pre-release playtest branch | A separate testing app that appeared on Steam before launch | Balance notes and bug reports on gates, fuel, and extreme-speed behavior | Closed; superseded by the 1.0 release |
+
+The itch.io prototype is the most documented part of the playtest era, and it is where most of the community's loudest opinions were formed. Player experience there reads like a design diary: people posting score screenshots, arguing about one ability's wording, and pushing the car until the game's own physics gave up.
+
+## Playtester Feedback That Shaped the Full Release
+
+Not every complaint turned into a patch, and that distinction is the most useful thing to understand about The Loopler's development. Mheep engaged with the community constantly but defended a few design choices on purpose. Here is how the biggest recurring themes played out.
+
+| Community report | What players said | Developer response | Where it stands |
+|---|---|---|---|
+| Fuel-cell recharge wording | "+1 fuel cell per loop" felt useless when running dozens of loops per second | The effect has diminishing returns by design, so runs cannot last forever | Mechanic unchanged; wording still divides players |
+| Gate detection at extreme speed | Some gates were skipped once the car outran the track logic | Acknowledged as a quirk of truly absurd speeds | Still reported occasionally |
+| Upgrade pool bloat | Too many unlocked items diluted the card and gate draft | Dev confirmed a toggle was planned | Frequently requested quality-of-life feature |
+| Mobile version | Multiple requests for phone and tablet support | No mobile release has been announced | Open request |
+| "The Muscler" balance | One car feels like a built-in hardcore mode | Speed carries between rounds and resets only at the start of a fresh run | Working as intended |
+
+Two lessons stand out. First, the fuel-cell debate is really a communication problem, not a balance problem — the mechanic behaves consistently once you know about diminishing returns. Second, the upgrade-toggle request is the kind of fix that only surfaces when hundreds of players hit the same wall at the same time, which is exactly what a long playtest is for.
+
+## The Loopler Playtest Checklist: Systems Worth Testing First
+
+If you are running your own The Loopler playtest session — whether with the free demo or the full game — resist the urge to just chase the biggest number. The systems interact, and testing them in isolation teaches you far more.
+
+| System | Content at launch | Test this first | Why it matters |
+|---|---|---|---|
+| Cards | 50 to draft | Multiplier stacking order | Determines whether a run scales linearly or exponentially |
+| Gates | 30 to place | Slot order on each track | Placement order changes how often each gate fires |
+| Charms | 70 to collect | Passive overlap | Charms multiply everything underneath them |
+| Cars | 9 with unique effects | Speed versus score identity | Each car pushes a different build archetype |
+| Tracks | 9 with distinct layouts | Gate slot count | More slots means more room for chain reactions |
+| Difficulty modes | 5 tiers | Scaling of run length | Higher tiers make "going infinite" dramatically harder |
+
+A practical approach is to pick one system per session. Spend a run testing only gate ordering, then a second run testing only charm stacking. Note what triggered and what did not. That is exactly how the earliest testers found the interactions that now define the endgame.
+
+## How to Run Your Own Testing Session
+
+Community members have already mapped out several challenge runs that stress the game in useful ways. These double as excellent playtest exercises because they force you to evaluate systems you would otherwise ignore.
+
+- **No-money run:** Skip currency gates and boosts entirely. Community reports show this is genuinely possible, with one player finishing at 6,474,600 points and another beating that with 11,220,000.
+- **Pure speed run:** Ignore score gates and push velocity. Players have reported late-run speeds in the range of 10 to 200 loops per second, which is where gate detection quirks tend to appear.
+- **Loop-count run:** Track total laps rather than points. One player reported reaching 150 loops in an early session.
+- **Fuel-less run:** Avoid fuel effects and see how far a run stretches. This is the fastest way to understand the diminishing-returns design.
+
+Two practical tips before you start. First, keep a notepad open — when a chain reaction fires, dozens of cards trigger at once and you will not remember the order afterward. Second, run a fresh start between tests, because speed persists across rounds and only resets when you begin a new run. Carrying a runaway build into a test session will skew every result.
+
+| Session goal | Time investment | What you learn |
+|---|---|---|
+| Gate order experiment | One short run | Which placement sequence maximizes triggers |
+| Charm stacking test | Two to three runs | How passives compound with multipliers |
+| Car identity comparison | One run per car | Which archetype fits your play style |
+| Difficulty scaling check | One run per tier | How much the game tightens at higher settings |
+
+## Launch Snapshot: What the Playtest Led To
+
+The transition from testing to release went smoothly by indie standards. A week after launch, the developer posted a community update noting reviews sitting around 90% positive with roughly 397 total reviews, and thanked players who had followed the project from its earliest builds. The numbers have held up since.
+
+| Detail | Value |
+|---|---|
+| Release date | September 11, 2026 |
+| Developer and publisher | Mheep |
+| Base price | $9.99 |
+| All-time reviews | Very Positive — 670 reviews, 89% positive |
+| Recent reviews | Very Positive — 391 reviews, 87% positive |
+| Steam Deck | Verified |
+| Achievements | 47 |
+| Interface languages | English plus 11 more |
+| Soundtrack | Chill original score by Pulsewith (Justin Skomarovsky) |
+| Bundles | Infinity Edition at $15.27, plus several crossover bundles |
+
+System requirements are refreshingly modest: an Intel Core i3, 2 GB of RAM, and 500 MB of storage on Windows 10 or 11, with comparable specs for macOS 12.0 and Ubuntu 20.04. The game is also playable without quick-time events and supports both Xbox and PlayStation controllers, which matters if you want to test on a handheld or a pad.
+
+You can check current pricing, demo availability, and the full feature list on [The Loopler's official Steam store page](https://store.steampowered.com/app/4150860/The_Loopler/), or look at the original prototype on [the developer's itch.io page for The Loopler](https://mheep.itch.io/the-loopler).
+
+## Frequently Asked Questions
+
+**Is there still an active The Loopler playtest I can join?**
+
+Not in the same form as before launch. The pre-release playtest branch has been superseded by the full release, but the free Steam demo remains the best way to test the game without buying it. The older itch.io prototype is still online, though community reports say it lags well behind the current version.
+
+**Why does the "+1 fuel cell per loop" ability feel like it does nothing?**
+
+Player experience suggests the effect has diminishing returns. It does recharge fuel, but the amount shrinks as you keep refueling, which prevents a run from continuing forever. At very high loop rates the gain becomes hard to notice, so the ability reads as broken even when it is working.
+
+**Can I test specific builds without unlocking everything?**
+
+That is the most common quality-of-life request from the community. Testers have asked for a way to enable or disable unlocked items so drafts stay focused, and the developer has said a toggle is planned. Until then, planning your unlocks around a target build is the best workaround.
+
+**Is The Loopler good for short testing sessions?**
+
+Yes. A single run is quick, and the daily and weekly challenges give you a fixed puzzle with optional leaderboards. That structure makes it easy to test one idea, log the result, and stop — which is exactly how a good playtest session should work.

@@ -1,0 +1,108 @@
+export const metadata = {
+  title: "Guia do playtest de The Loopler: o que os jogadores aprenderam testando o roguelite de carrinhos de corrida da Mheep",
+  description: "Um guia da comunidade para o playtest de The Loopler: o que os testadores encontraram na demo, o feedback que moldou o lançamento e dicas para suas próprias runs.",
+  category: "community",
+  date: "2026-10-16",
+}
+
+A maioria dos deckbuilders roguelite pede que você planeje com cuidado. The Loopler pede que você solte o controle e veja os números explodirem. O deckbuilder de carrinhos de corrida da Mheep passou cerca de um ano em testes públicos antes de seu lançamento completo na Steam em 11 de setembro de 2026, e boa parte dessa troca aconteceu abertamente, na página itch.io do desenvolvedor e nas discussões da Steam. Se você quer a história real do **playtest de The Loopler** — o que os testadores viram, o que os frustrou e quais reclamações o desenvolvedor realmente atendeu — este guia cobre isso, com notas tiradas diretamente da comunidade.
+
+Essa história importa, porque a versão que você pode comprar hoje não é a versão que os primeiros testadores exploraram. A fase de **playtest de The Loopler** moldou expectativas em torno de células de combustível, detecção de portões e escalonamento no fim das runs muito antes de a versão 1.0 ser lançada. Saber o que mudou (e o que deliberadamente não mudou) vai economizar horas de confusão quando suas próprias runs começarem a crescer em bola de neve.
+
+## Como o playtest realmente era
+
+The Loopler nunca foi segredo. A Mheep construiu uma audiência lançando versões jogáveis cedo e respondendo ao feedback diretamente, o que é incomum para um roguelite desenvolvido por uma só pessoa. Ao longo de aproximadamente um ano, os jogadores tiveram três maneiras diferentes de colocar as mãos no jogo antes do lançamento.
+
+| Campo de teste | O que era | O que revelou | Status hoje |
+|---|---|---|---|
+| Protótipo no itch.io | Uma versão inicial gratuita na página itch.io do desenvolvedor | O loop central, as primeiras cartas, os portões e o empilhamento de amuletos | Ainda está online, mas relatos da comunidade dizem que não é atualizado há bastante tempo |
+| Demo na Steam | Uma demo gratuita vinculada à página oficial da loja | Um recorte da estrutura completa do roguelite e da curva de dificuldade | Disponível agora como demo gratuita para PC |
+| Ramo de playtest pré-lançamento | Um aplicativo de teste separado que apareceu na Steam antes do lançamento | Notas de balanceamento e relatos de bugs sobre portões, combustível e comportamento em velocidade extrema | Fechado; substituído pelo lançamento da versão 1.0 |
+
+O protótipo no itch.io é a parte mais documentada da era de playtest, e foi onde a maioria das opiniões mais ruidosas da comunidade se formou. A experiência dos jogadores ali parece um diário de design: pessoas postando capturas de tela de pontuação, discutindo o texto de uma habilidade e forçando o carro até a própria física do jogo desistir.
+
+## Feedback dos testadores que moldou o lançamento completo
+
+Nem toda reclamação virou patch, e essa distinção é a coisa mais útil para entender sobre o desenvolvimento de The Loopler. A Mheep interagia com a comunidade constantemente, mas defendia algumas escolhas de design de propósito. Veja como os maiores temas recorrentes se desenrolaram.
+
+| Relato da comunidade | O que os jogadores disseram | Resposta do desenvolvedor | Situação atual |
+|---|---|---|---|
+| Texto de recarga da célula de combustível | "+1 célula de combustível por loop" parecia inútil ao rodar dezenas de loops por segundo | O efeito tem retornos decrescentes por design, então as runs não podem durar para sempre | Mecânica inalterada; o texto ainda divide os jogadores |
+| Detecção de portões em velocidade extrema | Alguns portões eram pulados quando o carro ultrapassava a lógica da pista | Reconhecido como uma peculiaridade de velocidades realmente absurdas | Ainda é relatado ocasionalmente |
+| Inchaço do pool de melhorias | Itens desbloqueados demais diluíam a escolha de cartas e portões | Dev confirmou que um toggle estava planejado | Recurso de qualidade de vida frequentemente pedido |
+| Versão mobile | Vários pedidos de suporte para celular e tablet | Nenhum lançamento mobile foi anunciado | Pedido em aberto |
+| Balanceamento de "The Muscler" | Um carro parece um modo hardcore embutido | A velocidade passa entre rodadas e só é redefinida no início de uma nova run | Funcionando como pretendido |
+
+Duas lições se destacam. Primeiro, o debate sobre a célula de combustível é, na verdade, um problema de comunicação, não de balanceamento — a mecânica se comporta de forma consistente depois que você sabe dos retornos decrescentes. Segundo, o pedido do toggle de melhorias é o tipo de correção que só aparece quando centenas de jogadores batem na mesma parede ao mesmo tempo, que é exatamente para isso que serve um playtest longo.
+
+## Checklist do playtest de The Loopler: sistemas que vale a pena testar primeiro
+
+Se você está conduzindo sua própria sessão de playtest de The Loopler — seja com a demo gratuita ou com o jogo completo — resista à vontade de apenas perseguir o maior número. Os sistemas interagem, e testá-los isoladamente ensina muito mais.
+
+| Sistema | Conteúdo no lançamento | Teste isto primeiro | Por que importa |
+|---|---|---|---|
+| Cartas | 50 para escolher | Ordem de empilhamento de multiplicadores | Determina se uma run escala de forma linear ou exponencial |
+| Portões | 30 para posicionar | Ordem dos slots em cada pista | A ordem de posicionamento muda a frequência com que cada portão dispara |
+| Amuletos | 70 para coletar | Sobreposição de passivos | Amuletos multiplicam tudo que está abaixo deles |
+| Carros | 9 com efeitos únicos | Identidade de velocidade versus pontuação | Cada carro impulsiona um arquétipo de build diferente |
+| Pistas | 9 com layouts distintos | Número de slots de portão | Mais slots significa mais espaço para reações em cadeia |
+| Modos de dificuldade | 5 níveis | Escalonamento da duração da run | Níveis mais altos tornam "ficar infinito" dramaticamente mais difícil |
+
+Uma abordagem prática é escolher um sistema por sessão. Gaste uma run testando apenas a ordem dos portões, depois uma segunda run testando apenas o empilhamento de amuletos. Anote o que disparou e o que não disparou. Foi exatamente assim que os primeiros testadores encontraram as interações que hoje definem o endgame.
+
+## Como conduzir sua própria sessão de testes
+
+Membros da comunidade já mapearam várias runs de desafio que forçam o jogo de maneiras úteis. Elas também servem como excelentes exercícios de playtest, porque obrigam você a avaliar sistemas que, de outra forma, ignoraria.
+
+- **Run sem dinheiro:** Ignore portões e boosts de moeda completamente. Relatos da comunidade mostram que isso é genuinamente possível, com um jogador terminando com 6.474.600 pontos e outro superando isso com 11.220.000.
+- **Run de velocidade pura:** Ignore portões de pontuação e aumente a velocidade. Jogadores relataram velocidades no fim da run na faixa de 10 a 200 loops por segundo, que é onde as peculiaridades de detecção de portões tendem a aparecer.
+- **Run de contagem de loops:** Acompanhe o total de voltas em vez de pontos. Um jogador relatou alcançar 150 loops em uma sessão inicial.
+- **Run sem combustível:** Evite efeitos de combustível e veja até onde uma run se estende. Esta é a maneira mais rápida de entender o design de retornos decrescentes.
+
+Duas dicas práticas antes de começar. Primeiro, mantenha um bloco de notas aberto — quando uma reação em cadeia dispara, dezenas de cartas são ativadas de uma vez e você não vai lembrar a ordem depois. Segundo, faça um começo novo entre os testes, porque a velocidade persiste entre rodadas e só é redefinida quando você inicia uma nova run. Levar uma build descontrolada para uma sessão de teste vai distorcer todos os resultados.
+
+| Objetivo da sessão | Tempo investido | O que você aprende |
+|---|---|---|
+| Experimento de ordem dos portões | Uma run curta | Qual sequência de posicionamento maximiza disparos |
+| Teste de empilhamento de amuletos | Duas a três runs | Como passivos se acumulam com multiplicadores |
+| Comparação de identidade dos carros | Uma run por carro | Qual arquétipo combina com seu estilo de jogo |
+| Verificação de escalonamento de dificuldade | Uma run por nível | O quanto o jogo aperta em configurações mais altas |
+
+## Panorama do lançamento: aonde o playtest levou
+
+A transição dos testes para o lançamento foi tranquila para os padrões indie. Uma semana após o lançamento, o desenvolvedor publicou uma atualização da comunidade observando avaliações em torno de 90% positivas com aproximadamente 397 avaliações totais, e agradeceu aos jogadores que acompanharam o projeto desde as primeiras builds. Os números se mantiveram desde então.
+
+| Detalhe | Valor |
+|---|---|
+| Data de lançamento | 11 de setembro de 2026 |
+| Desenvolvedor e publicadora | Mheep |
+| Preço base | US$ 9,99 |
+| Avaliações de todos os tempos | Muito Positivas — 670 avaliações, 89% positivas |
+| Avaliações recentes | Muito Positivas — 391 avaliações, 87% positivas |
+| Steam Deck | Verificado |
+| Conquistas | 47 |
+| Idiomas da interface | Inglês e mais 11 |
+| Trilha sonora | Trilha original relaxante de Pulsewith (Justin Skomarovsky) |
+| Pacotes | Edição Infinity por US$ 15,27, além de vários pacotes crossover |
+
+Os requisitos de sistema são refrescantemente modestos: um Intel Core i3, 2 GB de RAM e 500 MB de armazenamento no Windows 10 ou 11, com especificações comparáveis para macOS 12.0 e Ubuntu 20.04. O jogo também é jogável sem eventos de quick-time e oferece suporte a controles de Xbox e PlayStation, o que importa se você quiser testar em um portátil ou com um controle.
+
+Você pode conferir os preços atuais, a disponibilidade da demo e a lista completa de recursos na [página oficial de The Loopler na Steam](https://store.steampowered.com/app/4150860/The_Loopler/), ou ver o protótipo original na [página itch.io do desenvolvedor para The Loopler](https://mheep.itch.io/the-loopler).
+
+## Perguntas frequentes
+
+**Ainda existe um playtest de The Loopler ativo no qual eu possa entrar?**
+
+Não no mesmo formato de antes do lançamento. O ramo de playtest pré-lançamento foi substituído pelo lançamento completo, mas a demo gratuita na Steam continua sendo a melhor maneira de testar o jogo sem comprá-lo. O protótipo mais antigo no itch.io ainda está online, embora relatos da comunidade digam que ele está bem atrás da versão atual.
+
+**Por que a habilidade "+1 célula de combustível por loop" parece não fazer nada?**
+
+A experiência dos jogadores sugere que o efeito tem retornos decrescentes. Ele recarrega combustível, mas a quantidade diminui conforme você continua recarregando, o que impede que uma run continue para sempre. Em taxas de loop muito altas, o ganho fica difícil de perceber, então a habilidade parece quebrada mesmo quando está funcionando.
+
+**Posso testar builds específicas sem desbloquear tudo?**
+
+Esse é o pedido de qualidade de vida mais comum da comunidade. Testadores pediram uma forma de ativar ou desativar itens desbloqueados para que as escolhas permaneçam focadas, e o desenvolvedor disse que um toggle está planejado. Até então, planejar seus desbloqueios em torno de uma build-alvo é a melhor solução alternativa.
+
+**The Loopler é bom para sessões curtas de teste?**
+
+Sim. Uma run individual é rápida, e os desafios diários e semanais oferecem um quebra-cabeça fixo com placares opcionais. Essa estrutura facilita testar uma ideia, registrar o resultado e parar — que é exatamente como uma boa sessão de playtest deveria funcionar.

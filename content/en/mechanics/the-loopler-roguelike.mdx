@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "The Loopler Roguelike Mechanics Guide: Cards, Gates, Charms, and Drift",
+  description: "Learn how The Loopler roguelike works: card drafting, gate placement, charms, fuel, drift, overdrive, difficulty tiers, and leaderboard rules explained.",
+  category: "mechanics",
+  date: "2026-10-16",
+}
+
+Slot cars, deckbuilding, and a score counter that refuses to stop — that is the core pitch of **The Loopler roguelike**, a roguelite deckbuilder from solo developer Mheep. It puts a tiny slot car on a looping track and hands you the tools to turn a modest lap into an avalanche of multipliers. If you have bounced off **The Loopler roguelike** because you could not tell whether your upgrades were actually doing anything, this breakdown covers the mechanics that matter: how cards trigger, why gate order changes everything, and where fuel, drift, and overdrive quietly decide your run.
+
+## What Is The Loopler Roguelike? The Core Run Loop
+
+A run in The Loopler is built around a single track, a single car, and a score goal that grows every round. You draft cards, place gates into fixed slots on the circuit, and stack charms that change how your build behaves. Between rounds you visit the pitstop to shop, reroll, and repair. A standard run is 12 rounds, and certain rounds open with a three-way route choice that sends you into different event types — hazards, bosses, or reward-heavy paths.
+
+The game launched on Steam on September 11, 2026, and ships with nine cars, nine tracks, five difficulty modes, 50 cards, 30 gates, and 70 charms. It is verified for Steam Deck and playable without quick-time events.
+
+| System | What It Does | Where You Interact With It |
+|---|---|---|
+| Cards | Trigger effects on loops, repairs, drift, or other cards | Drafted from card packs, managed in the loadout |
+| Gates | Modify the track itself as the car passes through | Placed into gate slots on the circuit |
+| Charms | Passive stacking bonuses that alter run-wide rules | Bought and stacked in the pitstop |
+| Garage | Permanent stat tuning for the current run | Stat panel, car tab, modifier upgrades |
+| Pitstop | Shopping, rerolling, repairing, and loadout changes | Between rounds |
+
+The important detail is that these layers are not independent. A card that triggers "on emptied" behaves differently depending on whether a gate is refilling your tank, and a charm that boosts multipliers does nothing if your multiplier gates get replaced mid-run.
+
+## Cards, Gates, and Charms: How the Three Build Layers Interact
+
+Cards are the engine of your score. They can grant passive multipliers, spawn ghost cars, roll for jackpots, or trigger other cards entirely. Many of them are conditional: "on start" and "on emptied" cards carry charge counts per repair, and those charges are displayed separately from the effect text so you can tell info from payoff.
+
+Gates are the track-level layer. Each circuit has a limited number of placement slots, and the order in which the car hits them determines how multipliers compound. Placement matters enough that the community treats gate sequencing as a core skill rather than an afterthought.
+
+| Layer | Primary Role | Example Behaviors | Key Pitfall |
+|---|---|---|---|
+| Cards | Score generation and triggers | Jackpot rolls, ghost cars, chain triggers | Depleted cards stop contributing until repaired |
+| Gates | Track modification and sequencing | Score, multiply, chain, hungry, overdrive gates | Replacing a gate can remove the multiplier it granted |
+| Charms | Run-wide passive scaling | Lucky chance, gold generation, drift support | Some charms explicitly ignore extra Lucky Chance |
+
+A few interactions are worth knowing before you commit gold. A Hungry Gate placed on top of an existing gate eats it and absorbs its levels, which is one of the strongest scaling plays in the game. A Chain Gate's accumulated score resets every round, so it rewards fast early loops rather than late-round banking. And selling a Punch Card or Write Off takes back the score multiplier it gave you — the tooltip says so, and it is easy to miss.
+
+## Speed, Fuel, Boost, and Drift: The Engine Mechanics Explained
+
+The car itself is a stat sheet, and most new-player confusion lives here. Fuel efficiency drops as you refuel more often, which is why "refuel 1 cell per loop" effects can look broken when your loops-per-second counter is enormous. This is intentional diminishing returns, not a bug — and it is one of the most frequently reported misunderstandings in community discussions.
+
+Drift only triggers in corners; straights never activate it. Drift tick progress carries between corners within an attempt, and at extremely high speeds drift stops ticking altogether unless you have a Drift Gate. That single gate is the difference between a drift build that scales forever and one that silently dies at round 9.
+
+| Stat | What It Affects | Common Mistake |
+|---|---|---|
+| Speed | Loops per second, trigger frequency, score volume | Pushing speed before securing drift and gate detection |
+| Fuel | Run length; empty tank ends your momentum | Stacking refuel effects without accounting for diminishing returns |
+| Boost | Short bursts of speed gain, capped by Boost Cap | Ignoring that boost above the cap decays during overdrive |
+| Overdrive | Timed boost pulses with their own timer | Expecting Superheated Gate buffs to persist through overdrive |
+| Drift | Corner-based multiplier scaling | Forgetting that drift stops at extreme speeds |
+| Lucky Chance | Minimum card rank and upgrade quality | Assuming it boosts charms that explicitly ignore it |
+
+Overdrive deserves its own note. It runs on a timer, pulses boost at fixed intervals, and interacts with cards like Rocket, which doubles overdrive boost rather than tripling it after balance changes. Boost gains also taper at extreme speeds instead of holding a floor, so raw acceleration stacking hits a wall eventually.
+
+## Difficulty Tiers and Leaderboards: How Progression Actually Works
+
+The Loopler has five difficulty modes, and they are no longer unlocked per track — they unlock globally. Track cards now open on your highest unlocked difficulty, which means you are never forced back to Bronze just because you picked a new circuit. Higher tiers apply penalties to card and gate effectiveness; Emerald and Diamond are the punishing end of the ladder, and they are where builds get railroaded into narrow, reliable archetypes.
+
+Leaderboards have strict rules, and misunderstanding them wastes runs.
+
+| Leaderboard | Submission Rule | Notes |
+|---|---|---|
+| Standard track boards | Run must be settled on round 12 | Scores are only submitted if you settle rather than push into Infinity |
+| Infinity board | Ranks by fewest rounds to reach Infinity | Separate board from standard track scores |
+| Daily and weekly challenges | Per-challenge boards | Challenge runs award XP and achievements normally |
+
+If you want a leaderboard score, settle. If you want the prestige of an Infinity run, accept that the run will not count toward the normal track boards. The game now warns you about this at the Infinity choice.
+
+## Practical Tips for Your First Ten Runs
+
+- **Secure fuel before anything else.** The first pitstop of a run always offers a fuel or brake gate if you do not have a fuel source yet.
+- **Buy a Drift Gate before you chase speed.** Drift stops triggering at very high speeds without one.
+- **Treat gate order as a build decision.** The same five gates in a different sequence produce very different multipliers.
+- **Hover your garage stats.** Stat tooltips now explain what each value does instead of only naming it, including Loop Score, Overdrive Timer, Overdrive Pulse, and Lucky Chance.
+- **Use the 3x speed button.** Community reports frequently cite repeated animations and transitions as the biggest time sink between attempts.
+- **Do not sell multiplier cards casually.** Selling Punch Card or Write Off removes the score multiplier it granted.
+
+| Early-Game Priority | Reason | Risk If Ignored |
+|---|---|---|
+| Fuel source | Empty tank ends scoring momentum | Run stalls mid-round |
+| Drift support | Corner multipliers are a major scaling path | Late-round score ceiling |
+| Gate sequencing | Order drives compounding | Multipliers land out of order |
+| One upgradeable card | Level scaling beats breadth | Damage spread too thin to clear goals |
+
+Player experience also flags a real friction point: there is no in-game glossary, and several effects assume you already know the terminology. Until that changes, the community threads on the Steam hub are the fastest way to decode specific card and gate interactions.
+
+## Is The Loopler Roguelike Worth Playing? Reception and Scope
+
+Reception has been strong. The Steam store page lists an overall "Very Positive" rating at roughly 89% of 670 reviews, with a similar recent rating across the last 30 days. One week after launch, the developer reported over 40,000 units sold, more than 42,000 unique users, a peak of 2,068 concurrent players, and close to 200,000 hours played. The game also includes 47 Steam achievements, cloud saves, leaderboards, family sharing, and 12 interface languages.
+
+| Content Scope | Count |
+|---|---|
+| Cars | 9 |
+| Tracks | 9 |
+| Difficulty modes | 5 |
+| Cards | 50 |
+| Gates | 30 |
+| Charms | 70 |
+| Steam achievements | 47 |
+
+Community sentiment splits along predictable lines. Praise centers on the soundtrack by Pulsewith (Justin Skomarovsky), the dopamine-heavy scaling, and the "zero to hero" arc of a run. Criticism focuses on unclear feedback — players say it is hard to tell whether a specific upgrade helped — and on higher difficulties demanding specific early rolls. As one reviewer put it, do not expect Balatro with cars; the active decision-making sits in drafting and placement, not in moment-to-moment play.
+
+For current pricing, bundles, DLC, and the free demo, check [The Loopler on the official Steam store page](https://store.steampowered.com/app/4150860/The_Loopler/). The developer's [itch.io page for The Loopler](https://mheep.itch.io/the-loopler) hosts an older demo build and an active comment thread where the developer answers mechanic questions directly.
+
+## FAQ
+
+**What kind of game is The Loopler roguelike?**
+It is a roguelite deckbuilder about a slot car driving loops. You draft cards, place gates on the track, and stack charms to hit a score goal each round, with an optional Infinity mode that pushes the goal higher indefinitely.
+
+**Do I have to settle on round 12 for leaderboards to count?**
+Yes. Standard track leaderboards only accept runs where you settle at round 12. Pushing into Infinity sends your run to the separate Infinity leaderboard, which ranks by fewest rounds to reach Infinity.
+
+**Why does my "refuel per loop" effect seem to stop working?**
+Fuel efficiency decreases the more you refuel, so refuel effects deliver diminishing returns at high loop counts. This is by design, not a bug — the effect is still triggering, it is just paying out less each time.
+
+**Is The Loopler playable on Steam Deck?**
+Yes. It is Steam Deck Verified, supports Xbox and PlayStation controllers, and can be played without quick-time events.

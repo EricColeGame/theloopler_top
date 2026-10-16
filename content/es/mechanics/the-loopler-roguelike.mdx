@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Guía de mecánicas de The Loopler Roguelike: cartas, puertas, amuletos y derrape",
+  description: "Aprende cómo funciona el roguelike The Loopler: selección de cartas, colocación de puertas, amuletos, combustible, derrape, overdrive, niveles de dificultad y reglas de clasificación explicadas.",
+  category: "mechanics",
+  date: "2026-10-16",
+}
+
+Coches de slot, construcción de mazos y un contador de puntuación que se niega a detenerse: esa es la propuesta central de **el roguelike The Loopler**, un deckbuilder roguelite del desarrollador en solitario Mheep. Coloca un pequeño coche de slot en una pista con bucle y te da las herramientas para convertir una vuelta modesta en una avalancha de multiplicadores. Si has abandonado **el roguelike The Loopler** porque no podías saber si tus mejoras realmente hacían algo, este desglose cubre las mecánicas que importan: cómo se activan las cartas, por qué el orden de las puertas lo cambia todo y dónde el combustible, el derrape y el overdrive deciden silenciosamente tu partida.
+
+## ¿Qué es el roguelike The Loopler? El bucle central de la partida
+
+Una partida en The Loopler se construye alrededor de una sola pista, un solo coche y un objetivo de puntuación que crece cada ronda. Seleccionas cartas, colocas puertas en ranuras fijas del circuito y acumulas amuletos que cambian el comportamiento de tu build. Entre rondas visitas la parada en boxes para comprar, rerolear y reparar. Una partida estándar consta de 12 rondas, y ciertas rondas se abren con una elección de ruta de tres opciones que te lleva a distintos tipos de evento: peligros, jefes o caminos cargados de recompensas.
+
+El juego se lanzó en Steam el 11 de septiembre de 2026 y viene con nueve coches, nueve pistas, cinco modos de dificultad, 50 cartas, 30 puertas y 70 amuletos. Está verificado para Steam Deck y se puede jugar sin eventos de tiempo rápido.
+
+| Sistema | Qué hace | Dónde interactúas con él |
+|---|---|---|
+| Cartas | Activan efectos en bucles, reparaciones, derrape u otras cartas | Se seleccionan de paquetes de cartas, se gestionan en el equipamiento |
+| Puertas | Modifican la propia pista cuando el coche pasa por ellas | Se colocan en ranuras de puertas del circuito |
+| Amuletos | Bonificaciones pasivas acumulables que alteran las reglas de toda la partida | Se compran y acumulan en la parada en boxes |
+| Garaje | Ajuste permanente de estadísticas para la partida actual | Panel de estadísticas, pestaña del coche, mejoras de modificadores |
+| Parada en boxes | Comprar, rerolear, reparar y cambiar el equipamiento | Entre rondas |
+
+El detalle importante es que estas capas no son independientes. Una carta que se activa "al vaciarse" se comporta de forma distinta según si una puerta está rellenando tu depósito, y un amuleto que aumenta los multiplicadores no hace nada si tus puertas multiplicadoras son reemplazadas a mitad de partida.
+
+## Cartas, puertas y amuletos: cómo interactúan las tres capas de build
+
+Las cartas son el motor de tu puntuación. Pueden otorgar multiplicadores pasivos, generar coches fantasma, tirar por jackpots o activar por completo otras cartas. Muchas son condicionales: las cartas "al inicio" y "al vaciarse" llevan recuentos de cargas por reparación, y esas cargas se muestran por separado del texto de efecto para que puedas distinguir la información del beneficio.
+
+Las puertas son la capa de pista. Cada circuito tiene un número limitado de ranuras de colocación, y el orden en que el coche pasa por ellas determina cómo se acumulan los multiplicadores. La colocación importa lo suficiente como para que la comunidad trate la secuencia de puertas como una habilidad central y no como algo secundario.
+
+| Capa | Rol principal | Comportamientos de ejemplo | Error clave |
+|---|---|---|---|
+| Cartas | Generación de puntuación y activadores | Tiradas de jackpot, coches fantasma, activadores en cadena | Las cartas agotadas dejan de contribuir hasta que se reparan |
+| Puertas | Modificación de pista y secuenciación | Puertas de puntuación, multiplicación, cadena, hambre y overdrive | Reemplazar una puerta puede eliminar el multiplicador que otorgaba |
+| Amuletos | Escalado pasivo para toda la partida | Probabilidad de suerte, generación de oro, apoyo al derrape | Algunos amuletos ignoran explícitamente la Probabilidad de Suerte extra |
+
+Vale la pena conocer algunas interacciones antes de gastar oro. Una Puerta Hambrienta colocada encima de una puerta existente se la come y absorbe sus niveles, lo que es una de las jugadas de escalado más fuertes del juego. La puntuación acumulada de una Puerta de Cadena se reinicia cada ronda, así que recompensa bucles tempranos rápidos en lugar de acumular para el final de la ronda. Y vender una Punch Card o una Write Off te quita el multiplicador de puntuación que te dio; el tooltip lo dice, y es fácil pasarlo por alto.
+
+## Velocidad, combustible, impulso y derrape: las mecánicas del motor explicadas
+
+El coche en sí es una hoja de estadísticas, y aquí es donde reside la mayor parte de la confusión de los nuevos jugadores. La eficiencia del combustible cae a medida que repostas más a menudo, y por eso los efectos de "repostar 1 celda por bucle" pueden parecer rotos cuando tu contador de bucles por segundo es enorme. Estos son rendimientos decrecientes intencionados, no un error, y es uno de los malentendidos más reportados en las discusiones de la comunidad.
+
+El derrape solo se activa en las curvas; las rectas nunca lo activan. El progreso del tick de derrape se conserva entre curvas dentro de un intento, y a velocidades extremadamente altas el derrape deja de hacer tick por completo a menos que tengas una Puerta de Derrape. Esa única puerta marca la diferencia entre una build de derrape que escala para siempre y otra que muere en silencio en la ronda 9.
+
+| Estadística | Qué afecta | Error común |
+|---|---|---|
+| Velocidad | Bucles por segundo, frecuencia de activación, volumen de puntuación | Aumentar la velocidad antes de asegurar derrape y detección de puertas |
+| Combustible | Duración de la partida; un depósito vacío acaba con tu impulso | Acumular efectos de repostaje sin tener en cuenta los rendimientos decrecientes |
+| Impulso | Ráfagas cortas de ganancia de velocidad, limitadas por el límite de impulso | Ignorar que el impulso por encima del límite decae durante el overdrive |
+| Overdrive | Pulsos de impulso temporizados con su propio temporizador | Esperar que los beneficios de la Puerta Sobrecalentada persistan durante el overdrive |
+| Derrape | Escalado de multiplicadores basado en curvas | Olvidar que el derrape se detiene a velocidades extremas |
+| Probabilidad de Suerte | Rango mínimo de carta y calidad de mejora | Asumir que potencia amuletos que la ignoran explícitamente |
+
+Overdrive merece una nota aparte. Funciona con un temporizador, emite pulsos de impulso a intervalos fijos e interactúa con cartas como Rocket, que duplica el impulso de overdrive en lugar de triplicarlo después de los cambios de equilibrio. Las ganancias de impulso también se reducen a velocidades extremas en lugar de mantener un mínimo, así que acumular aceleración bruta acaba topándose con un muro.
+
+## Niveles de dificultad y clasificaciones: cómo funciona realmente la progresión
+
+The Loopler tiene cinco modos de dificultad, y ya no se desbloquean por pista: se desbloquean globalmente. Las cartas de pista ahora se abren en tu dificultad más alta desbloqueada, lo que significa que nunca te obligan a volver a Bronce solo porque elegiste un circuito nuevo. Los niveles superiores aplican penalizaciones a la eficacia de cartas y puertas; Esmeralda y Diamante son el extremo castigador de la escalera, y son donde las builds quedan empujadas hacia arquetipos estrechos y fiables.
+
+Las clasificaciones tienen reglas estrictas, y malinterpretarlas desperdicia partidas.
+
+| Clasificación | Regla de envío | Notas |
+|---|---|---|
+| Tablas estándar de pista | La partida debe cerrarse en la ronda 12 | Las puntuaciones solo se envían si cierras la partida en lugar de entrar en Infinito |
+| Tabla de Infinito | Clasifica por menos rondas para alcanzar Infinito | Tabla separada de las puntuaciones estándar de pista |
+| Desafíos diarios y semanales | Tablas por desafío | Las partidas de desafío otorgan XP y logros con normalidad |
+
+Si quieres una puntuación en la clasificación, cierra la partida. Si quieres el prestigio de una partida Infinito, acepta que la partida no contará para las tablas estándar de pista. El juego ahora te avisa de esto en la elección de Infinito.
+
+## Consejos prácticos para tus primeras diez partidas
+
+- **Asegura combustible antes que nada.** La primera parada en boxes de una partida siempre ofrece una puerta de combustible o de freno si aún no tienes una fuente de combustible.
+- **Compra una Puerta de Derrape antes de buscar velocidad.** El derrape deja de activarse a velocidades muy altas sin una.
+- **Trata el orden de las puertas como una decisión de build.** Las mismas cinco puertas en una secuencia distinta producen multiplicadores muy diferentes.
+- **Pasa el cursor por las estadísticas de tu garaje.** Los tooltips de estadísticas ahora explican qué hace cada valor en lugar de solo nombrarlo, incluyendo Puntuación de Bucle, Temporizador de Overdrive, Pulso de Overdrive y Probabilidad de Suerte.
+- **Usa el botón de velocidad 3x.** Los informes de la comunidad citan con frecuencia las animaciones y transiciones repetidas como la mayor pérdida de tiempo entre intentos.
+- **No vendas cartas multiplicadoras a la ligera.** Vender Punch Card o Write Off elimina el multiplicador de puntuación que otorgaba.
+
+| Prioridad temprana | Razón | Riesgo si se ignora |
+|---|---|---|
+| Fuente de combustible | Un depósito vacío acaba con el impulso de puntuación | La partida se estanca a mitad de ronda |
+| Apoyo al derrape | Los multiplicadores de curva son una vía de escalado importante | Techo de puntuación en rondas tardías |
+| Secuenciación de puertas | El orden impulsa la acumulación | Los multiplicadores llegan desordenados |
+| Una carta mejorable | El escalado por niveles supera a la amplitud | Daño repartido demasiado fino para cumplir objetivos |
+
+La experiencia de los jugadores también señala un punto de fricción real: no hay glosario dentro del juego, y varios efectos asumen que ya conoces la terminología. Hasta que eso cambie, los hilos de la comunidad en el hub de Steam son la forma más rápida de descifrar interacciones específicas entre cartas y puertas.
+
+## ¿Vale la pena jugar al roguelike The Loopler? Recepción y alcance
+
+La recepción ha sido fuerte. La página de la tienda de Steam muestra una valoración general "Muy positiva" de aproximadamente el 89 % de 670 reseñas, con una valoración reciente similar en los últimos 30 días. Una semana después del lanzamiento, el desarrollador informó de más de 40.000 unidades vendidas, más de 42.000 usuarios únicos, un pico de 2.068 jugadores simultáneos y cerca de 200.000 horas jugadas. El juego también incluye 47 logros de Steam, guardado en la nube, clasificaciones, uso compartido familiar y 12 idiomas de interfaz.
+
+| Alcance del contenido | Cantidad |
+|---|---|
+| Coches | 9 |
+| Pistas | 9 |
+| Modos de dificultad | 5 |
+| Cartas | 50 |
+| Puertas | 30 |
+| Amuletos | 70 |
+| Logros de Steam | 47 |
+
+El sentimiento de la comunidad se divide por líneas predecibles. Los elogios se centran en la banda sonora de Pulsewith (Justin Skomarovsky), el escalado cargado de dopamina y el arco de "cero a héroe" de una partida. Las críticas se centran en la retroalimentación poco clara —los jugadores dicen que es difícil saber si una mejora concreta ayudó— y en que las dificultades más altas exigen tiradas tempranas específicas. Como dijo un crítico, no esperes Balatro con coches; la toma de decisiones activa está en la selección y la colocación, no en el juego momento a momento.
+
+Para consultar precios actuales, paquetes, DLC y la demo gratuita, visita [The Loopler en la página oficial de la tienda de Steam](https://store.steampowered.com/app/4150860/The_Loopler/). La [página de itch.io del desarrollador para The Loopler](https://mheep.itch.io/the-loopler) aloja una versión de demo más antigua y un hilo de comentarios activo donde el desarrollador responde directamente a preguntas sobre mecánicas.
+
+## Preguntas frecuentes
+
+**¿Qué tipo de juego es el roguelike The Loopler?**
+Es un deckbuilder roguelite sobre un coche de slot que da vueltas. Seleccionas cartas, colocas puertas en la pista y acumulas amuletos para alcanzar un objetivo de puntuación cada ronda, con un modo Infinito opcional que eleva el objetivo indefinidamente.
+
+**¿Tengo que cerrar la partida en la ronda 12 para que cuente en las clasificaciones?**
+Sí. Las clasificaciones estándar de pista solo aceptan partidas en las que cierras en la ronda 12. Si entras en Infinito, tu partida pasa a la clasificación separada de Infinito, que ordena por menos rondas para alcanzar Infinito.
+
+**¿Por qué mi efecto de "repostar por bucle" parece dejar de funcionar?**
+La eficiencia del combustible disminuye cuanto más repostas, así que los efectos de repostaje dan rendimientos decrecientes con recuentos de bucles altos. Es intencionado, no un error: el efecto sigue activándose, solo que paga menos cada vez.
+
+**¿Se puede jugar a The Loopler en Steam Deck?**
+Sí. Está verificado para Steam Deck, admite mandos de Xbox y PlayStation, y se puede jugar sin eventos de tiempo rápido.

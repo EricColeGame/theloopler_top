@@ -1,0 +1,125 @@
+export const metadata = {
+  title: "The Loopler Idle Mechanics Explained: Cards, Gates, Charms, and Going Infinite",
+  description: "A deep dive into The Loopler idle mechanics: how cards, gates, and charms stack, what ships at launch, and tips for pushing a run toward infinity.",
+  category: "mechanics",
+  date: "2026-10-16",
+}
+
+Most idle games ask you to wait. The Loopler idle mechanics ask you to think, then wait, then think again. Released on Steam on September 11, 2026 by solo developer Mheep, the game straps a slot car to a closed track and lets it circle while you stack multipliers, place gates, and collect charms until the score stops behaving like a normal number. That combination is why The Loopler idle design matters: it borrows the satisfying drip-feed of an incremental game but keeps the decision-making of a roguelite deckbuilder, so a run never turns into pure background noise.
+
+## Why The Loopler Idle Mechanics Are More Strategic Than They Look
+
+In most incremental games, the only real decision happens once every few minutes — buy the next upgrade or save for something bigger. The Loopler compresses that decision into every single lap. The car drives itself, but the track is full of things you put there: cards you drafted, gates you slotted into fixed positions, and charms you stacked along the way. Each pass through those elements can fire a chain of effects, so a lap is never just a lap.
+
+That structure supports two very different play styles. You can lean forward, plan a build like you would in a card game, and tune every slot by hand — or you can let a run tick along in the background while you do something else and check back when the numbers get interesting. The game's November 2025 announcement described this as relaxed automation paired with strategic build-crafting, and the launch build delivers on both halves.
+
+The tension comes from round goals. Every round has a score target. Hit it and the run continues; fall short and the run ends. Because loops keep coming whether or not you are watching, failure is rarely sudden — it is a slow drift you can usually see coming several rounds ahead. That is what makes the game feel calm instead of punishing.
+
+## The Core Loop, Step by Step
+
+Strip away the card art and the charm stacking, and the structure underneath is a repeating seven-stage sequence.
+
+| Stage | What happens | What it changes |
+|---|---|---|
+| Car circles the track | The car auto-drives with no input required | Loop count and base score |
+| Cards trigger | Drafted cards fire from loop events | Multipliers, ghost cars, extra triggers |
+| Gates apply | Placed gates modify each pass through their slot | Order-sensitive bonuses |
+| Charms scale | Passive charms apply their effects continuously | Whole-run scaling |
+| Round goal check | Current score is compared against the round target | Run continues or ends |
+| Gold spend | Currency earned mid-run is spent on the build | Strength inside the current run |
+| Meta unlock | Currency banked after the run buys permanent upgrades | Strength of future runs |
+
+The important detail is that stages two, three, and four do not resolve in isolation. A gate can amplify a card, a card can spawn a ghost car that passes through the same gates, and a charm can multiply everything the pair produces. Community players describe this as the "fireworks show" moment — the point where a modest build suddenly tears across the screen and a round goal that looked impossible two laps ago gets cleared with room to spare.
+
+Because the car keeps looping during all of this, the game also has a natural pacing valve. If you want to slow down and study your build, you can pause; if you want the numbers to run, you can step away. Either way, the loop itself never punishes you for looking away for thirty seconds.
+
+## Cards, Gates, and Charms: The Three Build Layers
+
+Understanding The Loopler means understanding that three separate systems feed the same score, and they want different things from you.
+
+| Layer | How you acquire it | When it matters | What it is best at |
+|---|---|---|---|
+| Cards | Drafted during a run | Constantly, on trigger events | Active synergies and chain reactions |
+| Gates | Placed into fixed track slots | On every pass through the slot | Order-dependent multipliers |
+| Charms | Discovered and stacked | Passively, all run long | Global scaling and consistency |
+
+**Cards** are the drafting layer. Their effects vary widely — passive multipliers, spawned ghost cars, dice rolls for a jackpot, or effects that trigger other cards outright. Because they fire from multiple sources, a single well-supported card can become the engine of an entire run.
+
+**Gates** are the placement layer. Each track gives you a set number of slots, and the order you fill them in changes what you get out of them. This is the part that rewards replaying the same track: two players with identical card pools can produce wildly different results simply by swapping the sequence of two gates.
+
+**Charms** are the passive layer. They do not need triggers to work, which makes them the stabilizer of a build. When a run starts to feel inconsistent, charms are usually the fix.
+
+### Where new players go wrong
+
+The most common early mistake is treating gates as a second card pile. They are not — gates are positional. A gate placed in the wrong slot in the order can contribute almost nothing, while the same gate one slot earlier might be the difference between a clean round clear and a lost run.
+
+## Content at a Glance: What Ships With The Loopler
+
+The launch build is considerably larger than the original announcement suggested. Here is the shape of it.
+
+| Content type | Amount at launch |
+|---|---|
+| Cars | 9, each with its own identity and effects |
+| Tracks | 9, with different looks and layouts |
+| Cards | 50 to draft |
+| Gates | 30 to place |
+| Charms | 70 to collect |
+| Difficulty modes | 5 |
+| Steam achievements | 47 |
+
+Comparing the pre-launch announcement to the shipped game shows how much grew during development.
+
+| Feature | November 2025 announcement | Launch build |
+|---|---|---|
+| Cars | 4+ | 9 |
+| Tracks | 5+ | 9 |
+| Gates | 14+ | 30 |
+| Difficulty modes | 5 | 5 |
+| Draftable upgrades/cards | 30+ | 50 cards |
+
+Note that the terminology shifted between the announcement and launch — what the early press release called "upgrades" was reorganized into the card draft you see in the final game, so the two numbers are not a like-for-like comparison.
+
+Beyond the raw counts, the game ships with daily and weekly challenges that feed optional leaderboards, a chill soundtrack by Pulsewith (Justin Skomarovsky), and full Steam Deck Verified status. At the time of writing, the [official Steam store page for The Loopler](https://store.steampowered.com/app/4150860/The_Loopler/) listed a "Very Positive" overall rating with 89% of 670 reviews positive, alongside a free demo and two DLC items.
+
+Hardware demands are light, which suits the idle half of the design.
+
+| Platform | Minimum spec | Storage |
+|---|---|---|
+| Windows 10 / 11 (x64) | Intel Core i3, 2 GB RAM | 500 MB |
+| macOS 12.0 | Apple M1 or Intel Core i5, 2 GB RAM | 500 MB |
+| Ubuntu 20.04 | 4 hardware CPU threads (i5-750 or better), 2 GB RAM | 500 MB |
+
+## Optimization Tips and Player Experience
+
+Once you understand the layers, run planning becomes a matter of knowing which layer deserves your attention at which moment.
+
+| Run phase | Priority | Why it matters |
+|---|---|---|
+| Early rounds | High-trigger cards | Consistency beats raw power while the goal is small |
+| Mid rounds | Gate ordering | Position multiplies everything downstream |
+| Late rounds | Charms and passive multipliers | Global scaling carries a build past steep goals |
+| Endgame | Maxing cards and gates | Small percentage gains compound over thousands of loops |
+
+A few practical habits that experienced players repeat:
+
+- **Draft for triggers, not just for numbers.** A card that fires five times per loop usually outperforms a bigger flat bonus that fires once.
+- **Re-order before you re-draft.** If a round is close, rearranging gates is free; drafting is not.
+- **Watch the goal curve, not the score.** The question is never "how big is my number," it is "will this number be enough in three rounds."
+- **Use charms to smooth variance.** Dice-roll and jackpot effects are exciting but swingy; a charm that guarantees a floor keeps a run alive through bad drafts.
+- **Push difficulty only when a build is boring.** Higher difficulty modes exist to make infinity harder to reach, not to make early rounds miserable.
+
+Community reports from the demo period are worth reading alongside any guide. On the demo's itch.io page, one player experience flagged a tax gate that appeared to trigger infinitely instead of consuming its charges, and another described wanting more control and view options when playing on a Steam Deck. These are player-reported observations from an earlier build rather than confirmed issues in the released version, but they are a useful reminder that gate behavior is exactly the kind of edge case this game's synergy system invites.
+
+## FAQ
+
+**Is The Loopler an idle game or a deckbuilder?**
+It is genuinely both, and that is the point. The Loopler idle foundation keeps the car moving without input, while the drafting, gate placement, and charm stacking give you roguelite decisions to make between and during runs.
+
+**Do I have to watch the car the whole time?**
+No. Runs progress while you are doing something else, which is one of the game's main appeals. The tradeoff is that a run can quietly fall behind its round goal if you ignore a build that needed a fix two rounds earlier.
+
+**What actually ends a run?**
+Falling short of a round's score goal. There is no timer and no sudden death — the score target simply rises, and once your build cannot keep pace, the run closes out and you bank currency for permanent upgrades.
+
+**Is there a way to try it first?**
+Yes. A demo is available on the Steam store page, and the game is Steam Deck Verified if you prefer playing handheld.

@@ -1,0 +1,133 @@
+export const metadata = {
+  title: "Guía de build de coche de The Loopler: combustible, puertas y cartas que se vuelven infinitas",
+  description: "Una guía práctica de build de coche de The Loopler: supervivencia de combustible, un motor de puntuación, orden de puertas, acumulación de amuletos y elecciones en paradas en boxes que mantienen vivas las partidas.",
+  category: "vehicles",
+  date: "2026-10-16",
+}
+
+## Por qué una build estable vence a una llamativa
+
+La mayoría de las partidas en The Loopler no terminan porque los números fueran demasiado pequeños. Terminan porque el indicador de combustible se vació mientras la puntuación subía, y una prometedora build de coche de The Loopler se convirtió silenciosamente en un problema muy rápido. Entender cómo encajan las piezas importa más que perseguir el multiplicador más grande de la pantalla.
+
+The Loopler es un roguelite de construcción de mazos del desarrollador Mheep, lanzado en [Steam](https://store.steampowered.com/app/4150860/The_Loopler/) el 11 de septiembre de 2026. Tu coche de slot recorre la pista por su cuenta mientras cartas, puertas y amuletos disparan efectos que mueven puntuación, combustible, Boost y oro. Lo divertido es ver cómo una configuración modesta se convierte en bola de nieve, pero la bola de nieve solo se forma cuando el motor subyacente es sólido.
+
+Una buena build de coche de The Loopler tiene tres tareas, en este orden: mantener vivo el coche, mantener la puntuación creciendo a un ritmo repetible y solo entonces añadir multiplicadores que hagan absurdo ese crecimiento. Sáltate la primera tarea y la partida muere pronto. Sáltate la segunda y te estancas contra objetivos de puntuación crecientes. Sáltate la tercera y simplemente vas más lento que los demás.
+
+## Cómo funciona realmente una partida
+
+Antes de optimizar nada, ayuda ver el bucle como un ciclo y no como una lista de tareas. Cada ronda repite el mismo ritmo, con ofertas aleatorias entre medias.
+
+| Etapa | Qué ocurre | En qué deberías pensar |
+| --- | --- | --- |
+| Iniciar la ronda | El coche empieza a dar vueltas y los efectos se preparan | ¿Aguanta tu combustible una vuelta completa? |
+| Completar vueltas | Se activan los disparadores basados en vueltas | ¿Tus activadores están ocurriendo de verdad? |
+| Resolver cartas y puertas | Se activan los efectos elegidos y las puertas de las ranuras de pista | ¿Hay algo activándose que no habías planeado? |
+| Llenar el objetivo de puntuación | La ronda se completa y vuelves al mapa de ruta | ¿Puede este motor mantener el ritmo según crecen los objetivos? |
+| Recompensa y elección de ruta | Eliges una recompensa y un camino | ¿Qué elección cubre tu indicador más débil? |
+| Paradas en boxes y eventos | Tiendas, repostaje y mejoras | ¿Estás comprando un rol o solo un número brillante? |
+
+Los eventos de ruta, las opciones de recompensa y el stock de las paradas en boxes cambian entre partidas, así que una "ruta perfecta" guionizada no es un plan real. Las prioridades sí lo son. Sabe qué le falta a tu build y toma la oferta que cubra ese hueco.
+
+Los sistemas centrales se desglosan con claridad:
+
+| Sistema | Función práctica |
+| --- | --- |
+| Puntuación | Llena el objetivo de la ronda actual. Necesitas una forma repetible de mantener el ritmo. |
+| Cartas | Efectos elegidos con condiciones de activación impresas. Comprueba cuándo se activa cada una. |
+| Puertas | Efectos colocados en ranuras de pista. El coche las encuentra en el orden de la pista. |
+| Amuletos | Efectos pasivos acumulables que remodelan cómo se desarrolla una partida. |
+| Piezas de garaje | Equipo entre partidas que modifica depósito de combustible, eficiencia, durabilidad, límite de Boost y velocidad punta. |
+| Efectos de coche | Cada uno de los nueve coches tiene su propia identidad. Úsala como sesgo inicial, no como obligación. |
+
+Vale la pena entender pronto las configuraciones de equipamiento. Tu Loadout controla qué cartas, puertas y amuletos desbloqueados pueden aparecer en las ofertas. Los objetos habilitados pueden salir, pero no están garantizados. Un Loadout enfocado es una de las formas más silenciosas de dirigir una partida.
+
+## El marco de cuatro pasos para una build de coche de The Loopler que funcione
+
+Esta es la secuencia que convierte una conducción frágil en una máquina autosuficiente.
+
+| Paso | Objetivo | Qué comprobar | Error común |
+| --- | --- | --- | --- |
+| 1. Resolver la supervivencia del combustible | No dejar que el depósito se seque nunca | Vigilar combustible y durabilidad durante una vuelta completa | Comprar puntuación mientras el coche se come su propia salud |
+| 2. Elegir un motor de puntuación | Un plan repetible que escale | Puntuación por activadores de vuelta, una cadena de puertas o una configuración de alimentación | Reunir la mitad de tres motores |
+| 3. Comprar activadores fiables | Efectos que ya se activan en cada vuelta | Puertas que el coche siempre cruza; condiciones que ya ocurren | Pagar por amuletos de alto riesgo que necesitan una combinación que falta |
+| 4. Añadir multiplicadores | Mejorar frecuencia y rendimiento | ¿El multiplicador se aplica a algo que se activa a menudo? | Multiplicadores en activadores que se activan dos veces por partida |
+
+**Baja la velocidad de la simulación y observa una vuelta completa.** Anota qué efectos se activan, si el combustible termina más alto o más bajo y cuánto avanzó el objetivo de puntuación. Esa sola vuelta te dice si construiste un motor o solo un problema rápido. Es el diagnóstico más barato del juego.
+
+El paso dos merece énfasis porque es donde la mayoría de las builds fallan. Comprométete con un plan repetible. Si la puntuación por activadores de vuelta es tu motor, todo lo que compres debe alimentar vueltas. Si una cadena de puertas es tu motor, tu oro va al orden de las puertas y a la frecuencia de puertas. Una build con un motor fuerte supera a una build con tres a medio terminar casi siempre.
+
+## Cartas, puertas y amuletos: de dónde viene la sinergia
+
+La sinergia en The Loopler no consiste en coleccionar objetos poderosos. Consiste en hacer coincidir las condiciones de activación con lo que tu coche ya hace en cada vuelta.
+
+| Condición de activación | Qué fiable es | Mejor uso |
+| --- | --- | --- |
+| Se activa en cada vuelta | Muy alta | Puntuación central y sostenimiento de combustible |
+| Se activa al inicio de la ronda | Alta, pero una vez por ronda | Puntuación explosiva u oro inicial |
+| Se activa cuando se agota el combustible | Situacional | Recuperación de emergencia, no un plan |
+| Se activa junto a otra carta específica | Depende de tu selección | Beneficio tardío una vez existe la pareja |
+| Se activa al pasar una puerta | Depende de la colocación | Puntuación encadenada y multiplicadores |
+
+La colocación de las puertas es la palanca más subestimada. Las puertas ocupan ranuras de la pista y se resuelven en el orden en que el coche las encuentra, así que las mismas tres puertas pueden producir resultados muy diferentes según su secuencia. Coloca las puertas de preparación antes de las puertas de recompensa. Si una puerta añade un multiplicador y otra añade puntuación, el multiplicador debería ir generalmente primero en el orden de la pista para que se aplique a lo que viene después.
+
+Los informes de la comunidad en el hilo de comentarios de la demo muestran lo en serio que se toman esto los jugadores. Los probadores debatieron si una puerta específica se activaba con más frecuencia de la prevista, y otros compararon la versión de lanzamiento de forma desfavorable con la antigua build de la game jam. Ese último punto merece interiorizarse: la demo preliminar y la prueba de juego se reelaboraron y reiniciaron antes del lanzamiento, así que los consejos de builds antiguos de esa época deben tratarse como historia, no como reglas actuales.
+
+Los amuletos son el juego a largo plazo. Acumular amuletos pasivos cambia cómo se juega toda la partida, pero tardan en dar beneficios. Cómpralos cuando tu combustible y tu puntuación central ya sean estables, no cuando estés tapando una fuga.
+
+## Gestionar combustible, durabilidad, Boost y Overdrive
+
+Una barra de Boost brillante puede hacer que un coche diminuto parezca imparable mientras su combustible y durabilidad hacen las maletas en silencio. Los indicadores dicen la verdad incluso cuando los números se ven geniales.
+
+| Indicador | Qué hace | Señal de advertencia | Solución |
+| --- | --- | --- | --- |
+| Combustible | Mantiene el coche en marcha | El depósito tiende a bajar durante una vuelta completa | Repostar, eficiencia de combustible o menor consumo de combustible |
+| Durabilidad | Absorbe el castigo cuando falla el combustible | Empieza a bajar a mitad de ronda | Deja de comprar velocidad; estabiliza primero |
+| Boost | Ráfagas de aceleración | El Boost se agota sin beneficio asociado | Vincula el Boost a un activador de puntuación |
+| Overdrive | Pulsos de velocidad del estado final | El temporizador expira antes de que los pulsos den beneficio | Compara el valor de Pulse con la duración del Timer |
+
+Overdrive merece una nota específica. En el estado final de Overdrive, el coche recibe pulsos de velocidad repetidos, y el Timer determina cuánto dura ese intento. Compara el valor de Pulse con la duración del Timer antes de invertir. Un pulso enorme con un temporizador corto puede valer menos que un pulso modesto que sigue en marcha.
+
+La regla práctica: el combustible protege la durabilidad, la durabilidad protege la partida y la partida protege tu puntuación. Cualquier cosa que amenace el combustible tiene que justificarse con un motor de puntuación que ya esté probado.
+
+## Paradas en boxes, rerolls y reglas de recuperación
+
+Las paradas en boxes son donde se salvan las buenas partidas y se forman los malos hábitos. Dos reglas cubren la mayoría de las situaciones.
+
+| Situación | Acción recomendada |
+| --- | --- |
+| El combustible sigue bajando | Pausa las compras de puntuación. Toma la oferta de combustible o eficiencia más fiable, y luego observa otra vuelta completa antes de añadir velocidad. |
+| La tienda no ofrece nada útil | Considera irte con el oro en lugar de forzar una compra. |
+| Sabes exactamente qué rol falta | Haz reroll, pero solo si puedes permitirte el intento. |
+| La build sobrevive pero la puntuación está plana | Compra frecuencia de activación o un multiplicador para tu motor existente, no un motor nuevo. |
+| La puntuación vuela pero el combustible es escaso | Trátalo como una emergencia, no como una vuelta de victoria. |
+
+Salir de una tienda con oro no es una visita desperdiciada. El oro sin gastar es flexibilidad, y la próxima parada en boxes puede ofrecer el rol exacto que le falta a tu build de coche de The Loopler. Forzar una compra que no necesitas satura la build y diluye las ofertas que verás después.
+
+Si estás siguiendo el progreso a lo largo de una partida larga, muchos recursos de guías organizan las cosas en torno a puntos de control por ronda para que puedas medir si tu motor mantiene el ritmo del objetivo de puntuación creciente. Usa el sistema de puntos de control que prefieras; la cuestión es comparar tu ritmo actual con el anterior, no con una build soñada que viste en internet.
+
+## Errores comunes en la build de coche de The Loopler y soluciones rápidas
+
+| Error | Por qué duele | Solución |
+| --- | --- | --- |
+| Tres medios motores | Nada se activa con la suficiente frecuencia para escalar | Elige un motor y aliméntalo |
+| Multiplicadores antes que activadores | No hay nada que multiplicar | Establece primero activadores fiables |
+| Ignorar el orden de las puertas | Las puertas de recompensa se resuelven antes que las de preparación | Reordena para que la preparación preceda a la recompensa |
+| Acumular velocidad con poco combustible | Coche rápido, partida corta | Arregla la eficiencia antes de la velocidad punta |
+| Comprar amuletos demasiado pronto | Beneficio lento, sin estabilidad inmediata | Amuletos después de que combustible y puntuación estén seguros |
+| Hacer reroll a ciegas | El oro desaparece sin dirección | Haz reroll solo por un rol que sepas que falta |
+
+El RNG seguirá escondiendo la combinación soñada tras el muro de boxes de vez en cuando. Eso está bien. Construye a partir de lo que realmente aparece, mantén un respaldo para tu indicador más débil y deja que los números absurdos lleguen porque la máquina funciona, no porque lo deseaste con muchas ganas.
+
+## FAQ
+
+**¿Cuál es la parte más importante de una build de coche de The Loopler?**
+La supervivencia del combustible. Si el depósito se vacía y la durabilidad empieza a caer, ningún multiplicador importa. Observa una vuelta completa a una velocidad legible, confirma que el combustible es estable y solo entonces invierte en puntuación.
+
+**¿Debería comprar siempre la carta de mayor rareza que se ofrezca?**
+No. La rareza no garantiza que la condición de activación de una carta ocurra en tu build. Una carta común que se activa en cada vuelta suele valer más que una rara que espera una combinación que no tienes.
+
+**¿Cómo decido el orden de colocación de las puertas?**
+Coloca las puertas de preparación primero y las de recompensa después, ya que las puertas se resuelven en el orden en que el coche las encuentra. Luego prueba la disposición durante una vuelta completa y comprueba si tu puntuación por vuelta realmente mejoró.
+
+**¿Por qué mi build funciona al principio pero se estanca después?**
+Normalmente porque el motor no escala. Los objetivos de puntuación de las rondas aumentan, así que tu build necesita una forma repetible de mantener el ritmo, ya sea aumentando la frecuencia de activación o añadiendo multiplicadores a algo que ya se activa a menudo.

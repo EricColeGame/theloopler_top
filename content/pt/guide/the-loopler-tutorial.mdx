@@ -1,0 +1,132 @@
+export const metadata = {
+  title: "Tutorial de The Loopler: Guia para Iniciantes sobre Cartas, Portões e Loops Infinitos",
+  description: "Este tutorial de The Loopler apresenta a novos jogadores as cartas, portões, amuletos, combustível e Overdrive para que cada partida dure mais e pontue mais.",
+  category: "guide",
+  date: "2026-10-16",
+}
+
+Um carrinho de slot percorre uma pista, os portões piscam à medida que ele passa, e sua pontuação sobe até os milhões. Esse é o gancho de The Loopler, um deckbuilder roguelite em que você drafta cartas, posiciona portões e coleta amuletos em vez de dirigir. Se você desanimou depois de algumas partidas se perguntando o que suas melhorias realmente fizeram, você não está sozinho — essa é a reclamação mais comum nos relatos da comunidade. Este tutorial de The Loopler existe exatamente para resolver isso. Abaixo você encontrará um tutorial de The Loopler passo a passo para construir seu primeiro motor vencedor, além de tabelas que explicam cada medidor, gatilho e decisão de pit stop que você vai enfrentar.
+
+## Noções Básicas do Tutorial de The Loopler: O Que Você Realmente Controla
+
+O carro se dirige sozinho. Sempre foi assim. Seu verdadeiro trabalho é de engenharia: escolher quais efeitos comprar, onde posicioná-los e qual rota seguir em seguida. Entender essa divisão é a base de qualquer boa partida.
+
+| Sistema | O que faz | Por que importa |
+| --- | --- | --- |
+| Cartas | Efeitos draftados com gatilhos impressos, como ao completar loop, ao iniciar, ao esvaziar ou em cartas adjacentes | Sua principal fonte de pontuação e multiplicadores |
+| Portões | Efeitos colocados em espaços da pista que o carro atravessa fisicamente | A ordem de posicionamento altera como os combos se resolvem |
+| Amuletos | Coletáveis passivos que concedem bônus | Frequentemente carregam recompensas decisivas para a partida |
+| Peças de garagem | Equipamentos usados entre partidas que modificam atributos como tanque de combustível, eficiência de combustível, durabilidade, limite de Boost e velocidade máxima | Progresso permanente que suaviza partidas futuras |
+| Efeitos do carro | Cada carro tem um efeito único | Uma tendência inicial, não uma ordem para forçar itens correspondentes |
+| Loadout | Controla quais cartas, portões e amuletos desbloqueados são elegíveis para ofertas | Itens habilitados podem aparecer; eles nunca são garantidos |
+
+Uma rodada termina quando você preenche a meta de pontuação. Depois você escolhe uma recompensa, seleciona uma rota no mapa e visita um pit stop ou evento antes do início da próxima rodada. O carro está nos trilhos; as decisões são todas suas.
+
+## Construa Seu Primeiro Motor Funcional em Quatro Passos
+
+O conselho mais confiável dos jogadores experientes é entediante, mas eficaz: sobreviva primeiro, pontue depois, multiplique por último. Se você só lembrar de uma regra deste tutorial de The Loopler, que seja esta — diminua a velocidade da simulação e assista a um loop completo antes de comprar qualquer coisa.
+
+| Prioridade | Objetivo | Ação de exemplo | Sinal de alerta |
+| --- | --- | --- | --- |
+| 1 | Resolver a sobrevivência de combustível | Adotar reabastecimento confiável ou ajuda de eficiência de combustível | O tanque esvazia e a durabilidade começa a cair |
+| 2 | Escolher um motor de pontuação | Comprometer-se com pontuação por loop, uma corrente de portões ou uma recompensa repetida | Você tem metade de três motores diferentes |
+| 3 | Comprar gatilhos confiáveis | Um portão que o carro sempre atravessa vale mais que um amuleto esperando por um combo | Seus efeitos raramente disparam durante uma volta normal |
+| 4 | Adicionar multiplicadores | Aumentar a frequência ou o rendimento do que já funciona | Números grandes no papel, pontuação estagnada na pista |
+
+**Passo 1 — Assista a uma volta completa.** Observe quais efeitos disparam, se o combustível termina mais alto ou mais baixo e o quanto a meta de pontuação avançou. Essa única volta diz se você construiu um motor ou um problema muito veloz.
+
+**Passo 2 — Escolha um motor.** Pontuação por gatilho de loop, uma corrente de portões ou uma configuração que alimenta repetidamente uma única recompensa. Builds mistas parecem flexíveis e geralmente travam no meio da partida.
+
+**Passo 3 — Gaste em gatilhos, não em sonhos.** Ouro gasto em um efeito que já dispara a cada volta nunca é desperdiçado.
+
+**Passo 4 — Multiplique depois.** Multiplicadores amplificam uma máquina que funciona. Eles não conseguem salvar uma quebrada.
+
+## Cartas, Portões e Amuletos: Lendo Gatilhos Como um Profissional
+
+O texto das cartas é onde os novos jogadores se perdem, então leia a condição de gatilho antes do número. Uma carta que dispara a cada loop e uma carta que dispara uma vez por reparo não são comparáveis, mesmo que suas porcentagens pareçam semelhantes.
+
+| Tipo de gatilho | Quando dispara | Melhor uso |
+| --- | --- | --- |
+| Ao completar loop | A cada circuito completado | Crescimento constante de pontuação |
+| Ao iniciar | No começo de uma rodada ou ciclo de reparo | Explosões concentradas no início |
+| Ao esvaziar | Quando uma carga ou recurso acaba | Reciclar efeitos esgotados |
+| Em cartas adjacentes | Com base nos espaços de cartas vizinhas | Layouts compactos e deliberados |
+| Ao reparar | Cada vez que o carro é reparado | Partidas longas e de desgaste intenso |
+| Amuleto passivo | Constantemente enquanto equipado | Bônus flexíveis e de baixa manutenção |
+
+Os portões merecem sua própria tabela, porque o posicionamento muda tudo.
+
+| Portão | O que faz | Dica prática |
+| --- | --- | --- |
+| Portão de Pontuação | Concede metade da pontuação-base do loop, depois aumenta essa base | Excelente escolha inicial para crescimento composto |
+| Portão Multiplicador | Multiplica a pontuação; o multiplicador é removido se o portão for substituído | Posicione onde o carro atravessa a cada volta |
+| Portão Duplo | Aumenta o multiplicador acima de 1x | Penalidades de dificuldade se aplicam apenas a essa porção de bônus |
+| Portão Faminto | Devora um portão colocado sobre ele e absorve seus níveis | Relatos da comunidade mostram que isso pode escalar rapidamente |
+| Portão de Drift | Mantém o drift ativo em velocidades extremas | Praticamente obrigatório para builds de drift |
+| Portão Espelho | Reproduz os efeitos de outros portões | Depende do posicionamento; teste antes de investir |
+| Portão Corrente | Acumula pontuação | Lembre-se de que o total é redefinido a cada rodada |
+
+Um tutorial completo de The Loopler poderia passar horas só na ordem dos portões. Por enquanto, lembre-se de um princípio: portões são posição no tabuleiro, e a posição decide se um combo rende ou fracassa.
+
+## Lendo os Medidores: Combustível, Durabilidade, Boost e Overdrive
+
+Os números sobem, mas o medidor errado ainda pode acabar com sua partida. Aqui está o que cada medidor está lhe dizendo.
+
+| Medidor | O que faz | Sintoma de falha | Solução |
+| --- | --- | --- | --- |
+| Combustível | Mantém o carro funcionando | Tanque esvazia no meio da rodada | Cartas de reabastecimento, peças de eficiência, portões de combustível |
+| Durabilidade | Absorve dano quando o combustível acaba | A saúde drena durante uma volta | Repare nos pit stops; proteja o combustível primeiro |
+| Boost / Limite de Boost | Aumenta a velocidade | O excesso de boost decai durante o Overdrive | Aumente o limite na garagem |
+| Medidor de Drift | Recompensa curvas | O drift para de disparar em velocidades muito altas | Adicione um Portão de Drift |
+| Overdrive | Pulsos de velocidade repetidos em um cronômetro | Os pulsos chegam devagar demais para importar | Compare Pulse e Timer antes de investir |
+| Chance de Sorte | Melhora a raridade e as melhorias das cartas | A qualidade dos pacotes permanece estável | Acumule além de 100% para melhorias de duas categorias |
+| Limite de Congelamento | Congela o carro brevemente | Nada se acumula até o tempo de recarga terminar | Planeje em torno do tempo de recarga, não contra ele |
+
+Dois detalhes enganam quase todo mundo. Primeiro, o drift só é ativado em curvas — retas não fazem nada por ele. Segundo, o boost acima do seu limite decai durante o Overdrive, enquanto o boost abaixo do limite é retido, então aumentar o limite geralmente vale mais do que buscar ganho bruto.
+
+## Pit Stops, Rotas e Níveis de Dificuldade
+
+Os pit stops são onde as partidas são vencidas. O primeiro pit stop de uma partida sempre oferece um portão de combustível ou de freio se você ainda não tiver uma fonte de combustível, o que é uma forma discreta de dizer o que mais importa.
+
+| Dificuldade | Sensação aproximada | O que muda |
+| --- | --- | --- |
+| Bronze | Tolerante, ótima para aprender | As penalidades são leves |
+| Esmeralda | As builds começam a importar | Cartas e portões perdem eficácia |
+| Diamante | Punitiva, restrita | Builds fracas falham cedo |
+
+Algumas regras estruturais que vale internalizar:
+
+- As dificuldades são desbloqueadas globalmente, não por pista, e as cartas de pista agora abrem na sua dificuldade desbloqueada mais alta.
+- As escolhas de rota aparecem no início de uma partida e depois novamente nas rodadas 7 e 13.
+- Partidas de placar de líderes só contam se você finalizar na rodada 12.
+- A opção Infinity é desbloqueada quando você vence qualquer partida, e as pontuações só são enviadas aos placares normais se a partida for finalizada.
+- Os custos de reroll sobem rapidamente, então só faça reroll quando souber exatamente qual função está procurando.
+
+Você pode acompanhar o histórico de patches e os anúncios da comunidade no [hub oficial de The Loopler na comunidade Steam](https://steamcommunity.com/app/4150860), que também é onde relatos de bugs e discussões de balanceamento chegam primeiro.
+
+## Dicas Avançadas e Sabedoria da Comunidade
+
+Jogadores de longa data revelaram várias percepções que vale a pena tomar emprestado. Trate-as como experiência de jogador, não como evangelho, já que o balanceamento muda a cada patch.
+
+- **Alimentar um Portão Faminto é uma estratégia real.** Relatos da comunidade descrevem o empilhamento de portões dentro dele para inflar seus níveis muito além dos limites normais.
+- **A clareza é o maior ponto de atrito.** Vários jogadores pediram um glossário no jogo porque as dicas de ferramenta presumem que você já conhece o vocabulário.
+- **O impacto é difícil de sentir.** Um tema recorrente nas avaliações é que as melhorias são difíceis de avaliar, ao contrário de jogos em que uma mudança de build é imediatamente visível. Assistir a uma volta antes e depois de uma compra resolve a maior parte disso.
+- **Dificuldades altas restringem suas opções.** Vários jogadores relatam que partidas no Diamante recompensam fortemente builds específicas, então trate os primeiros sorteios da loja como críticos nos níveis mais difíceis.
+- **Use as ferramentas de velocidade.** O botão de velocidade 3x e o reinício segurando R existem por um motivo; farmar as rodadas iniciais na velocidade normal consome a paciência rapidamente.
+- **Confira as páginas de tutorial.** Patches recentes adicionaram um tutorial único de loadout e uma página de Overdrive explicando os pulsos de velocidade, que abordam diretamente a confusão que muitos novos jogadores sentem.
+
+## Perguntas Frequentes Sobre The Loopler
+
+**Preciso dirigir o carro?**
+Não. O carro percorre o circuito automaticamente, e sua influência vem de cartas, portões, amuletos, peças de garagem e escolhas de rota. Se você está esperando por um comando de controle que nunca chega, isso é o jogo funcionando como pretendido.
+
+**O que devo comprar no meu primeiro pit stop?**
+Combustível ou eficiência, quase todas as vezes. Um multiplicador enorme não significa nada se o tanque esvazia e a durabilidade começa a drenar. Depois que o combustível estiver estável, compre um gatilho que já dispare a cada volta.
+
+**Este tutorial de The Loopler cobre o modo Infinity?**
+Ele cobre a base que você precisa para isso. O Infinity é desbloqueado após você vencer qualquer partida, e ele eleva as metas de pontuação cada vez mais alto e mais difícil ao longo do tempo. Consiga primeiro um motor estável, depois persiga o placar infinito.
+
+**Por que meu drift para de funcionar em altas velocidades?**
+O drift só é ativado em curvas, e para de disparar em velocidades extremas a menos que você tenha um Portão de Drift. Guias da comunidade destacam isso constantemente, então pegue um antes que sua build dependa de ticks de drift.
+
+Construa em pequena escala, assista a uma volta, proteja o tanque e deixe os multiplicadores chegarem quando a máquina realmente funcionar. Essa é toda a lição — e é a que transforma uma primeira hora confusa em um loop genuinamente viciante.

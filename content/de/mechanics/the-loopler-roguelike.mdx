@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "The Loopler Roguelike Mechanik-Guide: Karten, Tore, Glücksbringer und Drift",
+  description: "Erfahre, wie The Loopler Roguelike funktioniert: Karten-Drafting, Tor-Platzierung, Glücksbringer, Treibstoff, Drift, Overdrive, Schwierigkeitsstufen und Leaderboard-Regeln erklärt.",
+  category: "mechanics",
+  date: "2026-10-16",
+}
+
+Slotcars, Deckbuilding und ein Punktestand, der einfach nicht aufhören will – das ist das Kernversprechen von **The Loopler Roguelike**, einem Roguelite-Deckbuilder vom Solo-Entwickler Mheep. Es setzt ein winziges Slotcar auf eine Rundstrecke und gibt dir die Werkzeuge, um aus einer bescheidenen Runde eine Lawine aus Multiplikatoren zu machen. Wenn du bei **The Loopler Roguelike** abgesprungen bist, weil du nicht erkennen konntest, ob deine Upgrades tatsächlich etwas bewirken, deckt diese Analyse die entscheidenden Mechaniken ab: wie Karten auslösen, warum die Tor-Reihenfolge alles verändert und wo Treibstoff, Drift und Overdrive still über deinen Run entscheiden.
+
+## Was ist The Loopler Roguelike? Die zentrale Run-Schleife
+
+Ein Run in The Loopler dreht sich um eine einzige Strecke, ein einziges Auto und ein Punktziel, das mit jeder Runde wächst. Du draftest Karten, platzierst Tore in feste Slots auf dem Kurs und stapelst Glücksbringer, die das Verhalten deines Builds verändern. Zwischen den Runden besuchst du den Boxenstopp, um einzukaufen, neu zu würfeln und zu reparieren. Ein Standard-Run umfasst 12 Runden, und bestimmte Runden beginnen mit einer Drei-Wege-Routenwahl, die dich in verschiedene Ereignistypen schickt – Gefahren, Bosse oder belohnungsreiche Pfade.
+
+Das Spiel erschien am 11. September 2026 auf Steam und enthält neun Autos, neun Strecken, fünf Schwierigkeitsmodi, 50 Karten, 30 Tore und 70 Glücksbringer. Es ist für Steam Deck verifiziert und ohne Quick-Time-Events spielbar.
+
+| System | Was es bewirkt | Wo du damit interagierst |
+|---|---|---|
+| Karten | Lösen Effekte bei Loops, Reparaturen, Drift oder anderen Karten aus | Aus Kartenpacks gedraftet, im Loadout verwaltet |
+| Tore | Verändern die Strecke selbst, während das Auto sie durchfährt | Werden in Tor-Slots auf dem Kurs platziert |
+| Glücksbringer | Passive stapelbare Boni, die Regeln für den gesamten Run verändern | Werden im Boxenstopp gekauft und gestapelt |
+| Garage | Permanentes Feintuning der Werte für den aktuellen Run | Wertepanel, Auto-Tab, Modifikator-Upgrades |
+| Boxenstopp | Einkaufen, Neu-Würfeln, Reparieren und Loadout-Änderungen | Zwischen den Runden |
+
+Das wichtige Detail ist, dass diese Ebenen nicht unabhängig voneinander sind. Eine Karte, die bei "on emptied" auslöst, verhält sich anders, je nachdem, ob ein Tor deinen Tank nachfüllt, und ein Glücksbringer, der Multiplikatoren verstärkt, bewirkt nichts, wenn deine Multiplikator-Tore mitten im Run ersetzt werden.
+
+## Karten, Tore und Glücksbringer: Wie die drei Build-Ebenen interagieren
+
+Karten sind der Motor deines Punktestands. Sie können passive Multiplikatoren gewähren, Geisterautos erzeugen, auf Jackpots würfeln oder andere Karten auslösen. Viele von ihnen sind bedingt: "on start"- und "on emptied"-Karten tragen Ladungszähler pro Reparatur, und diese Ladungen werden getrennt vom Effekttext angezeigt, damit du Informationen von der Auszahlung unterscheiden kannst.
+
+Tore sind die streckenbezogene Ebene. Jeder Kurs hat eine begrenzte Anzahl an Platzierungs-Slots, und die Reihenfolge, in der das Auto sie erreicht, bestimmt, wie Multiplikatoren sich kumulieren. Die Platzierung ist so wichtig, dass die Community die Tor-Sequenzierung als Kernfähigkeit statt als Nebensache behandelt.
+
+| Ebene | Hauptrolle | Beispielverhalten | Häufige Falle |
+|---|---|---|---|
+| Karten | Punktegenerierung und Auslöser | Jackpot-Würfe, Geisterautos, Kettenauslöser | Erschöpfte Karten tragen nichts mehr bei, bis sie repariert werden |
+| Tore | Streckenmodifikation und Sequenzierung | Punkte-, Multiplikator-, Ketten-, hungrige und Overdrive-Tore | Das Ersetzen eines Tors kann den Multiplikator entfernen, den es gewährt hat |
+| Glücksbringer | Run-weites passives Skalieren | Glückschance, Goldgenerierung, Drift-Unterstützung | Manche Glücksbringer ignorieren zusätzliche Glückschance ausdrücklich |
+
+Ein paar Interaktionen solltest du kennen, bevor du Gold einsetzt. Ein Hungriges Tor, das auf ein bestehendes Tor gesetzt wird, frisst es und absorbiert seine Stufen, was zu den stärksten Skalierungsspielzügen im Spiel gehört. Der angesammelte Punktestand eines Ketten-Tors wird jede Runde zurückgesetzt, belohnt also schnelle frühe Loops statt spätes Banking in der Runde. Und der Verkauf einer Punch Card oder Write Off nimmt den Punkte-Multiplikator zurück, den sie gewährt hat – der Tooltip sagt es, und es ist leicht zu übersehen.
+
+## Geschwindigkeit, Treibstoff, Boost und Drift: Die Motormechaniken erklärt
+
+Das Auto selbst ist ein Werteblatt, und hier liegt der größte Teil der Verwirrung bei neuen Spielern. Die Treibstoffeffizienz sinkt, je häufiger du nachfüllst, weshalb "refuel 1 cell per loop"-Effekte kaputt wirken können, wenn dein Loops-pro-Sekunde-Zähler enorm ist. Das ist beabsichtigte abnehmende Rendite, kein Bug – und eines der am häufigsten gemeldeten Missverständnisse in Community-Diskussionen.
+
+Drift wird nur in Kurven ausgelöst; auf Geraden wird er nie aktiviert. Der Drift-Tick-Fortschritt wird zwischen Kurven innerhalb eines Versuchs übertragen, und bei extrem hohen Geschwindigkeiten tickt Drift überhaupt nicht mehr, es sei denn, du hast ein Drift-Tor. Dieses eine Tor entscheidet darüber, ob ein Drift-Build ewig skaliert oder ob er in Runde 9 still stirbt.
+
+| Wert | Was er beeinflusst | Häufiger Fehler |
+|---|---|---|
+| Geschwindigkeit | Loops pro Sekunde, Auslösefrequenz, Punktevolumen | Geschwindigkeit pushen, bevor Drift und Tor-Erkennung gesichert sind |
+| Treibstoff | Run-Länge; leerer Tank beendet deinen Schwung | Nachfüll-Effekte stapeln, ohne die abnehmenden Erträge zu berücksichtigen |
+| Boost | Kurze Schübe von Geschwindigkeitszuwachs, begrenzt durch Boost-Obergrenze | Ignorieren, dass Boost über der Obergrenze während Overdrive verfällt |
+| Overdrive | Zeitlich begrenzte Boost-Impulse mit eigenem Timer | Erwarten, dass Buffs des Superheated Gate durch Overdrive hindurch bestehen bleiben |
+| Drift | Kurvenbasierte Multiplikator-Skalierung | Vergessen, dass Drift bei extremen Geschwindigkeiten stoppt |
+| Glückschance | Mindestkartenrang und Upgrade-Qualität | Annehmen, dass sie Glücksbringer verstärkt, die sie ausdrücklich ignorieren |
+
+Overdrive verdient eine eigene Anmerkung. Es läuft über einen Timer, stößt Boost in festen Intervallen aus und interagiert mit Karten wie Rocket, die den Overdrive-Boost nach Balance-Änderungen verdoppelt statt verdreifacht. Boost-Zuwächse flachen bei extremen Geschwindigkeiten außerdem ab, statt einen Mindestwert zu halten, sodass reines Beschleunigungs-Stapeln irgendwann an eine Wand stößt.
+
+## Schwierigkeitsstufen und Leaderboards: Wie der Fortschritt wirklich funktioniert
+
+The Loopler hat fünf Schwierigkeitsmodi, und diese werden nicht mehr pro Strecke freigeschaltet – sie werden global freigeschaltet. Streckenkarten öffnen jetzt auf deiner höchsten freigeschalteten Schwierigkeit, was bedeutet, dass du nie nur deshalb zurück zu Bronze gezwungen wirst, weil du einen neuen Kurs gewählt hast. Höhere Stufen belegen Karten- und Tor-Effektivität mit Abzügen; Emerald und Diamond sind das bestrafende Ende der Leiter, und dort werden Builds in enge, verlässliche Archetypen gedrängt.
+
+Leaderboards haben strenge Regeln, und ein Missverständnis verschwendet Runs.
+
+| Leaderboard | Einreichungsregel | Hinweise |
+|---|---|---|
+| Standard-Strecken-Boards | Run muss in Runde 12 abgeschlossen werden | Punktzahlen werden nur eingereicht, wenn du abschließt, statt in Infinity zu pushen |
+| Infinity-Board | Rangliste nach wenigsten Runden bis Infinity | Separates Board von den Standard-Streckenwertungen |
+| Tägliche und wöchentliche Herausforderungen | Boards pro Herausforderung | Herausforderungs-Runs vergeben normal XP und Erfolge |
+
+Wenn du eine Leaderboard-Wertung willst, schließe ab. Wenn du das Prestige eines Infinity-Runs willst, akzeptiere, dass der Run nicht für die normalen Strecken-Boards zählt. Das Spiel warnt dich jetzt bei der Infinity-Wahl davor.
+
+## Praktische Tipps für deine ersten zehn Runs
+
+- **Sichere Treibstoff, bevor du alles andere angehst.** Der erste Boxenstopp eines Runs bietet immer ein Treibstoff- oder Brems-Tor an, wenn du noch keine Treibstoffquelle hast.
+- **Kaufe ein Drift-Tor, bevor du Geschwindigkeit jagst.** Ohne eines löst Drift bei sehr hohen Geschwindigkeiten nicht mehr aus.
+- **Behandle die Tor-Reihenfolge als Build-Entscheidung.** Dieselben fünf Tore in einer anderen Sequenz erzeugen sehr unterschiedliche Multiplikatoren.
+- **Fahre mit der Maus über deine Garage-Werte.** Wert-Tooltips erklären jetzt, was jeder Wert bewirkt, statt ihn nur zu benennen, einschließlich Loop Score, Overdrive Timer, Overdrive Pulse und Glückschance.
+- **Nutze den 3x-Geschwindigkeitsbutton.** Community-Berichte nennen wiederholte Animationen und Übergänge häufig als größten Zeitfresser zwischen Versuchen.
+- **Verkaufe Multiplikator-Karten nicht leichtfertig.** Der Verkauf von Punch Card oder Write Off entfernt den Punkte-Multiplikator, den sie gewährt haben.
+
+| Priorität im frühen Spiel | Grund | Risiko, wenn ignoriert |
+|---|---|---|
+| Treibstoffquelle | Leerer Tank beendet den Punkte-Schwung | Run stockt mitten in der Runde |
+| Drift-Unterstützung | Kurven-Multiplikatoren sind ein wichtiger Skalierungspfad | Punkte-Obergrenze in späten Runden |
+| Tor-Sequenzierung | Reihenfolge treibt die Kumulierung voran | Multiplikatoren greifen in falscher Reihenfolge |
+| Eine upgradebare Karte | Level-Skalierung schlägt Breite | Schaden zu dünn verteilt, um Ziele zu erreichen |
+
+Spielerfahrung markiert außerdem einen echten Reibungspunkt: Es gibt kein In-Game-Glossar, und mehrere Effekte setzen voraus, dass du die Terminologie bereits kennst. Bis sich das ändert, sind die Community-Threads im Steam Hub der schnellste Weg, bestimmte Karten- und Tor-Interaktionen zu entschlüsseln.
+
+## Lohnt es sich, The Loopler Roguelike zu spielen? Resonanz und Umfang
+
+Die Resonanz war stark. Die Steam-Shop-Seite listet eine Gesamtbewertung von "Sehr positiv" bei etwa 89 % von 670 Bewertungen, mit einer ähnlichen aktuellen Bewertung über die letzten 30 Tage. Eine Woche nach dem Launch meldete der Entwickler über 40.000 verkaufte Einheiten, mehr als 42.000 eindeutige Nutzer, einen Höchststand von 2.068 gleichzeitigen Spielern und fast 200.000 gespielte Stunden. Das Spiel enthält außerdem 47 Steam-Erfolge, Cloud-Speicher, Leaderboards, Family Sharing und 12 Oberflächensprachen.
+
+| Inhaltsumfang | Anzahl |
+|---|---|
+| Autos | 9 |
+| Strecken | 9 |
+| Schwierigkeitsmodi | 5 |
+| Karten | 50 |
+| Tore | 30 |
+| Glücksbringer | 70 |
+| Steam-Erfolge | 47 |
+
+Die Community-Stimmung teilt sich entlang vorhersehbarer Linien. Lob konzentriert sich auf den Soundtrack von Pulsewith (Justin Skomarovsky), die dopaminreiche Skalierung und den "Zero to Hero"-Bogen eines Runs. Kritik richtet sich auf unklares Feedback – Spieler sagen, es sei schwer zu erkennen, ob ein bestimmtes Upgrade geholfen hat – und darauf, dass höhere Schwierigkeiten bestimmte frühe Rolls verlangen. Wie ein Rezensent es ausdrückte: Erwarte nicht Balatro mit Autos; die aktiven Entscheidungen liegen im Drafting und in der Platzierung, nicht im Moment-zu-Moment-Spiel.
+
+Für aktuelle Preise, Bundles, DLC und die kostenlose Demo schau dir [The Loopler auf der offiziellen Steam-Shop-Seite](https://store.steampowered.com/app/4150860/The_Loopler/) an. Die [itch.io-Seite des Entwicklers zu The Loopler](https://mheep.itch.io/the-loopler) hostet einen älteren Demo-Build und einen aktiven Kommentar-Thread, in dem der Entwickler Mechanikfragen direkt beantwortet.
+
+## FAQ
+
+**Was für ein Spiel ist The Loopler Roguelike?**
+Es ist ein Roguelite-Deckbuilder über ein Slotcar, das Runden dreht. Du draftest Karten, platzierst Tore auf der Strecke und stapelst Glücksbringer, um jede Runde ein Punktziel zu erreichen, mit einem optionalen Infinity-Modus, der das Ziel endlos höher treibt.
+
+**Muss ich in Runde 12 abschließen, damit Leaderboards zählen?**
+Ja. Standard-Strecken-Leaderboards akzeptieren nur Runs, in denen du in Runde 12 abschließt. Wenn du in Infinity pushst, wird dein Run zum separaten Infinity-Leaderboard geschickt, das nach den wenigsten Runden bis Infinity rankt.
+
+**Warum scheint mein "refuel per loop"-Effekt nicht mehr zu funktionieren?**
+Die Treibstoffeffizienz sinkt, je mehr du nachfüllst, daher liefern Nachfüll-Effekte bei hohen Loop-Zahlen abnehmende Erträge. Das ist Absicht, kein Bug – der Effekt löst weiterhin aus, zahlt aber jedes Mal weniger aus.
+
+**Ist The Loopler auf dem Steam Deck spielbar?**
+Ja. Es ist Steam Deck Verified, unterstützt Xbox- und PlayStation-Controller und kann ohne Quick-Time-Events gespielt werden.

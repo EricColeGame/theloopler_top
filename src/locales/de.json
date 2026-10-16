@@ -86,19 +86,19 @@
           "badge": "Karten",
           "title": "The Loopler Karten-Datenbank",
           "description": "Umfassender Kartenkatalog mit Geschwindigkeits-Boosts, Streckenerweiterungen und Punkte-Auslösern.",
-          "href": "/cards/the-loopler-cards-guide"
+          "href": "/mechanics/the-loopler-deckbuilder"
         },
         {
           "badge": "Builds",
           "title": "Beste The Loopler Builds",
           "description": "Optimierte Deckkombinationen und Toranordnungen für ausdauernde Highscore-Läufe im Endlosmodus.",
-          "href": "/builds/the-loopler-builds-guide"
+          "href": "/progression/the-loopler-builds"
         },
         {
           "badge": "Talismane",
           "title": "The Loopler Talisman Tier-Liste",
           "description": "Alle sammelbaren Talismane im Ranking mit passiven Effekten und optimalen Build-Kombinationen.",
-          "href": "/charms/the-loopler-charms-guide"
+          "href": "/progression/the-loopler-upgrades"
         }
       ]
     },
@@ -169,7 +169,7 @@
           "order": 2,
           "name": "The Loopler Karten-Leitfaden",
           "description": "Eine durchsuchbare Datenbank, die Karteneffekte, Synergien und empfohlene Kombinationen für verschiedene Builds erklärt. Spieler lernen, wie sie Kettenreaktionen auslösen und Höchstpunktzahlen erzielen.",
-          "href": "/cards/the-loopler-cards-guide",
+          "href": "/mechanics/the-loopler-deckbuilder",
           "displayType": "card-list",
           "highlights": [
             {
@@ -194,7 +194,7 @@
           "order": 3,
           "name": "The Loopler Builds-Leitfaden",
           "description": "Empfohlene Kombinationen aus Karten, Toren, Talismanen und Upgrades. Entwickelt für Spieler, die auf der Suche nach optimierten Strategien und Rekordläufen sind.",
-          "href": "/builds/the-loopler-builds-guide",
+          "href": "/progression/the-loopler-builds",
           "displayType": "card-list",
           "highlights": [
             {
@@ -219,7 +219,7 @@
           "order": 4,
           "name": "The Loopler Talisman-Leitfaden",
           "description": "Vollständige Übersicht aller sammelbaren Talismane, passiven Effekte und ihres Einflusses auf Spielstile. Hilft Spielern zu verstehen, welche Talismane am besten zu ihrem Build passen.",
-          "href": "/charms/the-loopler-charms-guide",
+          "href": "/progression/the-loopler-upgrades",
           "displayType": "tier-grid",
           "highlights": [
             {
@@ -244,7 +244,7 @@
           "order": 5,
           "name": "The Loopler Tor-Leitfaden",
           "description": "Strategischer Leitfaden zur Torplatzierung, zu Toreffekten und zur Streckenoptimierung für noch stärkere Multiplikatorketten.",
-          "href": "/gates/the-loopler-gates-guide",
+          "href": "/mechanics/the-loopler-infinite-loop",
           "displayType": "card-list",
           "highlights": [
             {
@@ -269,7 +269,7 @@
           "order": 6,
           "name": "The Loopler Fahrzeuge und Strecken",
           "description": "Nachschlagewerk über verfügbare Autos, Streckenlayouts und besondere Gameplay-Eigenschaften. Erleichtert den Vergleich vor jedem Start.",
-          "href": "/cars/the-loopler-cars-and-tracks",
+          "href": "/vehicles/the-loopler-car",
           "displayType": "card-list",
           "highlights": [
             {
@@ -294,7 +294,7 @@
           "order": 7,
           "name": "The Loopler Updates und Neuigkeiten",
           "description": "Nachrichtenbereich mit offiziellen Ankündigungen, Entwicklungsberichten, Demo-Infos und Patchnotizen für wiederkehrende Spieler.",
-          "href": "/news/the-loopler-updates-and-news",
+          "href": "/modes/the-loopler-update",
           "displayType": "card-list",
           "highlights": [
             {
@@ -319,7 +319,7 @@
           "order": 8,
           "name": "The Loopler Erfolge-Leitfaden",
           "description": "Leitfaden für Steam-Errungenschaften und Fortschrittsziele, um erreichte Meilensteine und langfristige Ziele im Blick zu behalten.",
-          "href": "/achievements/the-loopler-achievements-guide",
+          "href": "/progression/the-loopler-world-record",
           "displayType": "card-list",
           "highlights": [
             {

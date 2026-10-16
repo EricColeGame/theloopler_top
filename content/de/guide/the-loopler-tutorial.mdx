@@ -1,0 +1,132 @@
+export const metadata = {
+  title: "Das Loopler-Tutorial: Ein Leitfaden für Anfänger zu Karten, Gates und endlosen Loops",
+  description: "Dieses The Loopler Tutorial führt neue Spieler durch Karten, Gates, Charms, Treibstoff und Overdrive, damit jeder Run länger dauert und höher punktet.",
+  category: "guide",
+  date: "2026-10-16",
+}
+
+Ein Slotcar kreist auf einer Strecke, Gates blitzen auf, wenn es sie passiert, und dein Punktestand klettert in die Millionen. Das ist der Reiz von The Loopler, einem Roguelite-Deckbuilder, bei dem du Karten draftest, Gates platzierst und Charms sammelst, statt zu lenken. Wenn du nach ein paar Runs abgesprungen bist und dich gefragt hast, was deine Upgrades eigentlich bewirkt haben, bist du nicht allein — das ist die mit Abstand häufigste Beschwerde in Community-Berichten. Dieses The Loopler Tutorial existiert genau dafür. Unten findest du ein Schritt-für-Schritt-The Loopler-Tutorial für den Aufbau deiner ersten funktionierenden Engine, plus Tabellen, die jede Anzeige, jeden Trigger und jede Boxenstopp-Entscheidung erklären, die dir begegnen wird.
+
+## The Loopler Tutorial Grundlagen: Was du wirklich steuerst
+
+Das Auto fährt von selbst. Das tat es schon immer. Deine eigentliche Aufgabe ist das Engineering: auswählen, welche Effekte du kaufst, wo du sie platzierst und welche Route du als Nächstes nimmst. Diese Trennung zu verstehen ist die Grundlage jedes guten Runs.
+
+| System | Was es bewirkt | Warum es wichtig ist |
+| --- | --- | --- |
+| Karten | Gedraftete Effekte mit aufgedruckten Triggern, wie bei Loop, bei Start, bei Leerung oder bei benachbarten Karten | Deine Hauptquelle für Punkte und Multiplikatoren |
+| Gates | Effekte, die in Strecken-Slots platziert werden, die das Auto physisch durchfährt | Die Platzierungsreihenfolge verändert, wie Combos aufgelöst werden |
+| Charms | Passive Sammelobjekte, die Boni verleihen | Tragen oft run-definierende Belohnungen |
+| Garage-Teile | Ausrüstung zwischen Runs, die Werte wie Tank, Treibstoffeffizienz, Haltbarkeit, Boost-Cap und Höchstgeschwindigkeit modifiziert | Permanenter Fortschritt, der spätere Runs erleichtert |
+| Auto-Effekte | Jedes Auto hat einen einzigartigen Effekt | Eine Startneigung, kein Befehl, passende Gegenstände zu erzwingen |
+| Loadout | Steuert, welche freigeschalteten Karten, Gates und Charms für Angebote infrage kommen | Aktivierte Gegenstände können erscheinen; sie sind nie garantiert |
+
+Eine Runde endet, wenn du das Punkteziel erfüllst. Dann nimmst du eine Belohnung, wählst eine Route auf der Karte und besuchst einen Boxenstopp oder ein Event, bevor die nächste Runde beginnt. Das Auto fährt auf Schienen; die Entscheidungen liegen ganz bei dir.
+
+## Baue deine erste funktionierende Engine in vier Schritten
+
+Der verlässlichste Rat erfahrener Spieler ist langweilig, aber effektiv: erst überleben, dann punkten, zuletzt multiplizieren. Wenn du dir nur eine Regel aus diesem The Loopler Tutorial merkst, dann diese — verlangsame die Simulation und beobachte einen kompletten Loop, bevor du irgendetwas kaufst.
+
+| Priorität | Ziel | Beispielaktion | Warnsignal |
+| --- | --- | --- | --- |
+| 1 | Treibstoff-Überleben lösen | Verlässliche Tankhilfe oder Treibstoffeffizienz nehmen | Tank leert sich und Haltbarkeit beginnt zu sinken |
+| 2 | Eine Punkte-Engine wählen | Auf Loop-Scoring, eine Gate-Kette oder eine wiederholte Belohnung festlegen | Du besitzt die Hälfte von drei verschiedenen Engines |
+| 3 | Verlässliche Trigger kaufen | Ein Gate, das das Auto immer durchfährt, schlägt einen Charm, der auf eine Combo wartet | Deine Effekte feuern während einer normalen Runde selten |
+| 4 | Multiplikatoren ergänzen | Häufigkeit oder Auszahlung dessen erhöhen, was bereits funktioniert | Große Zahlen auf dem Papier, flache Punkte auf der Strecke |
+
+**Schritt 1 — Beobachte eine komplette Runde.** Notiere, welche Effekte feuern, ob Treibstoff höher oder niedriger endet und wie weit sich das Punkteziel bewegt hat. Diese eine Runde verrät dir, ob du eine Engine gebaut hast oder ein sehr schnelles Problem.
+
+**Schritt 2 — Wähle eine Engine.** Loop-Trigger-Scoring, eine Gate-Kette oder ein Setup, das wiederholt eine Belohnung füttert. Gemischte Builds fühlen sich flexibel an und stocken meist um die Mitte des Runs.
+
+**Schritt 3 — Gib Gold für Trigger aus, nicht für Träume.** Gold, das für einen Effekt ausgegeben wird, der bereits jede Runde feuert, ist nie verschwendet.
+
+**Schritt 4 — Multipliziere danach.** Multiplikatoren verstärken eine funktionierende Maschine. Eine kaputte können sie nicht retten.
+
+## Karten, Gates und Charms: Trigger wie ein Profi lesen
+
+Kartentext ist der Ort, an dem neue Spieler verloren gehen. Lies daher die Trigger-Bedingung vor der Zahl. Eine Karte, die bei jedem Loop feuert, und eine Karte, die einmal pro Reparatur feuert, sind nicht vergleichbar, selbst wenn ihre Prozentwerte ähnlich aussehen.
+
+| Trigger-Typ | Wann er feuert | Am besten geeignet für |
+| --- | --- | --- |
+| Bei Loop | Jeden abgeschlossenen Rundkurs | Stetiges Punktewachstum |
+| Bei Start | Zu Beginn einer Runde oder eines Reparaturzyklus | Frontlastige Bursts |
+| Bei Leerung | Wenn eine Ladung oder Ressource aufgebraucht ist | Wiederverwertung erschöpfter Effekte |
+| Bei benachbarten Karten | Basierend auf benachbarten Karten-Slots | Enge, durchdachte Layouts |
+| Bei Reparatur | Jedes Mal, wenn das Auto repariert wird | Lange, verschleißintensive Runs |
+| Passiver Charm | Permanent, solange im Besitz | Flexible, wartungsarme Boni |
+
+Gates verdienen ihre eigene Tabelle, denn die Platzierung verändert alles.
+
+| Gate | Was es bewirkt | Praktischer Tipp |
+| --- | --- | --- |
+| Score Gate | Vergibt die Hälfte des Basis-Loop-Scores und erhöht dann diese Basis | Ausgezeichnete frühe Wahl für wachsendes Wachstum |
+| Multiply Gate | Multipliziert Punkte; der Multiplikator wird entfernt, wenn das Gate ersetzt wird | Platziere es dort, wo das Auto jede Runde durchfährt |
+| Double Gate | Erhöht den Multiplikator über 1x | Schwierigkeitsstrafen gelten nur für diesen Bonusanteil |
+| Hungry Gate | Frisst ein darauf platziertes Gate und absorbiert dessen Level | Community-Berichte zeigen, dass dies schnell eskalieren kann |
+| Drift Gate | Hält Drift auch bei extremen Geschwindigkeiten am Laufen | Praktisch Pflicht für Drift-Builds |
+| Mirror Gate | Wiederholt andere Gate-Effekte | Platzierungsabhängig; teste, bevor du dich festlegst |
+| Chain Gate | Sammelt Punkte an | Denke daran: Die Gesamtsumme wird jede Runde zurückgesetzt |
+
+Ein vollständiges The Loopler Tutorial könnte Stunden allein mit der Gate-Reihenfolge verbringen. Für den Moment merke dir ein Prinzip: Gates sind Brettposition, und die Position entscheidet, ob eine Combo auszahlt oder verpufft.
+
+## Die Anzeigen lesen: Treibstoff, Haltbarkeit, Boost und Overdrive
+
+Zahlen steigen, aber die falsche Anzeige kann deinen Run trotzdem beenden. Hier erfährst du, was dir jeder Wert sagt.
+
+| Anzeige | Was sie bewirkt | Fehlersymptom | Lösung |
+| --- | --- | --- | --- |
+| Treibstoff | Hält das Auto am Laufen | Tank leert sich mitten in der Runde | Tankkarten, Effizienzteile, Treibstoff-Gates |
+| Haltbarkeit | Absorbiert Schaden, wenn der Treibstoff ausgeht | Leben sinkt während einer Runde | Bei Boxenstopps reparieren; zuerst Treibstoff schützen |
+| Boost / Boost-Cap | Erhöht die Geschwindigkeit | Überschüssiger Boost verfällt während Overdrive | Erhöhe den Cap in der Garage |
+| Drift-Anzeige | Belohnt Kurvenfahren | Drift hört bei sehr hohen Geschwindigkeiten auf zu triggern | Füge ein Drift Gate hinzu |
+| Overdrive | Wiederholte Geschwindigkeitspulse auf einem Timer | Pulse kommen zu langsam, um zu wirken | Vergleiche Pulse und Timer, bevor du investierst |
+| Lucky Chance | Verbessert Karten-Seltenheit und Upgrades | Pack-Qualität bleibt flach | Stapel sie über 100 % für Zwei-Rang-Upgrades |
+| Freeze-Schwelle | Friert das Auto kurz ein | Nichts sammelt sich, bis der Cooldown endet | Plane um den Cooldown herum, nicht durch ihn hindurch |
+
+Zwei Details bringen fast jeden ins Stolpern. Erstens: Drift aktiviert sich nur in Kurven — Geraden bringen dafür nichts. Zweitens: Boost über deinem Cap verfällt während Overdrive, während Boost unter dem Cap erhalten bleibt. Den Cap zu erhöhen ist daher oft mehr wert, als rohen Zugewinn zu jagen.
+
+## Boxenstopps, Routen und Schwierigkeitsstufen
+
+Boxenstopps sind der Ort, an dem Runs gewonnen werden. Der erste Boxenstopp eines Runs bietet immer ein Treibstoff- oder Brems-Gate, wenn du noch keine Treibstoffquelle hast — eine leise Art zu sagen, was am wichtigsten ist.
+
+| Schwierigkeit | Ungefähres Gefühl | Was sich ändert |
+| --- | --- | --- |
+| Bronze | Nachsichtig, ideal zum Lernen | Strafen sind mild |
+| Emerald | Builds beginnen zu zählen | Karten und Gates verlieren an Effektivität |
+| Diamond | Bestrafend, eng | Schwache Builds scheitern früh |
+
+Ein paar strukturelle Regeln, die es sich zu verinnerlichen lohnt:
+
+- Schwierigkeiten werden global freigeschaltet, nicht pro Strecke, und Streckenkarten öffnen jetzt auf deiner höchsten freigeschalteten Schwierigkeit.
+- Routenauswahl erscheint zu Beginn eines Runs und dann erneut in den Runden 7 und 13.
+- Leaderboard-Runs zählen nur, wenn du in Runde 12 abschließt.
+- Die Infinity-Option wird freigeschaltet, sobald du einen beliebigen Run gewonnen hast, und Punkte werden nur dann an normale Leaderboards übermittelt, wenn der Run abgeschlossen ist.
+- Reroll-Kosten steigen schnell, also reroll nur, wenn du genau weißt, auf welche Rolle du jagst.
+
+Du kannst Patch-Historie und Community-Ankündigungen auf [dem offiziellen Steam-Community-Hub von The Loopler](https://steamcommunity.com/app/4150860) verfolgen, wo auch Bug-Reports und Balance-Diskussionen zuerst landen.
+
+## Fortgeschrittene Tipps und Community-Weisheit
+
+Langjährige Spieler haben mehrere Einsichten zutage gefördert, die es sich zu übernehmen lohnt. Behandle sie als Spielerfahrung und nicht als Evangelium, denn die Balance ändert sich mit jedem Patch.
+
+- **Ein Hungry Gate zu füttern ist eine echte Strategie.** Community-Berichte beschreiben, wie Gates hineingestapelt werden, um seine Level weit über normale Grenzen hinaus zu erhöhen.
+- **Klarheit ist der größte Reibungspunkt.** Mehrere Spieler haben um ein In-Game-Glossar gebeten, weil Tooltips davon ausgehen, dass du das Vokabular bereits kennst.
+- **Wirkung ist schwer zu spüren.** Ein wiederkehrendes Review-Thema ist, dass Upgrades schwer zu bewerten sind, anders als in Spielen, in denen eine Build-Änderung sofort sichtbar ist. Eine Runde vor und nach einem Kauf zu beobachten, löst das meiste davon.
+- **Hohe Schwierigkeiten verengen deine Optionen.** Mehrere Spieler berichten, dass Diamond-Runs bestimmte Builds stark belohnen, also behandle frühe Shop-Rolls auf den härtesten Stufen als kritisch.
+- **Nutze die Geschwindigkeitswerkzeuge.** Der 3x-Geschwindigkeitsbutton und der Halten-R-Neustart existieren aus gutem Grund; frühe Runden bei normaler Geschwindigkeit zu grinden zehrt schnell an der Geduld.
+- **Schau dir die Tutorial-Seiten an.** Neuere Patches haben ein einmaliges Loadout-Tutorial und eine Overdrive-Seite hinzugefügt, die Geschwindigkeitspulse erklärt — was direkt die Verwirrung vieler neuer Spieler anspricht.
+
+## FAQ zu The Loopler
+
+**Muss ich das Auto überhaupt lenken?**
+Nein. Das Auto fährt den Rundkurs automatisch, und dein Einfluss kommt aus Karten, Gates, Charms, Garage-Teilen und Routenwahlen. Wenn du auf eine Steuereingabe wartest, die nie kommt, dann funktioniert das Spiel genau wie beabsichtigt.
+
+**Was sollte ich an meinem ersten Boxenstopp kaufen?**
+Treibstoff oder Effizienz, fast jedes Mal. Ein riesiger Multiplikator bedeutet nichts, wenn der Tank leer wird und die Haltbarkeit zu sinken beginnt. Nachdem der Treibstoff stabil ist, kaufe einen Trigger, der bereits jede Runde feuert.
+
+**Deckt dieses The Loopler Tutorial den Infinity-Modus ab?**
+Es deckt die Grundlage ab, die du dafür brauchst. Infinity wird freigeschaltet, nachdem du einen beliebigen Run gewonnen hast, und es treibt die Punkteziele mit der Zeit höher und härter. Hole dir zuerst eine stabile Engine und jage dann dem Infinity-Leaderboard nach.
+
+**Warum funktioniert mein Drift bei hohen Geschwindigkeiten nicht mehr?**
+Drift triggert nur in Kurven, und bei extremen Geschwindigkeiten hört es auf zu feuern, es sei denn, du hast ein Drift Gate. Community-Guides weisen ständig darauf hin, also schnapp dir eines, bevor dein Build von Drift-Ticks abhängt.
+
+Baue klein, beobachte eine Runde, schütze den Tank und lass die Multiplikatoren kommen, sobald die Maschine tatsächlich läuft. Das ist die ganze Lektion — und diejenige, die eine verwirrende erste Stunde in einen wirklich süchtig machenden Loop verwandelt.

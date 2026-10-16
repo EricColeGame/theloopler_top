@@ -86,19 +86,19 @@
           "badge": "Cards",
           "title": "The Loopler Cards Database",
           "description": "Complete card catalog detailing speed boosts, track extenders, and scoring triggers.",
-          "href": "/cards/the-loopler-cards-guide"
+          "href": "/mechanics/the-loopler-deckbuilder"
         },
         {
           "badge": "Builds",
           "title": "Best Loopler Builds",
           "description": "Optimized deck combinations and gate arrangements for sustained high-score endless runs.",
-          "href": "/builds/the-loopler-builds-guide"
+          "href": "/progression/the-loopler-builds"
         },
         {
           "badge": "Charms",
           "title": "The Loopler Charms Tier List",
           "description": "All collectible charms ranked with passive effects and best build pairings.",
-          "href": "/charms/the-loopler-charms-guide"
+          "href": "/progression/the-loopler-upgrades"
         }
       ]
     },
@@ -169,7 +169,7 @@
           "order": 2,
           "name": "The Loopler Cards Guide",
           "description": "A searchable card database explaining card effects, synergies, and recommended combinations for different builds. Players can learn how to create powerful chain reactions and maximize their scores.",
-          "href": "/cards/the-loopler-cards-guide",
+          "href": "/mechanics/the-loopler-deckbuilder",
           "displayType": "card-list",
           "highlights": [
             {
@@ -194,7 +194,7 @@
           "order": 3,
           "name": "The Loopler Builds Guide",
           "description": "A build recommendation section featuring strong combinations of cards, gates, charms, and upgrades. It targets players looking for optimized strategies and high-score runs.",
-          "href": "/builds/the-loopler-builds-guide",
+          "href": "/progression/the-loopler-builds",
           "displayType": "card-list",
           "highlights": [
             {
@@ -219,7 +219,7 @@
           "order": 4,
           "name": "The Loopler Charms Guide",
           "description": "A complete overview of collectible charms, their passive effects, and how they influence different playstyles. This module helps players understand which charms fit specific builds.",
-          "href": "/charms/the-loopler-charms-guide",
+          "href": "/progression/the-loopler-upgrades",
           "displayType": "tier-grid",
           "highlights": [
             {
@@ -244,7 +244,7 @@
           "order": 5,
           "name": "The Loopler Gates Guide",
           "description": "A strategy guide focused on gate placement, gate effects, and track optimization. Players can learn how to arrange gates to create stronger multiplier chains.",
-          "href": "/gates/the-loopler-gates-guide",
+          "href": "/mechanics/the-loopler-infinite-loop",
           "displayType": "card-list",
           "highlights": [
             {
@@ -269,7 +269,7 @@
           "order": 6,
           "name": "The Loopler Cars and Tracks",
           "description": "A reference section covering available cars, track layouts, and their unique gameplay characteristics. It helps users compare options before starting a run.",
-          "href": "/cars/the-loopler-cars-and-tracks",
+          "href": "/vehicles/the-loopler-car",
           "displayType": "card-list",
           "highlights": [
             {
@@ -294,7 +294,7 @@
           "order": 7,
           "name": "The Loopler Updates and News",
           "description": "A news section collecting official announcements, development updates, demo information, and patch notes. It keeps returning players informed about new content and balance changes.",
-          "href": "/news/the-loopler-updates-and-news",
+          "href": "/modes/the-loopler-update",
           "displayType": "card-list",
           "highlights": [
             {
@@ -319,7 +319,7 @@
           "order": 8,
           "name": "The Loopler Achievements Guide",
           "description": "A guide for Steam achievements and progression goals, helping players track completion targets and discover long-term objectives. This module supports users searching for achievement and completion information.",
-          "href": "/achievements/the-loopler-achievements-guide",
+          "href": "/progression/the-loopler-world-record",
           "displayType": "card-list",
           "highlights": [
             {

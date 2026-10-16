@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Guia de Mecânicas de The Loopler Roguelike: Cartas, Portões, Amuletos e Drift",
+  description: "Aprenda como The Loopler roguelike funciona: draft de cartas, posicionamento de portões, amuletos, combustível, drift, overdrive, níveis de dificuldade e regras de placar explicadas.",
+  category: "mechanics",
+  date: "2026-10-16",
+}
+
+Carrinhos de slot, deckbuilding e um contador de pontos que se recusa a parar — essa é a proposta central de **The Loopler roguelike**, um roguelite deckbuilder do desenvolvedor solo Mheep. Ele coloca um pequeno carrinho de slot em uma pista em loop e entrega as ferramentas para transformar uma volta modesta em uma avalanche de multiplicadores. Se você abandonou **The Loopler roguelike** porque não conseguia dizer se suas melhorias estavam realmente fazendo algo, esta análise cobre as mecânicas que importam: como as cartas disparam, por que a ordem dos portões muda tudo e onde combustível, drift e overdrive decidem silenciosamente sua run.
+
+## O que é The Loopler Roguelike? O Loop Central da Run
+
+Uma run em The Loopler gira em torno de uma única pista, um único carro e uma meta de pontos que aumenta a cada rodada. Você faz draft de cartas, posiciona portões em espaços fixos no circuito e empilha amuletos que mudam o comportamento da sua build. Entre as rodadas, você visita o pitstop para comprar, rerrolar e reparar. Uma run padrão tem 12 rodadas, e certas rodadas começam com uma escolha de rota entre três caminhos que leva a tipos diferentes de evento — perigos, chefes ou rotas com muitas recompensas.
+
+O jogo foi lançado na Steam em 11 de setembro de 2026 e vem com nove carros, nove pistas, cinco modos de dificuldade, 50 cartas, 30 portões e 70 amuletos. É verificado para Steam Deck e jogável sem eventos de quick-time.
+
+| Sistema | O que Faz | Onde Você Interage com Ele |
+|---|---|---|
+| Cartas | Disparam efeitos em loops, reparos, drift ou outras cartas | Obtidas em pacotes de cartas, gerenciadas no loadout |
+| Portões | Modificam a própria pista conforme o carro passa por eles | Posicionados em espaços de portão no circuito |
+| Amuletos | Bônus passivos acumuláveis que alteram regras da run inteira | Comprados e empilhados no pitstop |
+| Garagem | Ajuste permanente de atributos para a run atual | Painel de atributos, aba do carro, melhorias de modificadores |
+| Pitstop | Compras, rerrolagens, reparos e mudanças de loadout | Entre as rodadas |
+
+O detalhe importante é que essas camadas não são independentes. Uma carta que dispara "ao esvaziar" se comporta de forma diferente dependendo de um portão estar reabastecendo seu tanque, e um amuleto que aumenta multiplicadores não faz nada se seus portões de multiplicação forem substituídos no meio da run.
+
+## Cartas, Portões e Amuletos: Como as Três Camadas de Build Interagem
+
+As cartas são o motor da sua pontuação. Elas podem conceder multiplicadores passivos, gerar carros fantasmas, rolar jackpots ou disparar outras cartas inteiramente. Muitas são condicionais: cartas "ao iniciar" e "ao esvaziar" carregam contagens de carga por reparo, e essas cargas são exibidas separadamente do texto de efeito para você distinguir informação de recompensa.
+
+Os portões são a camada da pista. Cada circuito tem um número limitado de espaços de posicionamento, e a ordem em que o carro passa por eles determina como os multiplicadores se acumulam. O posicionamento importa o suficiente para a comunidade tratar o sequenciamento de portões como uma habilidade central, não como um detalhe secundário.
+
+| Camada | Papel Principal | Comportamentos de Exemplo | Armadilha Principal |
+|---|---|---|---|
+| Cartas | Geração de pontos e disparos | Rolagens de jackpot, carros fantasmas, disparos em cadeia | Cartas esgotadas param de contribuir até serem reparadas |
+| Portões | Modificação e sequenciamento da pista | Portões de pontos, multiplicação, corrente, faminto, overdrive | Substituir um portão pode remover o multiplicador que ele concedia |
+| Amuletos | Escalonamento passivo da run inteira | Chance de sorte, geração de ouro, suporte a drift | Alguns amuletos ignoram explicitamente Chance de Sorte extra |
+
+Vale conhecer algumas interações antes de gastar ouro. Um Portão Faminto colocado sobre um portão existente o devora e absorve seus níveis, o que é uma das jogadas de escalonamento mais fortes do jogo. A pontuação acumulada de um Portão de Corrente é redefinida a cada rodada, então ele recompensa loops rápidos no início em vez de acumular no fim da rodada. E vender um Punch Card ou Write Off retira o multiplicador de pontos que ele concedeu — a dica diz isso, e é fácil não perceber.
+
+## Velocidade, Combustível, Boost e Drift: As Mecânicas do Motor Explicadas
+
+O carro em si é uma ficha de atributos, e é aqui que mora a maior parte da confusão dos novatos. A eficiência de combustível cai quanto mais você reabastece, e é por isso que efeitos de "reabastecer 1 célula por loop" podem parecer quebrados quando seu contador de loops por segundo é enorme. Isso é retorno decrescente intencional, não um bug — e é um dos mal-entendidos mais relatados nas discussões da comunidade.
+
+O drift só é ativado em curvas; retas nunca o ativam. O progresso do tick de drift é mantido entre curvas dentro de uma tentativa, e em velocidades extremamente altas o drift para de contar completamente, a menos que você tenha um Portão de Drift. Esse único portão é a diferença entre uma build de drift que escala para sempre e uma que morre silenciosamente na rodada 9.
+
+| Atributo | O que Afeta | Erro Comum |
+|---|---|---|
+| Velocidade | Loops por segundo, frequência de disparos, volume de pontos | Empurrar velocidade antes de garantir drift e detecção de portões |
+| Combustível | Duração da run; tanque vazio encerra seu ímpeto | Empilhar efeitos de reabastecimento sem considerar o retorno decrescente |
+| Boost | Rajadas curtas de ganho de velocidade, limitadas pelo Limite de Boost | Ignorar que o boost acima do limite decai durante o overdrive |
+| Overdrive | Pulsos de boost cronometrados com seu próprio temporizador | Esperar que buffs de Portão Superaquecido persistam durante o overdrive |
+| Drift | Escalonamento de multiplicador baseado em curvas | Esquecer que o drift para em velocidades extremas |
+| Chance de Sorte | Rank mínimo de carta e qualidade de melhoria | Presumir que ela melhora amuletos que explicitamente a ignoram |
+
+O overdrive merece uma nota própria. Ele funciona com um temporizador, pulsa boost em intervalos fixos e interage com cartas como Rocket, que dobra o boost de overdrive em vez de triplicá-lo após mudanças de balanceamento. Ganhos de boost também diminuem em velocidades extremas em vez de manter um piso, então empilhar aceleração bruta eventualmente encontra um limite.
+
+## Níveis de Dificuldade e Placar: Como a Progressão Realmente Funciona
+
+The Loopler tem cinco modos de dificuldade, e eles não são mais desbloqueados por pista — agora desbloqueiam globalmente. As cartas de pista agora abrem na sua dificuldade mais alta desbloqueada, o que significa que você nunca é forçado a voltar ao Bronze só porque escolheu um novo circuito. Níveis mais altos aplicam penalidades à eficácia de cartas e portões; Esmeralda e Diamante são o fim punitivo da escada, e é onde as builds são encurraladas em arquétipos estreitos e confiáveis.
+
+Os placares têm regras rígidas, e entendê-las mal desperdiça runs.
+
+| Placar | Regra de Envio | Observações |
+|---|---|---|
+| Placar de pista padrão | A run precisa ser finalizada na rodada 12 | Pontuações só são enviadas se você finalizar em vez de avançar para o Infinito |
+| Placar de Infinito | Classifica pelo menor número de rodadas para alcançar o Infinito | Placar separado das pontuações de pista padrão |
+| Desafios diários e semanais | Placares por desafio | Runs de desafio concedem XP e conquistas normalmente |
+
+Se você quer uma pontuação no placar, finalize. Se você quer o prestígio de uma run no Infinito, aceite que a run não contará para os placares normais de pista. O jogo agora avisa você sobre isso na escolha do Infinito.
+
+## Dicas Práticas para Suas Primeiras Dez Runs
+
+- **Garanta combustível antes de qualquer outra coisa.** O primeiro pitstop de uma run sempre oferece um portão de combustível ou freio se você ainda não tem uma fonte de combustível.
+- **Compre um Portão de Drift antes de perseguir velocidade.** O drift para de disparar em velocidades muito altas sem um.
+- **Trate a ordem dos portões como uma decisão de build.** Os mesmos cinco portões em uma sequência diferente produzem multiplicadores bem diferentes.
+- **Passe o mouse sobre os atributos da garagem.** As dicas de atributos agora explicam o que cada valor faz em vez de apenas nomeá-lo, incluindo Pontuação de Loop, Temporizador de Overdrive, Pulso de Overdrive e Chance de Sorte.
+- **Use o botão de velocidade 3x.** Relatos da comunidade frequentemente citam animações e transições repetidas como o maior ladrão de tempo entre tentativas.
+- **Não venda cartas de multiplicador casualmente.** Vender Punch Card ou Write Off remove o multiplicador de pontos que ela concedeu.
+
+| Prioridade no Início | Motivo | Risco se Ignorada |
+|---|---|---|
+| Fonte de combustível | Tanque vazio encerra o ímpeto de pontuação | Run trava no meio da rodada |
+| Suporte a drift | Multiplicadores de curva são um grande caminho de escalonamento | Teto de pontuação no fim da rodada |
+| Sequenciamento de portões | A ordem impulsiona o acúmulo | Multiplicadores entram fora de ordem |
+| Uma carta aprimorável | Escalonamento por nível vence amplitude | Dano espalhado demais para cumprir metas |
+
+A experiência dos jogadores também aponta um ponto real de atrito: não há glossário no jogo, e vários efeitos presumem que você já conhece a terminologia. Até isso mudar, os tópicos da comunidade no hub da Steam são a forma mais rápida de decifrar interações específicas de cartas e portões.
+
+## The Loopler Roguelike Vale a Pena? Recepção e Escopo
+
+A recepção tem sido forte. A página da Steam lista uma avaliação geral "Muito Positiva", com cerca de 89% de 670 avaliações, além de uma avaliação recente semelhante nos últimos 30 dias. Uma semana após o lançamento, o desenvolvedor relatou mais de 40.000 unidades vendidas, mais de 42.000 usuários únicos, um pico de 2.068 jogadores simultâneos e quase 200.000 horas jogadas. O jogo também inclui 47 conquistas da Steam, saves na nuvem, placares, compartilhamento familiar e 12 idiomas de interface.
+
+| Escopo de Conteúdo | Quantidade |
+|---|---|
+| Carros | 9 |
+| Pistas | 9 |
+| Modos de dificuldade | 5 |
+| Cartas | 50 |
+| Portões | 30 |
+| Amuletos | 70 |
+| Conquistas da Steam | 47 |
+
+O sentimento da comunidade se divide em linhas previsíveis. Os elogios se concentram na trilha sonora de Pulsewith (Justin Skomarovsky), no escalonamento repleto de dopamina e no arco "do zero ao herói" de uma run. As críticas focam no feedback pouco claro — jogadores dizem que é difícil saber se uma melhoria específica ajudou — e nas dificuldades mais altas exigirem rolagens iniciais específicas. Como disse um avaliador, não espere um Balatro com carros; a tomada de decisão ativa está no draft e no posicionamento, não no jogo momento a momento.
+
+Para preços atuais, bundles, DLC e a demo gratuita, confira [The Loopler na página oficial da Steam](https://store.steampowered.com/app/4150860/The_Loopler/). A [página do desenvolvedor no itch.io para The Loopler](https://mheep.itch.io/the-loopler) hospeda uma build de demo mais antiga e um tópico de comentários ativo onde o desenvolvedor responde perguntas sobre mecânicas diretamente.
+
+## FAQ
+
+**Que tipo de jogo é The Loopler roguelike?**
+É um roguelite deckbuilder sobre um carrinho de slot dando voltas. Você faz draft de cartas, posiciona portões na pista e empilha amuletos para atingir uma meta de pontos a cada rodada, com um modo Infinito opcional que aumenta a meta indefinidamente.
+
+**Preciso finalizar na rodada 12 para o placar contar?**
+Sim. Os placares de pista padrão só aceitam runs em que você finaliza na rodada 12. Avançar para o Infinito envia sua run para o placar separado de Infinito, que classifica pelo menor número de rodadas para alcançar o Infinito.
+
+**Por que meu efeito de "reabastecer por loop" parece parar de funcionar?**
+A eficiência de combustível diminui quanto mais você reabastece, então efeitos de reabastecimento entregam retornos decrescentes em contagens altas de loops. Isso é intencional, não um bug — o efeito ainda está disparando, só está pagando menos a cada vez.
+
+**The Loopler é jogável no Steam Deck?**
+Sim. É verificado para Steam Deck, suporta controles de Xbox e PlayStation e pode ser jogado sem eventos de quick-time.

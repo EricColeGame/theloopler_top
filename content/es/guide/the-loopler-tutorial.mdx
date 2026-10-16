@@ -1,0 +1,132 @@
+export const metadata = {
+  title: "Tutorial de The Loopler: Guía para Principiantes sobre Cartas, Puertas y Bucles Infinitos",
+  description: "Este tutorial de The Loopler guía a los nuevos jugadores por cartas, puertas, amuletos, combustible y Overdrive para que cada partida dure más y consiga mejores puntuaciones.",
+  category: "guide",
+  date: "2026-10-16",
+}
+
+Un coche de ranura gira alrededor de una pista, las puertas destellan a su paso y tu puntuación se eleva hasta los millones. Ese es el gancho de The Loopler, un roguelite deckbuilder en el que draftas cartas, colocas puertas y coleccionas amuletos en lugar de conducir. Si has abandonado tras unas cuantas partidas preguntándote qué hicieron realmente tus mejoras, no eres el único: esa es la queja más común en los informes de la comunidad. Este tutorial de The Loopler existe precisamente para arreglar eso. A continuación encontrarás un tutorial de The Loopler paso a paso para construir tu primer motor ganador, además de tablas que explican cada medidor, activador y decisión de parada en boxes que afrontarás.
+
+## Conceptos Básicos del Tutorial de The Loopler: Qué Controlas Realmente
+
+El coche se conduce solo. Siempre lo ha hecho. Tu verdadero trabajo es la ingeniería: elegir qué efectos comprar, dónde colocarlos y qué ruta tomar después. Entender esa división es la base de cualquier buena partida.
+
+| Sistema | Qué hace | Por qué importa |
+| --- | --- | --- |
+| Cartas | Efectos draftados con activadores impresos, como al completar un bucle, al empezar, al vaciarse o sobre cartas adyacentes | Tu principal fuente de puntuación y multiplicadores |
+| Puertas | Efectos colocados en ranuras de la pista que el coche cruza físicamente | El orden de colocación cambia cómo se resuelven los combos |
+| Amuletos | Coleccionables pasivos que añaden bonificaciones | A menudo conllevan recompensas que definen la partida |
+| Piezas de garaje | Equipo entre partidas que modifica estadísticas como el depósito de combustible, la eficiencia de combustible, la durabilidad, el límite de Boost y la velocidad máxima | Progreso permanente que suaviza las partidas posteriores |
+| Efectos de coche | Cada coche tiene un efecto único | Un sesgo inicial, no una orden de forzar objetos que coincidan |
+| Equipamiento | Controla qué cartas, puertas y amuletos desbloqueados son elegibles para las ofertas | Los objetos habilitados pueden aparecer; nunca están garantizados |
+
+Una ronda termina cuando llenas el objetivo de puntuación. Luego tomas una recompensa, eliges una ruta en el mapa y visitas una parada en boxes o un evento antes de que comience la siguiente ronda. El coche va sobre raíles; las decisiones son todas tuyas.
+
+## Construye Tu Primer Motor Funcional en Cuatro Pasos
+
+El consejo más fiable de los jugadores experimentados es aburrido pero efectivo: sobrevive primero, puntúa después, multiplica al final. Si solo recuerdas una regla de este tutorial de The Loopler, que sea esta: ralentiza la simulación y observa un bucle completo antes de comprar nada.
+
+| Prioridad | Objetivo | Acción de ejemplo | Señal de alarma |
+| --- | --- | --- | --- |
+| 1 | Resolver la supervivencia de combustible | Toma ayuda fiable de repostaje o eficiencia de combustible | El depósito se vacía y la durabilidad empieza a caer |
+| 2 | Elegir un motor de puntuación | Comprométete con la puntuación por bucle, una cadena de puertas o una recompensa repetida | Tienes la mitad de tres motores diferentes |
+| 3 | Comprar activadores fiables | Una puerta que el coche siempre cruza supera a un amuleto que espera un combo | Tus efectos rara vez se activan durante una vuelta normal |
+| 4 | Añadir multiplicadores | Aumenta la frecuencia o el pago de lo que ya funciona | Grandes números sobre el papel, puntuación plana en la pista |
+
+**Paso 1 — Observa una vuelta completa.** Anota qué efectos se activan, si el combustible termina más alto o más bajo y cuánto avanzó el objetivo de puntuación. Esa única vuelta te dice si construiste un motor o un problema muy rápido.
+
+**Paso 2 — Elige un motor.** Puntuación por activador de bucle, una cadena de puertas o una configuración que alimente repetidamente una recompensa. Las builds mixtas parecen flexibles y normalmente se estancan a mitad de la partida.
+
+**Paso 3 — Gasta en activadores, no en sueños.** El oro gastado en un efecto que ya se activa cada vuelta nunca se desperdicia.
+
+**Paso 4 — Multiplica después.** Los multiplicadores amplifican una máquina que funciona. No pueden rescatar una rota.
+
+## Cartas, Puertas y Amuletos: Leer los Activadores Como un Profesional
+
+El texto de las cartas es donde los nuevos jugadores se pierden, así que lee la condición del activador antes que el número. Una carta que se activa en cada bucle y una carta que se activa una vez por reparación no son comparables, aunque sus porcentajes parezcan similares.
+
+| Tipo de activador | Cuándo se activa | Mejor uso |
+| --- | --- | --- |
+| Al completar bucle | Cada circuito completado | Crecimiento constante de puntuación |
+| Al empezar | Al inicio de una ronda o ciclo de reparación | Ráfagas concentradas al principio |
+| Al vaciarse | Cuando una carga o recurso se agota | Reciclar efectos agotados |
+| Sobre cartas adyacentes | Según las ranuras de cartas vecinas | Diseños ajustados y deliberados |
+| Al reparar | Cada vez que se repara el coche | Partidas largas y de desgaste |
+| Amuleto pasivo | Constantemente mientras se posee | Bonificaciones flexibles y de bajo mantenimiento |
+
+Las puertas merecen su propia tabla, porque la colocación lo cambia todo.
+
+| Puerta | Qué hace | Consejo práctico |
+| --- | --- | --- |
+| Puerta de Puntuación | Otorga la mitad de la puntuación base por bucle y luego aumenta esa base | Excelente elección temprana para un crecimiento compuesto |
+| Puerta Multiplicadora | Multiplica la puntuación; el multiplicador se elimina si se reemplaza la puerta | Colócala donde el coche pase en cada vuelta |
+| Puerta Doble | Aumenta el multiplicador por encima de 1x | Las penalizaciones de dificultad se aplican solo a esa porción de bonificación |
+| Puerta Hambrienta | Se come una puerta colocada encima de ella y absorbe sus niveles | Los informes de la comunidad muestran que puede escalar muy rápido |
+| Puerta de Derrape | Mantiene el derrape activo a velocidades extremas | Prácticamente obligatoria para builds de derrape |
+| Puerta Espejo | Reproduce otros efectos de puerta | Depende de la colocación; prueba antes de comprometerte |
+| Puerta de Cadena | Acumula puntuación | Recuerda que el total se reinicia cada ronda |
+
+Un tutorial completo de The Loopler podría pasar horas solo con el orden de las puertas. Por ahora, recuerda un principio: las puertas son posición en el tablero, y la posición decide si un combo da resultado o se desvanece.
+
+## Leer los Medidores: Combustible, Durabilidad, Boost y Overdrive
+
+Los números suben, pero el medidor equivocado aún puede terminar tu partida. Esto es lo que te dice cada indicador.
+
+| Medidor | Qué hace | Síntoma de fallo | Solución |
+| --- | --- | --- | --- |
+| Combustible | Mantiene el coche en marcha | El depósito se vacía a mitad de ronda | Cartas de repostaje, piezas de eficiencia, puertas de combustible |
+| Durabilidad | Absorbe el daño cuando se agota el combustible | La salud se drena durante una vuelta | Repara en las paradas en boxes; protege primero el combustible |
+| Boost / Límite de Boost | Aumenta la velocidad | El exceso de boost decae durante Overdrive | Sube el límite en el garaje |
+| Medidor de derrape | Recompensa el tomar curvas | El derrape deja de activarse a velocidades muy altas | Añade una Puerta de Derrape |
+| Overdrive | Pulsos de velocidad repetidos con temporizador | Los pulsos llegan demasiado despacio para importar | Compara Pulso y Temporizador antes de invertir |
+| Probabilidad de Suerte | Mejora la rareza y las mejoras de las cartas | La calidad del sobre se mantiene plana | Acumúlala por encima del 100 % para mejoras de dos rangos |
+| Umbral de congelación | Congela el coche brevemente | Nada se acumula hasta que termina el enfriamiento | Planifica alrededor del enfriamiento, no a través de él |
+
+Dos detalles confunden a casi todos. Primero, el derrape solo se activa en las curvas: las rectas no hacen nada por él. Segundo, el boost por encima de tu límite decae durante Overdrive, mientras que el boost por debajo del límite se conserva, así que subir el límite a menudo vale más que perseguir ganancia bruta.
+
+## Paradas en Boxes, Rutas y Niveles de Dificultad
+
+Las paradas en boxes son donde se ganan las partidas. La primera parada en boxes de una partida siempre ofrece una puerta de combustible o de freno si aún no tienes una fuente de combustible, lo que es una forma discreta de decirte qué es lo que más importa.
+
+| Dificultad | Sensación aproximada | Qué cambia |
+| --- | --- | --- |
+| Bronce | Indulgente, ideal para aprender | Las penalizaciones son leves |
+| Esmeralda | Las builds empiezan a importar | Las cartas y puertas pierden efectividad |
+| Diamante | Castigadora y estrecha | Las builds débiles fallan pronto |
+
+Algunas reglas estructurales que vale la pena interiorizar:
+
+- Las dificultades se desbloquean globalmente, no por pista, y las cartas de pista ahora se abren en tu dificultad desbloqueada más alta.
+- Las opciones de ruta aparecen al inicio de una partida y luego de nuevo en las rondas 7 y 13.
+- Las partidas de clasificación solo cuentan si te asientas en la ronda 12.
+- La opción Infinito se desbloquea una vez que hayas superado cualquier partida, y las puntuaciones solo se envían a las clasificaciones normales si la partida se asienta.
+- Los costes de reroll suben rápido, así que haz reroll solo cuando sepas exactamente qué rol estás buscando.
+
+Puedes seguir el historial de parches y los anuncios de la comunidad en [el centro comunitario oficial de The Loopler en Steam](https://steamcommunity.com/app/4150860), que también es donde llegan primero los informes de errores y los debates de equilibrio.
+
+## Consejos Avanzados y Sabiduría de la Comunidad
+
+Los jugadores veteranos han sacado a la luz varias ideas que vale la pena tomar prestadas. Trátalas como experiencia de jugadores y no como evangelio, ya que el equilibrio cambia con cada parche.
+
+- **Alimentar una Puerta Hambrienta es una estrategia real.** Los informes de la comunidad describen apilar puertas dentro de ella para inflar sus niveles mucho más allá de los límites normales.
+- **La claridad es el mayor punto de fricción.** Varios jugadores han pedido un glosario dentro del juego porque las descripciones emergentes asumen que ya conoces el vocabulario.
+- **El impacto es difícil de percibir.** Un tema recurrente en las reseñas es que las mejoras son difíciles de evaluar, a diferencia de juegos donde un cambio de build es inmediatamente visible. Observar una vuelta antes y después de una compra resuelve la mayor parte de esto.
+- **Las dificultades altas estrechan tus opciones.** Varios jugadores informan que las partidas en Diamante recompensan mucho builds específicas, así que trata las tiradas tempranas de la tienda como críticas en los niveles más duros.
+- **Usa las herramientas de velocidad.** El botón de velocidad 3x y el reinicio manteniendo R existen por una razón; farmear las rondas tempranas a velocidad normal agota la paciencia rápido.
+- **Consulta las páginas del tutorial.** Los parches recientes añadieron un tutorial de equipamiento de un solo uso y una página de Overdrive que explica los pulsos de velocidad, que abordan directamente la confusión que sienten muchos jugadores nuevos.
+
+## Preguntas Frecuentes Sobre The Loopler
+
+**¿Necesito conducir el coche en absoluto?**
+No. El coche recorre el circuito automáticamente, y tu influencia viene de las cartas, puertas, amuletos, piezas de garaje y elecciones de ruta. Si estás esperando una entrada de control que nunca llega, eso es el juego funcionando según lo previsto.
+
+**¿Qué debería comprar en mi primera parada en boxes?**
+Combustible o eficiencia, casi siempre. Un multiplicador enorme no significa nada si el depósito se vacía y la durabilidad empieza a drenarse. Una vez que el combustible es estable, compra un activador que ya se active en cada vuelta.
+
+**¿Este tutorial de The Loopler cubre el modo Infinito?**
+Cubre la base que necesitas para él. Infinito se desbloquea después de superar cualquier partida, y empuja los objetivos de puntuación cada vez más alto y más duro con el tiempo. Consigue primero un motor estable y luego persigue la clasificación infinita.
+
+**¿Por qué mi derrape deja de funcionar a altas velocidades?**
+El derrape solo se activa en las curvas, y deja de activarse a velocidades extremas a menos que tengas una Puerta de Derrape. Las guías de la comunidad lo señalan constantemente, así que consigue una antes de que tu build dependa de los tics de derrape.
+
+Construye en pequeño, observa una vuelta, protege el depósito y deja que los multiplicadores lleguen cuando la máquina realmente funcione. Esa es toda la lección, y es la que convierte una primera hora confusa en un bucle genuinamente adictivo.

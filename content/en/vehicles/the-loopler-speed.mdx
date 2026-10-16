@@ -1,0 +1,122 @@
+export const metadata = {
+  title: "The Loopler Speed Guide: How to Push Your Slot Car to Insane Velocities",
+  description: "Master The Loopler speed with our guide to drift, boost, overdrive, gates, and caps — plus fixes for frozen cars and stalled velocity runs.",
+  category: "vehicles",
+  date: "2026-10-16",
+}
+
+Numbers go up — that is the entire pitch of The Loopler, and the speedometer is where that promise turns into a light show. Learning how The Loopler speed works matters because velocity is not just cosmetic here: it feeds loop counts, gate triggers, and eventually your score multiplier. Two players can draft the same cards and walk away with wildly different results simply because one understood the speed curve and the other did not.
+
+Below, we break down the systems that push The Loopler speed upward, the caps that hold it back, and the practical habits that separate a clean infinity run from a car that stalls out before round ten.
+
+## How The Loopler Speed Actually Works
+
+The Loopler is a roguelite deckbuilder about a slot car driving in mesmerizing loops, developed and published by Mheep and released on September 11, 2026 for $9.99. You draft cards, place gates on the track, and stack charms, then watch the car circulate automatically while numbers climb.
+
+Speed is the engine behind that climb. Faster laps mean more gate hits per minute, more card triggers, and more compounding multipliers. The catch is that speed is not a single stat you can dump points into. It is the sum of several interacting systems:
+
+- **Base speed** — the car's starting velocity and any flat gains from cards or car identity.
+- **Boost** — a temporary acceleration layer with a ceiling, tracked by your Boost Cap stat.
+- **Overdrive** — a pulsing speed state that fires on a timer, with its own Overdrive Timer and Overdrive Pulse stats.
+- **Drift** — corner-based acceleration that rewards track layout knowledge.
+- **Gates** — physical checkpoints on the loop that convert speed into score, multipliers, or further speed.
+
+Because these layers multiply rather than add, a run that feels sluggish at round 4 can explode by round 12. That is the dopamine loop the store page promises, and it is why players keep chasing "one more run."
+
+## The Loopler Speed Systems at a Glance
+
+| System | What It Does | Where You Manage It |
+|---|---|---|
+| Base speed | Starting velocity plus flat card gains | Loadout, garage parts |
+| Boost | Short-term acceleration with a hard cap | Boost Cap stat in the garage panel |
+| Overdrive | Timed speed pulses during a run | Overdrive Timer and Overdrive Pulse stats |
+| Drift | Corner-triggered speed that extends via gates and charms | Track corners, Drift Gate, drift cards |
+| Gates | Convert laps into score, multipliers, fuel, or speed | Gate slots on each track |
+| Charms | Passive modifiers that reshape the whole run | Charm slots, shop, rewards |
+
+The garage stats panel added Loop Score, Overdrive Timer, Overdrive Pulse, and Lucky Chance readouts, and the Boost Cap stat now shows the actual speed it permits in brackets after the percentage. If you are tuning a speed build, that panel is your dashboard — hover everything.
+
+## Cards, Gates, and Charms That Move the Needle
+
+Not every upgrade is a speed upgrade, and community reports consistently flag this as the game's biggest learning curve. A common complaint in Steam reviews is that it is hard to tell what an upgrade actually did after you picked it. The fix is to read tooltips before you buy, not after.
+
+Here is how the major speed-relevant categories break down.
+
+| Category | Examples | Role in a Speed Build |
+|---|---|---|
+| Drift cards | Drift-triggering and drift-scaling cards | Convert corners into sustained acceleration |
+| Boost cards | Boost gain and boost multiplier cards | Raise your ceiling and how fast you reach it |
+| Overdrive cards | Overdrive boost doublers | Multiply your pulse windows |
+| Speed gates | Drift Gate, Overdrive Gate, Surge Gate | Keep speed ticking at extreme velocities |
+| Utility gates | Score Gate, Multiply Gate, Hungry Gate | Convert speed into score instead of more speed |
+| Charms | Passive multipliers and Lucky Chance effects | Long-term scaling across all 12 rounds |
+
+A frequently repeated piece of player experience from the itch.io demo page: Drift only triggers in corners, and it stops firing at extremely high speeds unless you have a Drift Gate placed to keep it ticking. That single gate can be the difference between a run that plateaus and one that keeps accelerating into the millions.
+
+The developer has also adjusted balance over time. According to the V1.0.1 patch notes, Rocket now doubles overdrive boost instead of tripling it, and Boost Chip grants 5% boost gain per stack instead of 10%. Boost above the cap now decays during overdrive, while boost below the cap is retained. In other words, the ceiling is real and the game intends for you to feel it.
+
+## Drift, Boost, and Overdrive Compared
+
+These three systems overlap constantly, which is why players mix them up. Here is the clean separation.
+
+| System | Trigger | Duration | Best Paired With |
+|---|---|---|---|
+| Drift | Entering a corner | Ticks while cornering | Drift Gate, corner-heavy tracks |
+| Boost | Card effects, gates, charms | Temporary, capped | Boost Cap upgrades, Overdrive |
+| Overdrive | Timed pulses during a run | Cyclical windows | Rocket, Overdrive Gate, Superheated Gate |
+
+Two important interactions to memorize:
+
+1. **Superheated Gate and Overdrive conflict.** Entering overdrive removes the Superheated buff, so do not build around both.
+2. **Drift now works above 10k speed** as of V1.0.1, and drift tick progress carries over between corners within an attempt. That makes corner-dense layouts far more forgiving than they used to be.
+
+If you want to see how these systems look in motion before committing to a build, the official Steam store page for The Loopler hosts the gameplay trailer and screenshots that show late-run velocity in action.
+
+## Common Speed Problems and How to Fix Them
+
+High velocity in The Loopler used to break things. Several of those bugs have since been patched, but knowing them helps you diagnose odd behavior in older builds or during extreme runs.
+
+| Symptom | Likely Cause | Fix |
+|---|---|---|
+| Car appears frozen at the start of the track | Extreme speed desync (fixed in V1.0.2) | Update to the latest patch |
+| Drift stops ticking late in a run | Drift deactivates at very high speeds | Place a Drift Gate |
+| Fuel drains with no refill despite refuel cards | Refuel efficiency diminishing returns | Read the tooltip; efficiency drops the more you refuel |
+| Speed plateaus despite boost cards | You are at or above the Boost Cap | Raise Boost Cap in the garage |
+| Gates seem to be missed at high speed | Community reports of detection issues during extreme velocity | Slow the animation with the 3x speed button, verify gate slots |
+| Reserve Tank banks nothing | Overflow bug at very high speeds (fixed in V1.0.2) | Update to the latest patch |
+
+The refuel issue deserves special attention because it generates the most confused feedback. Player experience on the itch.io page repeatedly describes a "+1 fuel cell per loop" ability that appears not to work. It does work — it simply has diminishing returns, which the developer confirmed directly in the comment thread. Without that cap, a run could loop forever.
+
+## Practical Tips to Raise The Loopler Speed
+
+Building for velocity is a discipline. These habits come from patch notes, developer commentary, and community consensus.
+
+- **Pick a lane early.** Decide by round 3 whether you are chasing score or raw speed. Mixed builds stall on higher difficulties.
+- **Anchor on a Drift Gate.** If your track has corners and you intend to scale, a Drift Gate protects your drift ticks at extreme speeds.
+- **Watch the Boost Cap, not the boost number.** Above the cap, gains decay during overdrive. Raising the cap is often worth more than stacking more boost.
+- **Treat fuel as a speed stat.** A run that dies at round 9 because of an empty tank never gets to show its true velocity.
+- **Use the 3x speed button.** As of V1.0.2 the button was "found and activated," and it makes long, high-velocity runs far easier to observe.
+- **Settle your run if you want leaderboard credit.** Leaderboard runs only count when you settle on round 12; infinity has its own separate board.
+- **Respect difficulty penalties.** On Emerald and Diamond, cards and gates are less effective, so speed builds need tighter synergy to compensate.
+
+One more note for anyone learning the game: the first few difficulties are forgiving by design, while higher difficulties tend to push you toward specific builds. That is a common criticism in negative Steam reviews, and it is fair — but it also means a speed build that works on Bronze may need a full redesign by Diamond.
+
+## Frequently Asked Questions
+
+**Does The Loopler speed reset between rounds?**
+
+No. Speed persists across rounds within a single run and only resets when you start a new run. Cars with per-loop speed traits can therefore accumulate absurd velocity by round 10 — enough that players report skid marks turning into abstract bow-tie shapes.
+
+**Why does my drift stop working at very high speeds?**
+
+Drift deactivates at extreme velocities by design. Placing a Drift Gate on the track keeps drift ticking and lets drift cards continue to trigger. This is one of the most repeated pieces of advice in the community.
+
+**Is there a hard cap on The Loopler speed?**
+
+There is a Boost Cap that limits how much boost you can hold, and boost above that cap decays during overdrive. Base speed itself is not hard-capped, which is why players can push into five- and six-digit loop counts.
+
+**Does animation speed affect The Loopler speed?**
+
+No. The 3x speed button changes how quickly the game plays back menus and rounds for your convenience; it does not alter the car's actual velocity or your score. Use it freely on long runs.
+
+Speed in The Loopler rewards patience and reading. Understand drift, respect the boost ceiling, feed the tank, and the numbers will do the rest.

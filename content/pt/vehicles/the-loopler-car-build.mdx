@@ -1,0 +1,133 @@
+export const metadata = {
+  title: "Guia de Build de Carro em The Loopler: Combustível, Portões e Cartas que Entram em Loop Infinito",
+  description: "Um guia prático de build de carro em The Loopler: sobrevivência de combustível, um motor de pontuação, ordem dos portões, acúmulo de amuletos e escolhas de pit stop que mantêm as runs vivas.",
+  category: "vehicles",
+  date: "2026-10-16",
+}
+
+## Por Que uma Build Estável Vence uma Build Vistosa
+
+A maioria das runs em The Loopler não termina porque os números eram pequenos demais. Elas terminam porque o medidor de combustível zerou enquanto a pontuação subia, e uma promissora build de carro em The Loopler silenciosamente virou um problema muito rápido. Entender como as peças se encaixam importa mais do que caçar o maior multiplicador isolado da tela.
+
+The Loopler é um deckbuilder roguelite do desenvolvedor Mheep, lançado na [Steam](https://store.steampowered.com/app/4150860/The_Loopler/) em 11 de setembro de 2026. Seu carrinho de slot circula pela pista sozinho enquanto cartas, portões e amuletos disparam efeitos que movimentam pontuação, combustível, Boost e ouro. A graça é ver uma configuração modesta virar bola de neve — mas a bola de neve só se forma quando o motor por trás dela é sólido.
+
+Uma boa build de carro em The Loopler tem três funções, nesta ordem: manter o carro vivo, manter a pontuação crescendo em ritmo repetível e só então adicionar multiplicadores que deixam o crescimento absurdo. Pule a primeira função e a run morre cedo. Pule a segunda e você trava contra metas de pontuação cada vez maiores. Pule a terceira e você simplesmente vai mais devagar que todo mundo.
+
+## Como uma Run Realmente Funciona
+
+Antes de otimizar qualquer coisa, ajuda enxergar o loop como um ciclo, e não como uma lista de tarefas. Cada rodada repete o mesmo ritmo, com ofertas aleatórias no meio.
+
+| Etapa | O que acontece | O que você deveria estar pensando |
+| --- | --- | --- |
+| Iniciar a rodada | O carro começa a circular e os efeitos se armam | Seu combustível aguenta uma volta completa? |
+| Completar loops | Gatilhos baseados em loop disparam | Seus gatilhos estão realmente acontecendo? |
+| Cartas e portões resolvem | Efeitos draftados e portões em slots da pista são ativados | Tem algo disparando que você não planejou? |
+| Preencher a meta de pontuação | A rodada termina e te leva de volta ao mapa de rota | Esse motor consegue acompanhar o ritmo conforme as metas crescem? |
+| Recompensa e escolha de rota | Você escolhe uma recompensa e um caminho | Qual escolha cobre o seu medidor mais fraco? |
+| Pit stops e eventos | Lojas, reabastecimento e melhorias | Você está comprando uma função ou só um número bonito? |
+
+Eventos de rota, opções de recompensa e o estoque do pit stop variam entre runs, então uma "rota perfeita" decorada não é um plano de verdade. Prioridades são. Saiba o que falta na sua build e aceite a oferta que preenche essa lacuna.
+
+Os sistemas centrais se dividem de forma clara:
+
+| Sistema | Função prática |
+| --- | --- |
+| Pontuação | Preenche a meta da rodada atual. Você precisa de uma forma repetível de acompanhar o ritmo. |
+| Cartas | Efeitos draftados com condições de gatilho impressas. Verifique quando cada uma dispara. |
+| Portões | Efeitos posicionados em slots da pista. O carro os encontra na ordem da pista. |
+| Amuletos | Efeitos passivos acumuláveis que remodelam como a run se desenrola. |
+| Peças de garagem | Equipamentos entre runs que modificam tanque de combustível, eficiência, durabilidade, limite de Boost e velocidade máxima. |
+| Efeitos de carro | Cada um dos nove carros tem sua própria identidade. Use-a como tendência inicial, não como obrigação. |
+
+Vale a pena entender os Loadouts desde cedo. Seu Loadout controla quais cartas, portões e amuletos desbloqueados podem aparecer nas ofertas. Itens habilitados podem aparecer — não é garantido. Um Loadout focado é uma das formas mais discretas de direcionar uma run.
+
+## O Framework de Quatro Passos para uma Build de Carro Funcional em The Loopler
+
+Esta é a sequência que transforma uma direção frágil em uma máquina autossustentável.
+
+| Passo | Objetivo | O que verificar | Erro comum |
+| --- | --- | --- | --- |
+| 1. Resolver a sobrevivência de combustível | Nunca deixar o tanque secar | Observe combustível e durabilidade durante um loop completo | Comprar pontuação enquanto o carro devora a própria vida |
+| 2. Escolher um motor de pontuação | Um plano repetível que escala | Pontuação por gatilho de loop, uma corrente de portões ou uma configuração de alimentação | Juntar metade de três motores |
+| 3. Comprar gatilhos confiáveis | Efeitos que já disparam a cada volta | Portões que o carro sempre cruza; condições que já acontecem | Pagar por amuletos de high-roll que precisam de um combo que você não tem |
+| 4. Adicionar multiplicadores | Melhorar frequência e retorno | O multiplicador se aplica a algo que dispara com frequência? | Multiplicadores em gatilhos que disparam duas vezes por run |
+
+**Diminua a velocidade da simulação e assista a um loop completo.** Anote quais efeitos disparam, se o combustível termina mais alto ou mais baixo e o quanto a meta de pontuação avançou. Essa única volta te diz se você construiu um motor ou apenas um problema rápido. É o diagnóstico mais barato do jogo.
+
+O passo dois merece ênfase porque é onde a maioria das builds erra. Comprometa-se com um plano repetível. Se a pontuação por gatilho de loop é o seu motor, tudo o que você comprar deve alimentar loops. Se uma corrente de portões é o seu motor, seu ouro vai para ordem dos portões e frequência de portões. Uma build com um motor forte vence uma build com três motores pela metade quase sempre.
+
+## Cartas, Portões e Amuletos: de Onde Vem a Sinergia
+
+Sinergia em The Loopler não é sobre colecionar itens poderosos. É sobre combinar condições de gatilho com aquilo que seu carro já faz a cada volta.
+
+| Condição de gatilho | Quão confiável é | Melhor uso |
+| --- | --- | --- |
+| Dispara em todo loop | Muito alta | Pontuação central e sustentação de combustível |
+| Dispara no início da rodada | Alta, mas uma vez por rodada | Pontuação explosiva ou ouro de abertura |
+| Dispara quando o combustível acaba | Situacional | Recuperação de emergência — não é um plano |
+| Dispara ao lado de outra carta específica | Depende do seu draft | Retorno no fim da run, depois que o par existe |
+| Dispara ao passar por um portão | Depende do posicionamento | Pontuação encadeada e multiplicadores |
+
+O posicionamento dos portões é a alavanca mais subestimada. Os portões ficam em slots da pista e resolvem na ordem em que o carro os encontra, então os mesmos três portões podem produzir resultados bem diferentes dependendo da sequência. Coloque portões de preparação antes dos portões de retorno. Se um portão adiciona um multiplicador e outro adiciona pontuação, o multiplicador geralmente deve vir primeiro na ordem da pista para se aplicar ao que vem depois.
+
+Relatos da comunidade na thread de feedback da demo mostram o quanto os jogadores levam isso a sério. Testadores debatiam se um portão específico estava disparando mais vezes do que o pretendido, e outros compararam a versão de lançamento de forma desfavorável com a build mais antiga de game jam. Vale internalizar esse último ponto: a demo de pré-lançamento e o playtest foram retrabalhados e resetados antes do lançamento, então conselhos de build mais antigos daquela época devem ser tratados como história, não como regras atuais.
+
+Amuletos são o jogo de longo prazo. Acumular amuletos passivos muda como a run inteira se desenrola, mas eles demoram para dar retorno. Compre-os quando seu combustível e sua pontuação central já estiverem estáveis, não quando você estiver tapando um vazamento.
+
+## Gerenciando Combustível, Durabilidade, Boost e Overdrive
+
+Uma barra de Boost brilhante pode fazer um carrinho minúsculo parecer imbatível enquanto seu combustível e sua durabilidade fazem as malas em silêncio. Os medidores dizem a verdade mesmo quando os números parecem ótimos.
+
+| Medidor | O que faz | Sinal de alerta | Correção |
+| --- | --- | --- | --- |
+| Combustível | Mantém o carro rodando | O tanque tende a cair ao longo de um loop completo | Reabastecimento, eficiência de combustível ou menor consumo |
+| Durabilidade | Absorve o castigo quando o combustível falha | Começa a cair no meio da rodada | Pare de comprar velocidade; estabilize primeiro |
+| Boost | Rajadas de aceleração | O Boost drena sem retorno atrelado | Vincule o Boost a um gatilho de pontuação |
+| Overdrive | Pulsos de velocidade no estado final | O Timer expira antes dos pulsos darem retorno | Compare o valor do Pulse com a duração do Timer |
+
+O Overdrive merece uma observação específica. No estado final de Overdrive, o carro recebe pulsos de velocidade repetidos, e o Timer determina quanto tempo essa tentativa dura. Compare o valor do Pulse com a duração do Timer antes de investir. Um pulso enorme em um timer curto pode valer menos que um pulso modesto que continua rolando.
+
+A regra prática: combustível protege a durabilidade, a durabilidade protege a run, e a run protege a sua pontuação. Qualquer coisa que ameace o combustível precisa se justificar com um motor de pontuação já comprovado.
+
+## Pit Stops, Rerolls e Regras de Recuperação
+
+Pit stops são onde boas runs são salvas e maus hábitos são formados. Duas regras cobrem a maioria das situações.
+
+| Situação | Ação recomendada |
+| --- | --- |
+| O combustível continua caindo | Pause as compras de pontuação. Pegue a oferta de combustível ou eficiência mais confiável e assista a mais um loop completo antes de adicionar velocidade. |
+| A loja não oferece nada útil | Considere sair com o ouro em vez de forçar uma compra. |
+| Você sabe exatamente qual função está faltando | Rerolle — mas só se puder pagar a tentativa. |
+| A build está sobrevivendo, mas a pontuação está estagnada | Compre frequência de gatilho ou um multiplicador no seu motor atual, não um motor novo. |
+| A pontuação está voando, mas o combustível está escasso | Trate isso como emergência, não como volta da vitória. |
+
+Sair de uma loja com ouro não é uma visita desperdiçada. Ouro não gasto é flexibilidade, e o próximo pit stop pode oferecer exatamente a função que falta na sua build de carro em The Loopler. Forçar uma compra que você não precisa polui a build e dilui as ofertas que você verá depois.
+
+Se você acompanha o progresso ao longo de uma run longa, muitos guias organizam as coisas em torno de checkpoints de rodada para que você possa medir se seu motor está acompanhando a meta de pontuação crescente. Use o sistema de checkpoint que preferir — o ponto é comparar seu ritmo atual com o anterior, não com uma build dos sonhos que você viu na internet.
+
+## Erros Comuns de Build de Carro em The Loopler e Correções Rápidas
+
+| Erro | Por que dói | Correção |
+| --- | --- | --- |
+| Três meio-motores | Nada dispara com frequência suficiente para escalar | Escolha um motor e o alimente |
+| Multiplicadores antes dos gatilhos | Não há nada para multiplicar | Estabeleça gatilhos confiáveis primeiro |
+| Ignorar a ordem dos portões | Portões de retorno resolvem antes dos de preparação | Reordene para que a preparação venha antes do retorno |
+| Acumular velocidade com pouco combustível | Carro rápido, run curta | Conserte a eficiência antes da velocidade máxima |
+| Comprar amuletos cedo demais | Retorno lento, sem estabilidade imediata | Amuletos depois que combustível e pontuação estiverem seguros |
+| Rerrolar às cegas | O ouro some sem direção | Rerolle apenas para uma função que você sabe que falta |
+
+O RNG ainda vai esconder o combo dos sonhos atrás do muro do pit stop de vez em quando. Tudo bem. Construa a partir do que realmente aparece, mantenha um plano B para o seu medidor mais fraco e deixe os números absurdos chegarem porque a máquina funciona — não porque você desejou com muita força.
+
+## Perguntas Frequentes
+
+**Qual é a parte mais importante de uma build de carro em The Loopler?**
+Sobrevivência de combustível. Se o tanque seca e a durabilidade começa a cair, nenhum multiplicador importa. Assista a um loop completo em velocidade legível, confirme que o combustível está estável e só então invista em pontuação.
+
+**Devo sempre comprar a carta de maior raridade oferecida?**
+Não. Raridade não garante que a condição de gatilho de uma carta vai acontecer na sua build. Uma carta comum que dispara a cada loop costuma valer mais que uma rara esperando por um combo que você não tem.
+
+**Como decido a ordem de posicionamento dos portões?**
+Coloque portões de preparação primeiro e portões de retorno depois, já que os portões resolvem na ordem em que o carro os encontra. Depois teste o arranjo por um loop completo e verifique se sua pontuação por volta realmente melhorou.
+
+**Por que minha build funciona no começo, mas trava depois?**
+Normalmente porque o motor não escala. As metas de pontuação das rodadas crescem, então sua build precisa de uma forma repetível de acompanhar o ritmo — seja aumentando a frequência dos gatilhos, seja adicionando multiplicadores a algo que já dispara com frequência.

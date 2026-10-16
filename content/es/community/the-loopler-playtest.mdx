@@ -1,0 +1,108 @@
+export const metadata = {
+  title: "Guía del playtest de The Loopler: lo que los jugadores aprendieron al probar el roguelite de coches de slot de Mheep",
+  description: "Una guía comunitaria del playtest de The Loopler: lo que encontraron los probadores en la demo, los comentarios que dieron forma al lanzamiento y consejos para tus propias partidas.",
+  category: "community",
+  date: "2026-10-16",
+}
+
+La mayoría de los deckbuilders roguelite te piden planificar con cuidado. The Loopler te pide que sueltes el control y veas cómo explotan los números. El deckbuilder de coches de slot de Mheep pasó aproximadamente un año en pruebas públicas antes de su lanzamiento completo en Steam el 11 de septiembre de 2026, y gran parte de ese ida y vuelta ocurrió a la vista de todos, en la página de itch.io del desarrollador y en los debates de Steam. Si quieres la historia real del **playtest de The Loopler** — qué vieron los probadores, qué les frustró y qué quejas atendió realmente el desarrollador — esta guía lo cubre, con notas sacadas directamente de la comunidad.
+
+Esa historia importa, porque la versión que puedes comprar hoy no es la que probaron los primeros testers. La fase de **playtest de The Loopler** dio forma a las expectativas en torno a las celdas de combustible, la detección de puertas y el escalado al final de la partida mucho antes de que se lanzara la versión 1.0. Saber qué cambió (y qué no cambió a propósito) te ahorrará horas de confusión cuando tus propias partidas empiecen a descontrolarse.
+
+## Cómo era realmente el playtest
+
+The Loopler nunca fue un secreto. Mheep construyó una audiencia lanzando versiones jugables pronto y respondiendo a los comentarios directamente, algo poco habitual en un roguelite desarrollado por una sola persona. A lo largo de aproximadamente un año, los jugadores tuvieron tres formas distintas de probar el juego antes del lanzamiento.
+
+| Campo de pruebas | Qué era | Qué reveló | Estado actual |
+|---|---|---|---|
+| Prototipo en itch.io | Una versión temprana gratuita en la página de itch.io del desarrollador | El bucle central, las primeras cartas, las puertas y la acumulación de amuletos | Sigue en línea, pero los informes de la comunidad dicen que no se ha actualizado desde hace mucho tiempo |
+| Demo de Steam | Una demo gratuita vinculada a la página oficial de la tienda | Una porción de la estructura completa del roguelite y su curva de dificultad | Disponible ahora como demo gratuita para PC |
+| Rama de playtest previa al lanzamiento | Una aplicación de prueba separada que apareció en Steam antes del lanzamiento | Notas de equilibrio e informes de errores sobre puertas, combustible y comportamiento a velocidades extremas | Cerrada; reemplazada por el lanzamiento 1.0 |
+
+El prototipo de itch.io es la parte más documentada de la era de playtest, y es donde se formaron la mayoría de las opiniones más sonadas de la comunidad. La experiencia de los jugadores allí se lee como un diario de diseño: gente publicando capturas de puntuaciones, discutiendo sobre la redacción de una habilidad y llevando el coche al límite hasta que la propia física del juego se rendía.
+
+## Comentarios de los probadores que dieron forma al lanzamiento completo
+
+No todas las quejas se convirtieron en un parche, y esa distinción es lo más útil que hay que entender sobre el desarrollo de The Loopler. Mheep interactuaba constantemente con la comunidad, pero defendía a propósito algunas decisiones de diseño. Así se desarrollaron los temas recurrentes más importantes.
+
+| Informe de la comunidad | Qué decían los jugadores | Respuesta del desarrollador | Situación actual |
+|---|---|---|---|
+| Redacción de la recarga de celdas de combustible | «+1 celda de combustible por bucle» parecía inútil al hacer docenas de bucles por segundo | El efecto tiene rendimientos decrecientes por diseño, así que las partidas no pueden durar para siempre | Mecánica sin cambios; la redacción sigue dividiendo a los jugadores |
+| Detección de puertas a velocidad extrema | Algunas puertas se saltaban cuando el coche superaba la lógica de la pista | Reconocido como una rareza de velocidades realmente absurdas | Todavía se reporta ocasionalmente |
+| Saturación del grupo de mejoras | Demasiados objetos desbloqueados diluían el draft de cartas y puertas | El desarrollador confirmó que se planeaba un interruptor | Función de calidad de vida solicitada con frecuencia |
+| Versión móvil | Múltiples peticiones de compatibilidad con teléfonos y tabletas | No se ha anunciado ningún lanzamiento móvil | Solicitud abierta |
+| Equilibrio de «The Muscler» | Un coche se siente como un modo hardcore incorporado | La velocidad se mantiene entre rondas y solo se reinicia al empezar una partida nueva | Funciona según lo previsto |
+
+Destacan dos lecciones. Primero, el debate sobre las celdas de combustible es en realidad un problema de comunicación, no de equilibrio: la mecánica se comporta de forma consistente una vez que sabes lo de los rendimientos decrecientes. Segundo, la petición del interruptor de mejoras es el tipo de solución que solo aparece cuando cientos de jugadores chocan con el mismo muro al mismo tiempo, que es exactamente para lo que sirve un playtest largo.
+
+## Lista de comprobación del playtest de The Loopler: sistemas que conviene probar primero
+
+Si vas a hacer tu propia sesión de playtest de The Loopler —ya sea con la demo gratuita o con el juego completo—, resiste la tentación de limitarte a perseguir el número más grande. Los sistemas interactúan, y probarlos de forma aislada te enseña mucho más.
+
+| Sistema | Contenido en el lanzamiento | Prueba esto primero | Por qué importa |
+|---|---|---|---|
+| Cartas | 50 para elegir en el draft | Orden de acumulación de multiplicadores | Determina si una partida escala de forma lineal o exponencial |
+| Puertas | 30 para colocar | Orden de ranuras en cada pista | El orden de colocación cambia la frecuencia con la que se activa cada puerta |
+| Amuletos | 70 para recolectar | Superposición de pasivas | Los amuletos multiplican todo lo que tienen debajo |
+| Coches | 9 con efectos únicos | Identidad de velocidad frente a puntuación | Cada coche impulsa un arquetipo de build diferente |
+| Pistas | 9 con diseños distintos | Cantidad de ranuras para puertas | Más ranuras significa más espacio para reacciones en cadena |
+| Modos de dificultad | 5 niveles | Escalado de la duración de la partida | Los niveles más altos hacen que «volverse infinito» sea mucho más difícil |
+
+Un enfoque práctico es elegir un sistema por sesión. Dedica una partida a probar solo el orden de las puertas y luego una segunda a probar solo la acumulación de amuletos. Anota qué se activó y qué no. Así fue exactamente como los primeros probadores encontraron las interacciones que ahora definen el endgame.
+
+## Cómo llevar a cabo tu propia sesión de pruebas
+
+Los miembros de la comunidad ya han trazado varias partidas de desafío que ponen a prueba el juego de formas útiles. También sirven como excelentes ejercicios de playtest porque te obligan a evaluar sistemas que, de otro modo, ignorarías.
+
+- **Partida sin dinero:** Omite por completo las puertas de moneda y las mejoras. Los informes de la comunidad muestran que esto es realmente posible: un jugador terminó con 6.474.600 puntos y otro lo superó con 11.220.000.
+- **Partida de velocidad pura:** Ignora las puertas de puntuación y aumenta la velocidad. Los jugadores han reportado velocidades al final de la partida en el rango de 10 a 200 bucles por segundo, que es donde suelen aparecer las rarezas en la detección de puertas.
+- **Partida por recuento de bucles:** Cuenta el total de vueltas en lugar de los puntos. Un jugador reportó haber alcanzado 150 bucles en una sesión temprana.
+- **Partida sin combustible:** Evita los efectos de combustible y observa hasta dónde se estira una partida. Esta es la forma más rápida de entender el diseño de rendimientos decrecientes.
+
+Dos consejos prácticos antes de empezar. Primero, ten un bloc de notas abierto: cuando se desencadena una reacción en cadena, se activan docenas de cartas a la vez y no recordarás el orden después. Segundo, empieza de cero entre pruebas, porque la velocidad persiste entre rondas y solo se reinicia cuando comienzas una partida nueva. Llevar una build descontrolada a una sesión de pruebas sesgará todos los resultados.
+
+| Objetivo de la sesión | Inversión de tiempo | Qué aprendes |
+|---|---|---|
+| Experimento de orden de puertas | Una partida corta | Qué secuencia de colocación maximiza las activaciones |
+| Prueba de acumulación de amuletos | Dos o tres partidas | Cómo se combinan las pasivas con los multiplicadores |
+| Comparación de identidad de coches | Una partida por coche | Qué arquetipo encaja con tu estilo de juego |
+| Comprobación del escalado de dificultad | Una partida por nivel | Cuánto se aprieta el juego en ajustes más altos |
+
+## Panorama del lanzamiento: a qué llevó el playtest
+
+La transición de las pruebas al lanzamiento fue fluida para los estándares indie. Una semana después del lanzamiento, el desarrollador publicó una actualización para la comunidad en la que señalaba que las reseñas rondaban el 90 % de valoraciones positivas, con aproximadamente 397 reseñas en total, y agradeció a los jugadores que habían seguido el proyecto desde sus primeras versiones. Los números se han mantenido desde entonces.
+
+| Dato | Valor |
+|---|---|
+| Fecha de lanzamiento | 11 de septiembre de 2026 |
+| Desarrollador y editor | Mheep |
+| Precio base | 9,99 $ |
+| Reseñas de todos los tiempos | Muy positivas — 670 reseñas, 89 % positivas |
+| Reseñas recientes | Muy positivas — 391 reseñas, 87 % positivas |
+| Steam Deck | Verificado |
+| Logros | 47 |
+| Idiomas de interfaz | Inglés y 11 más |
+| Banda sonora | Música original relajante de Pulsewith (Justin Skomarovsky) |
+| Paquetes | Infinity Edition a 15,27 $, además de varios paquetes crossover |
+
+Los requisitos del sistema son sorprendentemente modestos: un Intel Core i3, 2 GB de RAM y 500 MB de almacenamiento en Windows 10 u 11, con especificaciones comparables para macOS 12.0 y Ubuntu 20.04. El juego también se puede jugar sin eventos de tiempo rápido y es compatible con mandos de Xbox y PlayStation, lo cual importa si quieres probarlo en una consola portátil o con un mando.
+
+Puedes consultar el precio actual, la disponibilidad de la demo y la lista completa de características en [la página oficial de The Loopler en Steam](https://store.steampowered.com/app/4150860/The_Loopler/), o ver el prototipo original en [la página de itch.io del desarrollador para The Loopler](https://mheep.itch.io/the-loopler).
+
+## Preguntas frecuentes
+
+**¿Todavía hay un playtest activo de The Loopler al que pueda unirme?**
+
+No en la misma forma que antes del lanzamiento. La rama de playtest previa al lanzamiento ha sido reemplazada por el lanzamiento completo, pero la demo gratuita de Steam sigue siendo la mejor forma de probar el juego sin comprarlo. El prototipo más antiguo de itch.io sigue en línea, aunque los informes de la comunidad dicen que está muy por detrás de la versión actual.
+
+**¿Por qué la habilidad «+1 celda de combustible por bucle» parece no hacer nada?**
+
+La experiencia de los jugadores sugiere que el efecto tiene rendimientos decrecientes. Sí recarga combustible, pero la cantidad se reduce a medida que sigues recargando, lo que impide que una partida continúe para siempre. A tasas de bucles muy altas, la ganancia se vuelve difícil de notar, así que la habilidad parece rota incluso cuando funciona.
+
+**¿Puedo probar builds específicas sin desbloquearlo todo?**
+
+Esa es la petición de calidad de vida más común de la comunidad. Los probadores han pedido una forma de activar o desactivar objetos desbloqueados para que los drafts se mantengan enfocados, y el desarrollador ha dicho que se planea un interruptor. Hasta entonces, planificar tus desbloqueos en torno a una build objetivo es la mejor solución provisional.
+
+**¿The Loopler es bueno para sesiones de prueba cortas?**
+
+Sí. Una sola partida es rápida, y los desafíos diarios y semanales te dan un rompecabezas fijo con tablas de clasificación opcionales. Esa estructura facilita probar una idea, registrar el resultado y parar, que es exactamente como debería funcionar una buena sesión de playtest.
